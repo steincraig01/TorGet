@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+       android:id="@+id/providertpb"
+       android:icon="@drawable/ic_search_white_18dp"
+       android:title="ThePirateBay"/>
+  <item
+       android:id="@+id/providerkat"
+       android:icon="@drawable/ic_settings_applications_white_18dp"
+       android:title="KickassTorrents" />
+  <item
+       android:id="@+id/providereztv"
+       android:icon="@drawable/ic_search_white_18dp"
+       android:title="EZTV"/>
+  <item
+       android:id="@+id/providerrlsbb"
+       android:icon="@drawable/ic_search_white_18dp"
+       android:title="RLSBB"/>
+</menu>
