@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Graphics;
 using Android.Views;
 using Android.Widget;
 using System.Collections.Generic;
@@ -50,7 +51,8 @@ namespace TorGet
                 view.FindViewById<ImageView>(Resource.Id.imgstatus).SetImageResource(Resource.Drawable.trustgreen16);
             if (item.Comments == 1)
                 view.FindViewById<ImageView>(Resource.Id.imgcomments).SetImageResource(Resource.Drawable.commentyellow16);
-
+            view.Elevation = 10;
+            
             return view;
         }
     }

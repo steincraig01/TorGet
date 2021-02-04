@@ -28,7 +28,11 @@
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
         android:id="@+id/lvresults"/>
+
+
 </LinearLayout>>
 
 </LinearLayout>

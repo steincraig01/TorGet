@@ -1,0 +1,138 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/shape_searchdialog"
+    android:theme="@style/Theme.AppCompat.Light"
+    android:elevation="3dp"
+    android:id="@+id/TorrentView">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bluetorrent64"
+            android:padding="10dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:text="Torrent Details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/tvsearchheader"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvTorrentName"
+        android:text="Frozen.2.2019.DVDScr.XVID.AC3.Hive-CM8[TGx]"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold"
+        android:textColor="#007ACC"/>
+
+    <TextView
+        android:id="@+id/tvTorrentUploaded"
+        android:text="Uploaded 03-26 2012 by Sotnikam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:drawableEnd="@drawable/trustblue32"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentCategory"
+        android:text="Category: Video (Movies)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentSize"
+        android:text="Size: 128.7 MiB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentSeeds"
+        android:text="Seeds: 2534"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentLeech"
+        android:text="Leeches: 984"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llTorButtons">
+        
+        <ImageButton
+            
+            android:src="@drawable/bluetorrent48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:id="@+id/imageButton1"
+            android:adjustViewBounds="true" />
+        <ImageButton
+            android:src="@drawable/bluetorrent48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_shape"
+            android:id="@+id/imageButton1"
+            android:adjustViewBounds="true" />
+        <ImageButton
+            android:src="@drawable/bluetorrent48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_shape"
+            android:id="@+id/imageButton1"
+            android:adjustViewBounds="true" />
+   
+            
+    </LinearLayout>
+
+</LinearLayout>

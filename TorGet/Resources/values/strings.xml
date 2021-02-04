@@ -2,10 +2,15 @@
     <string name="app_name">TorGet</string>
     <string name="action_settings">Settings</string>
     <string-array name="categories">
-          <item>All</item>
-          <item>Audio</item>
-          <item>Video</item>
-          <item>Applications</item>
-          <item>Games</item>
-      </string-array>
+      <item>All</item>
+      <item>Audio</item>
+      <item>Applications</item>
+      <item>Games</item>
+      <item>Video</item>
+    </string-array>
+    <string-array name="providers">
+      <item>ThePirateBay</item>
+      <item>KickassTorrents</item>
+      <item>EZTV</item>
+    </string-array>
 </resources>
