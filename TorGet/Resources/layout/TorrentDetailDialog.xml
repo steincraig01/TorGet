@@ -8,37 +8,31 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
     android:background="@drawable/shape_searchdialog"
-    android:theme="@style/Theme.AppCompat.Light"
-    android:elevation="3dp"
+
+    android:elevation="4dp"
     android:id="@+id/TorrentView">
     <LinearLayout
-        android:orientation="vertical"
-        android:minWidth="25px"
-        android:minHeight="25px"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:background="#007ACC"
         android:id="@+id/linearLayout1">
-
-
-
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/bluetorrent64"
-            android:padding="10dp"
-            android:layout_gravity="center_horizontal"/>
-
+            android:src="@drawable/torrent48white"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_vertical"/>
         <TextView
             android:text="Torrent Details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
             android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/tvsearchheader"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 
@@ -53,86 +47,165 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="bold"
         android:textColor="#007ACC"/>
-
-    <TextView
-        android:id="@+id/tvTorrentUploaded"
-        android:text="Uploaded 03-26 2012 by Sotnikam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:gravity="center_vertical"
-        android:drawableEnd="@drawable/trustblue32"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/tvTorrentCategory"
-        android:text="Category: Video (Movies)"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/tvTorrentSize"
-        android:text="Size: 128.7 MiB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/tvTorrentSeeds"
-        android:text="Seeds: 2534"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:textStyle="bold"/>
-    <TextView
-        android:id="@+id/tvTorrentLeech"
-        android:text="Leeches: 984"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:textStyle="bold"/>
-    <LinearLayout
-        android:orientation="horizontal"
+    <TableLayout
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/llTorButtons">
-        
-        <ImageButton
-            
-            android:src="@drawable/bluetorrent48"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:id="@+id/imageButton1"
-            android:adjustViewBounds="true" />
-        <ImageButton
-            android:src="@drawable/bluetorrent48"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/circle_shape"
-            android:id="@+id/imageButton1"
-            android:adjustViewBounds="true" />
-        <ImageButton
-            android:src="@drawable/bluetorrent48"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/circle_shape"
-            android:id="@+id/imageButton1"
-            android:adjustViewBounds="true" />
-   
-            
-    </LinearLayout>
+        android:stretchColumns="1"
+        android:id="@+id/TableLayout1">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:text="Category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentCategory"
+        android:text="Video (Movies)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"    
+        android:textStyle="bold"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:text="Uploaded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentUploaded"
+        android:text="03-26 2012"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    </TableRow>
+        <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:text="Uploader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentUploader"
+        android:text="Sotnikam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:text="Size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentSize"
+        android:text="128.7 MiB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvTorrentCategory"
+        android:textStyle="bold"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:text="Seeders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentSeeds"
+        android:text="2534"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/tvTorrentCategory"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:text="Leechers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvTorrentLeech"
+        android:text="984"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/tvTorrentCategory"
+        android:layout_alignParentRight="true"
+        android:textStyle="bold"/>
+    </TableRow>
+    </TableLayout>
 
 </LinearLayout>

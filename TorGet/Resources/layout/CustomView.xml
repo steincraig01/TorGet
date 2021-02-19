@@ -7,8 +7,9 @@
    android:orientation="vertical"
    android:id="@+id/linearLayout1"
    android:background="@drawable/shape_listitem"
-
-   android:padding="10dp">
+   android:elevation="10dp"
+   android:clipToPadding="false"
+   android:padding="7dp">
    <TextView
         android:id="@+id/tvtorname"
         android:text="Rick.and.Morty.S04E07.720p"

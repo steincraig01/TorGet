@@ -4,6 +4,7 @@ using Android.Content;
 using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Runtime;
+using Android.Support.V4.View;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
@@ -12,7 +13,8 @@ using System.Drawing;
 using System.Runtime.Remoting.Contexts;
 using System.Threading;
 using static Android.App.ActionBar;
-
+using Xamarin.Essentials;
+using Android.Animation;
 
 namespace TorGet
 {
@@ -21,20 +23,23 @@ namespace TorGet
     {
         List<Torrent> torrents;
         ListView listView;
+        Android.Support.V7.Widget.SearchView torSearchView;
         Button btnSearch;
         EditText edtSearchQuery;
         Dialog searchDialog;
         Dialog torrentDialog;
         Spinner spinnerCategory;
         Spinner spinnerProvider;
-        LinearLayout mainContentLayout;
-        LinearLayout emptyView;
         TextView tvTorName;
         TextView tvTorUploaded;
         TextView tvTorUploader;
         TextView tvTorCategory;
         TextView tvTorSize;
         TextView tvTorSeedLeech;
+        RelativeLayout rlStatusLayout;
+        Android.Support.V7.Widget.Toolbar toolbar;
+        TextView tvStatusText;
+
 
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -44,29 +49,29 @@ namespace TorGet
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
             listView = FindViewById<ListView>(Resource.Id.lvresults);
-            //mainContentLayout = FindViewById<LinearLayout>(Resource.Id.content_layout);
-            //emptyView = FindViewById<LinearLayout>(Resource.Id.ListViewMessage);
-            //mainContentLayout.AddView(FindViewById<>(Resource.Layout.EmptyView));
-            //listView.EmptyView = FindViewById<TextView>(Resource.Id.tvLVM) ;
-            //listView.AddView(FindViewById<TextView>(Resource.Id.tvLVM));
-            
             listView.ItemClick += OnListItemClick;
             listView.SetPadding(20, 20, 20, 10);
-            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
+            toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "TorGet";
-
-            //ArrayAdapter adapter = new ArrayAdapter(this, Resource.Layout, objects);
-            //View headerView = this.LayoutInflater.Inflate(Resource.Layout.listview_header, null);
-            //listView.AddHeaderView(headerView);
-
+            var back = this.GetDrawable(Resource.Drawable.buttonrect);
+            toolbar.Background = back;
+            tvStatusText = FindViewById<TextView>(Resource.Id.status_text);
+            rlStatusLayout = FindViewById<RelativeLayout>(Resource.Id.status_layout);
+            rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
+            torSearchView = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.menu_search);
+            //Check network connection
+            var current = Connectivity.NetworkAccess;
+            if (current == NetworkAccess.None)
+            {
+                Toast.MakeText(this, "No internet connection detected", ToastLength.Short).Show();
+            }
         }
 
         
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
@@ -76,31 +81,59 @@ namespace TorGet
             var t = torrents[e.Position];
             Android.Widget.Toast.MakeText(this, t.Name, Android.Widget.ToastLength.Short).Show();
             torrentDialog = new Dialog(this);
-
             torrentDialog.SetContentView(Resource.Layout.TorrentDetailDialog);
             torrentDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
-            //searchDialog.Window.ClearFlags(WindowManagerFlags.DimBehind);
-            
             torrentDialog.Show();
             torrentDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
-            //torrentDialog.Window.SetBackgroundDrawableResource(Resource.Color.transparent);
+            torrentDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);;
             tvTorName = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentName);
+            tvTorUploaded = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentUploaded);
             tvTorName.Text = t.Name;
-            
+            tvTorUploaded.Text = t.Uploaded;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            
             MenuInflater.Inflate(Resource.Menu.toolmenu, menu);
+            var item = menu.FindItem(Resource.Id.menu_search);
+            var searchItem = MenuItemCompat.GetActionView(item);
+            torSearchView = searchItem.JavaCast<Android.Support.V7.Widget.SearchView>();
+            torSearchView.QueryHint = "Torrent Search...";
+            torSearchView.SubmitButtonEnabled = true;
+            var id = torSearchView.Context.Resources.GetIdentifier("search_src_text", "id", PackageName);
+            var searchEditText = torSearchView.FindViewById<EditText>(id);
+            searchEditText.SetTextColor(Android.Graphics.Color.White);
+            searchEditText.SetHintTextColor(Android.Graphics.Color.WhiteSmoke);
+            
+            torSearchView.QueryTextSubmit += (s, e) =>
+            {
+                string query = e.NewText.ToString();
+                Thread thread = new Thread(() =>
+                {
+                    UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
+                    torrents = Tpb.Search(new TpbQuery(query, 0, TpbQueryOrder.BySize,TpbTorrentCategory.All));
+                   
+                    RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
+                    UserDialogs.Instance.HideLoading();
+                }); ;
+                thread.Start();
+                torSearchView.ClearFocus();
+                torSearchView.SetQuery("", false);
+                MenuItemCompat.CollapseActionView(item);
+                toolbar.SetBackgroundColor(Android.Graphics.Color.ParseColor("#007ACC"));
+                tvStatusText.Text = "Search results for: " + e.NewText.ToString();
+                rlStatusLayout.Visibility = Android.Views.ViewStates.Visible;
+                e.Handled = true;
+            };
+            //return true;
             return base.OnCreateOptionsMenu(menu);
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            if (item.TitleFormatted.ToString() == "Search")
+            if (item.TitleFormatted.ToString() == "Sea")
             {
-                //listView.Visibility = Android.Views.ViewStates.Gone;
+                
                 searchDialog = new Dialog(this);
                 
                 searchDialog.SetContentView(Resource.Layout.searchpopup);
