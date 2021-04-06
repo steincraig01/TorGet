@@ -15,6 +15,12 @@ using System.Threading;
 using static Android.App.ActionBar;
 using Xamarin.Essentials;
 using Android.Animation;
+using System.Collections.ObjectModel;
+using Android.Graphics;
+using JoanZapata.XamarinIconify;
+using JoanZapata.XamarinIconify.Fonts;
+using JoanZapata.XamarinIconify.Widget;
+using Android.Views.Animations;
 
 namespace TorGet
 {
@@ -38,7 +44,17 @@ namespace TorGet
         TextView tvTorSeedLeech;
         RelativeLayout rlStatusLayout;
         Android.Support.V7.Widget.Toolbar toolbar;
-        TextView tvStatusText;
+        JoanZapata.XamarinIconify.Widget.IconTextView tvStatusText;
+        Typeface customFont;
+        RelativeLayout layoutWelcome;
+        ImageButton btnClearSearch;
+        Animation statusAnimShow;
+        Animation listViewAnimShow;
+        Animation statusAnimHide;
+        Animation listViewAnimHide;
+
+
+
 
 
 
@@ -48,18 +64,28 @@ namespace TorGet
             UserDialogs.Init(this);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
+            customFont = Typeface.CreateFromAsset(Application.Assets, "commonfont.ttf");
             listView = FindViewById<ListView>(Resource.Id.lvresults);
             listView.ItemClick += OnListItemClick;
             listView.SetPadding(20, 20, 20, 10);
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "TorGet";
+            SupportActionBar.Title = "TorTools";
             var back = this.GetDrawable(Resource.Drawable.buttonrect);
             toolbar.Background = back;
-            tvStatusText = FindViewById<TextView>(Resource.Id.status_text);
+            btnClearSearch = FindViewById<ImageButton>(Resource.Id.btn_clear_search);
+            btnClearSearch.Click += BtnClearSearch_Click;
+            layoutWelcome = FindViewById<RelativeLayout>(Resource.Id.layout_welcome);
+            tvStatusText = FindViewById<IconTextView>(Resource.Id.status_text);
             rlStatusLayout = FindViewById<RelativeLayout>(Resource.Id.status_layout);
             rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
             torSearchView = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.menu_search);
+            statusAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_in_top);
+            listViewAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_in_bottom);
+            statusAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_fade_out);
+            listViewAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_out_bottom);
+            Iconify.with(new MaterialModule());
+
             //Check network connection
             var current = Connectivity.NetworkAccess;
             if (current == NetworkAccess.None)
@@ -98,13 +124,18 @@ namespace TorGet
             var item = menu.FindItem(Resource.Id.menu_search);
             var searchItem = MenuItemCompat.GetActionView(item);
             torSearchView = searchItem.JavaCast<Android.Support.V7.Widget.SearchView>();
+            torSearchView.SetIconifiedByDefault(false);
             torSearchView.QueryHint = "Torrent Search...";
-            torSearchView.SubmitButtonEnabled = true;
+            //torSearchView.SubmitButtonEnabled = true;
+            var simgid = torSearchView.Context.Resources.GetIdentifier("search_mag_icon", "id", PackageName);
             var id = torSearchView.Context.Resources.GetIdentifier("search_src_text", "id", PackageName);
             var searchEditText = torSearchView.FindViewById<EditText>(id);
-            searchEditText.SetTextColor(Android.Graphics.Color.White);
-            searchEditText.SetHintTextColor(Android.Graphics.Color.WhiteSmoke);
+            var searchIcon = torSearchView.FindViewById<ImageView>(simgid);
             
+            searchIcon.SetColorFilter(Android.Graphics.Color.White);
+            searchEditText.SetTextColor(Android.Graphics.Color.White);
+            searchEditText.SetHintTextColor(Android.Graphics.Color.White);
+
             torSearchView.QueryTextSubmit += (s, e) =>
             {
                 string query = e.NewText.ToString();
@@ -112,8 +143,23 @@ namespace TorGet
                 {
                     UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
                     torrents = Tpb.Search(new TpbQuery(query, 0, TpbQueryOrder.BySize,TpbTorrentCategory.All));
-                   
-                    RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
+                    if (torrents.Count == 0)
+                    {
+                        RunOnUiThread(() => Toast.MakeText(this, "No results found for " + query, ToastLength.Short).Show());
+                        
+                    }
+                    else
+                    {
+                        
+                        listViewAnimShow.Duration = 1000;
+                        rlStatusLayout.StartAnimation(statusAnimShow);
+                        listView.StartAnimation(listViewAnimShow);
+                        RunOnUiThread(() => rlStatusLayout.Visibility = ViewStates.Visible);
+                        RunOnUiThread(() => listView.Visibility = ViewStates.Visible);
+                        RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
+                        
+                    };
+                    
                     UserDialogs.Instance.HideLoading();
                 }); ;
                 thread.Start();
@@ -121,8 +167,10 @@ namespace TorGet
                 torSearchView.SetQuery("", false);
                 MenuItemCompat.CollapseActionView(item);
                 toolbar.SetBackgroundColor(Android.Graphics.Color.ParseColor("#007ACC"));
-                tvStatusText.Text = "Search results for: " + e.NewText.ToString();
-                rlStatusLayout.Visibility = Android.Views.ViewStates.Visible;
+                tvStatusText.Text = "Results for: " + e.NewText.ToString();
+                //tvStatusText.Text = "{md_accessibility}";
+                layoutWelcome.Visibility = ViewStates.Gone;
+                
                 e.Handled = true;
             };
             //return true;
@@ -190,6 +238,18 @@ namespace TorGet
             searchDialog.Dismiss();
             searchDialog.Hide();
             
+        }
+        public void BtnClearSearch_Click(object sender, System.EventArgs e)
+        {
+            listView.SetAdapter(null);
+            listView.StartAnimation(listViewAnimHide);
+            rlStatusLayout.StartAnimation(statusAnimHide);
+            listView.Visibility = ViewStates.Gone;
+            rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
+            var back = this.GetDrawable(Resource.Drawable.buttonrect);
+            toolbar.Background = back;
+            layoutWelcome.Visibility = ViewStates.Visible;
+
         }
     }
 }

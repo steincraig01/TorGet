@@ -30,7 +30,7 @@
         android:textStyle="bold"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/tvLVM"
-        android:textColor="@color/black"/>
+        android:textColor="@android:color/black"/>
 
 
 

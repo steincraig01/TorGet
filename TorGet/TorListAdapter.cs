@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Graphics;
+
 using Android.Views;
+using Android.Views.Animations;
 using Android.Widget;
 using System.Collections.Generic;
 
@@ -29,6 +31,7 @@ namespace TorGet
         {
             get { return items.Count; }
         }
+
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = items[position];
@@ -53,6 +56,10 @@ namespace TorGet
                 view.FindViewById<ImageView>(Resource.Id.imgcomments).SetImageResource(Resource.Drawable.commentyellow16);
             view.Elevation = 10;
             
+            Animation myAnimation = AnimationUtils.LoadAnimation(Application.Context, Resource.Animation.abc_grow_fade_in_from_bottom);
+            myAnimation.Duration = 500;
+            view.StartAnimation(myAnimation);
+
             return view;
         }
     }

@@ -32,7 +32,7 @@
             android:textStyle="bold"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/tvsearchheader"
-            android:textColor="@color/white"/>
+            android:textColor="@android:color/white"/>
     </LinearLayout>
 
 
