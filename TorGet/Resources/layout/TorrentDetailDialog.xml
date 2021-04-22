@@ -3,36 +3,41 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
+    
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/shape_searchdialog"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/shape_tordetaildialog"
 
-    android:elevation="4dp"
+    android:elevation="3dp"
     android:id="@+id/TorrentView">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#007ACC"
+        android:gravity="right"
         android:id="@+id/linearLayout1">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/torrent48white"
-            android:layout_margin="5dp"
-            android:layout_gravity="center_vertical"/>
         <TextView
             android:text="Torrent Details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            
             android:textStyle="bold"
+            
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/tvsearchheader"
             android:textColor="@android:color/white"/>
+        <ImageButton
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/imageButton1" />
+
     </LinearLayout>
 
 

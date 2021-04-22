@@ -5,26 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="#F4F4F4"
     android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:elevation="4dp"
-        android:background="#007ACC"
-        app:title="TorTools"
+        android:elevation="3dp"
+        android:background="@drawable/toolbar_shape"
+        app:title="TorrentTools"
+        
+        app:collapseIcon="@drawable/ic_backarrow"
         app:titleTextColor="@android:color/white">
     </android.support.v7.widget.Toolbar>
     <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:elevation="4dp"
-        android:background="@drawable/buttonrect"
+        android:layout_height="30dp"
+        android:background="@android:color/white"
+        tools:visibility="gone"
         android:id="@+id/status_layout">
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="Results for:"
-            android:textColor="@android:color/white"
+            android:text="Search results for:"
+            android:textColor="@android:color/black"
             android:textSize="16dp"
             android:textStyle="bold"
             android:layout_width="wrap_content"
@@ -32,33 +35,25 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="15dp"
             android:id="@+id/status_text" />
-        <ImageButton
-            android:src="@drawable/close"
-            android:background="@android:color/transparent"
-            android:layout_width="32px"
-            android:layout_height="32px"
-            android:layout_marginRight="20dp"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"
-            android:layout_alignParentRight="true"
-            android:id="@+id/btn_clear_search" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_vertical"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
         android:id="@+id/layout_welcome" >
         <ImageView
-            android:src="@drawable/magnet128"
+            android:src="@drawable/magnet128_solid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="150dp"
             android:layout_centerHorizontal="true"
             android:id="@+id/img_magnet" />
         <TextView
-            android:text="Welcome to TorTools. Please enter a query in the search box above to begin finding torrents!"
+            android:text="Please enter a query in the search box above to begin..."
             android:textSize="24dp"
             android:textStyle="bold"
             android:textColor="@android:color/black"
@@ -74,9 +69,9 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        
+        android:background="@android:color/transparent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="5dp"
+        android:dividerHeight="6dp"
         tools:visibility="gone"
         android:id="@+id/lvresults"/>
 </LinearLayout>

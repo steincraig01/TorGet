@@ -35,7 +35,7 @@ namespace TorGet
         Dialog searchDialog;
         Dialog torrentDialog;
         Spinner spinnerCategory;
-        Spinner spinnerProvider;
+
         TextView tvTorName;
         TextView tvTorUploaded;
         TextView tvTorUploader;
@@ -44,7 +44,7 @@ namespace TorGet
         TextView tvTorSeedLeech;
         RelativeLayout rlStatusLayout;
         Android.Support.V7.Widget.Toolbar toolbar;
-        JoanZapata.XamarinIconify.Widget.IconTextView tvStatusText;
+        IconTextView tvStatusText;
         Typeface customFont;
         RelativeLayout layoutWelcome;
         ImageButton btnClearSearch;
@@ -52,6 +52,7 @@ namespace TorGet
         Animation listViewAnimShow;
         Animation statusAnimHide;
         Animation listViewAnimHide;
+        Animation welcomeAnimShow;
 
 
 
@@ -67,15 +68,13 @@ namespace TorGet
             customFont = Typeface.CreateFromAsset(Application.Assets, "commonfont.ttf");
             listView = FindViewById<ListView>(Resource.Id.lvresults);
             listView.ItemClick += OnListItemClick;
-            listView.SetPadding(20, 20, 20, 10);
+            listView.SetPadding(10, 10, 10, 10);
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
-            SupportActionBar.Title = "TorTools";
-            var back = this.GetDrawable(Resource.Drawable.buttonrect);
-            toolbar.Background = back;
-            btnClearSearch = FindViewById<ImageButton>(Resource.Id.btn_clear_search);
-            btnClearSearch.Click += BtnClearSearch_Click;
+            SupportActionBar.Title = "TorrentTools";
+            //btnClearSearch.Click += BtnClearSearch_Click;
             layoutWelcome = FindViewById<RelativeLayout>(Resource.Id.layout_welcome);
+            
             tvStatusText = FindViewById<IconTextView>(Resource.Id.status_text);
             rlStatusLayout = FindViewById<RelativeLayout>(Resource.Id.status_layout);
             rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
@@ -83,18 +82,38 @@ namespace TorGet
             statusAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_in_top);
             listViewAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_in_bottom);
             statusAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_fade_out);
+            welcomeAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_grow_fade_in_from_bottom);
+            welcomeAnimShow.Duration = 3000;
+            layoutWelcome.Animation = welcomeAnimShow;
             listViewAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_out_bottom);
             Iconify.with(new MaterialModule());
-
+            layoutWelcome.Visibility = ViewStates.Visible;
+            Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
             //Check network connection
-            var current = Connectivity.NetworkAccess;
-            if (current == NetworkAccess.None)
-            {
-                Toast.MakeText(this, "No internet connection detected", ToastLength.Short).Show();
-            }
+            //var current = Connectivity.NetworkAccess;
+            //if (current != NetworkAccess.Internet)
+            //{
+            // Toast.MakeText(this, "No internet connection detected", ToastLength.Short).Show();
+            // }
         }
 
-        
+        protected override void OnStart()
+        {
+           // Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+            //layoutWelcome.Visibility = ViewStates.Visible;
+            base.OnStart();
+        }
+
+        public void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
+        {
+
+            var access = e.NetworkAccess;
+            var profiles = e.ConnectionProfiles;
+            if (access == NetworkAccess.None)
+                Toast.MakeText(this, "No internet connection detected", ToastLength.Short).Show();
+
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -109,6 +128,9 @@ namespace TorGet
             torrentDialog = new Dialog(this);
             torrentDialog.SetContentView(Resource.Layout.TorrentDetailDialog);
             torrentDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
+            torSearchView.ClearFocus();
+            torSearchView.SetQuery("", false);
+            //MenuItemCompat.CollapseActionView(item);
             torrentDialog.Show();
             torrentDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
             torrentDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);;
@@ -120,6 +142,7 @@ namespace TorGet
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
+            
             MenuInflater.Inflate(Resource.Menu.toolmenu, menu);
             var item = menu.FindItem(Resource.Id.menu_search);
             var searchItem = MenuItemCompat.GetActionView(item);
@@ -139,10 +162,12 @@ namespace TorGet
             torSearchView.QueryTextSubmit += (s, e) =>
             {
                 string query = e.NewText.ToString();
+                rlStatusLayout.Visibility = ViewStates.Gone;
+                listView.Visibility = ViewStates.Gone;
                 Thread thread = new Thread(() =>
                 {
                     UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
-                    torrents = Tpb.Search(new TpbQuery(query, 0, TpbQueryOrder.BySize,TpbTorrentCategory.All));
+                    torrents = Tpb.Search(new TpbQuery(query, 0, TpbQueryOrder.BySeeds,TpbTorrentCategory.All));
                     if (torrents.Count == 0)
                     {
                         RunOnUiThread(() => Toast.MakeText(this, "No results found for " + query, ToastLength.Short).Show());
@@ -151,7 +176,7 @@ namespace TorGet
                     else
                     {
                         
-                        listViewAnimShow.Duration = 1000;
+                        listViewAnimShow.Duration = 500;
                         rlStatusLayout.StartAnimation(statusAnimShow);
                         listView.StartAnimation(listViewAnimShow);
                         RunOnUiThread(() => rlStatusLayout.Visibility = ViewStates.Visible);
@@ -166,8 +191,7 @@ namespace TorGet
                 torSearchView.ClearFocus();
                 torSearchView.SetQuery("", false);
                 MenuItemCompat.CollapseActionView(item);
-                toolbar.SetBackgroundColor(Android.Graphics.Color.ParseColor("#007ACC"));
-                tvStatusText.Text = "Results for: " + e.NewText.ToString();
+                tvStatusText.Text = "Search results for: " + e.NewText.ToString();
                 //tvStatusText.Text = "{md_accessibility}";
                 layoutWelcome.Visibility = ViewStates.Gone;
                 
@@ -231,25 +255,20 @@ namespace TorGet
                 RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
                 UserDialogs.Instance.HideLoading();
             }); ;
-            
             thread.Start();
-
-
             searchDialog.Dismiss();
-            searchDialog.Hide();
-            
+            searchDialog.Hide(); 
         }
-        public void BtnClearSearch_Click(object sender, System.EventArgs e)
-        {
-            listView.SetAdapter(null);
-            listView.StartAnimation(listViewAnimHide);
-            rlStatusLayout.StartAnimation(statusAnimHide);
-            listView.Visibility = ViewStates.Gone;
-            rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
-            var back = this.GetDrawable(Resource.Drawable.buttonrect);
-            toolbar.Background = back;
-            layoutWelcome.Visibility = ViewStates.Visible;
-
-        }
+        //public void BtnClearSearch_Click(object sender, System.EventArgs e)
+        //{
+        //    listView.SetAdapter(null);
+        //    listView.StartAnimation(listViewAnimHide);
+        //    rlStatusLayout.StartAnimation(statusAnimHide);
+        //    listView.Visibility = ViewStates.Gone;
+        //    rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
+        //    var back = this.GetDrawable(Resource.Drawable.buttonrect);
+        //    toolbar.Background = back;
+        //    layoutWelcome.Visibility = ViewStates.Visible;
+        //}
     }
 }

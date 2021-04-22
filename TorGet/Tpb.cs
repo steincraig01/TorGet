@@ -1,7 +1,9 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+
 
 namespace TorGet
 {
@@ -14,8 +16,16 @@ namespace TorGet
             torrentList.Clear();
             //List<Torrent> result = new List<Torrent>();
             HtmlWeb web = new HtmlWeb();
-            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
-            doc = web.Load(query.TranslateToUrl());
+            
+            HtmlDocument doc = new HtmlDocument();
+            try
+            {
+                doc = web.Load(query.TranslateToUrl());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
             HtmlNode table = doc.DocumentNode.SelectSingleNode("//table");
             // HtmlNode nNode in table.Descendants("tr").Where(f => f.GetAttributeValue("class", "") != "header" && f.GetAttributeValue("class", "") != "alt"))
             foreach (HtmlNode trNode in table.Descendants("tr").Where(f => f.GetAttributeValue("class", "") != "header"))
