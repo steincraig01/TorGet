@@ -55,8 +55,8 @@ namespace TorGet
             view.FindViewById<TextView>(Resource.Id.tvtorseeds).Text = "Seeds: " + item.Seeds.ToString();
             view.FindViewById<TextView>(Resource.Id.tvtorleech).Text = "Leech: " + item.Leechers.ToString();
             view.FindViewById<TextView>(Resource.Id.tvtorcategory).Text = item.CategoryParent + " " + "(" + item.Category + ")";
-            if (item.IsTrusted == true || item.IsVip == true)
-                view.FindViewById<TextView>(Resource.Id.tvtoruled).SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.ic_verified16_star_blue, 0);
+            //if (item.IsTrusted == true || item.IsVip == true)
+                //view.FindViewById<TextView>(Resource.Id.tvtoruled).SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.ic_verified16_star_blue, 0);
                 //view.FindViewById<ImageView>(Resource.Id.torrenticon).SetImageResource(Resource.Drawable.ic_magnet32_trusted_blue_border);
             //if (item.IsVip == true)
                 //view.FindViewById<ImageView>(Resource.Id.torrenticon).SetImageResource(Resource.Drawable.ic_magnet32_trusted_border);
