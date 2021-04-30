@@ -1,106 +1,64 @@
 adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
-android.support.v7.widget.SwitchCompat;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_switch_editor.xml
+android.support.constraint.ConstraintLayout;obj\Release\90\res\layout\customview.xml
+android.support.constraint.ConstraintLayout;obj\Release\90\res\layout\torrentdetaildialog.xml
 android.support.v7.widget.Toolbar;obj\Release\90\res\layout\activity_main.xml
 androidhud.ProgressWheel;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingprogress.xml
+animated-selector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox.xml
+animated-vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked_to_indeterminate_animation.xml
+animated-vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked_to_unchecked_animation.xml
+animated-vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate_to_checked_animation.xml
+animated-vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate_to_unchecked_animation.xml
+animated-vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked_to_checked_animation.xml
+animated-vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked_to_indeterminate_animation.xml
 attr;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\attrs.xml
-attr;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\values.xml
-attr;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\values.xml
-AutoCompleteTextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_autocomplete_editor.xml
+attr;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\attrs.xml
 background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
-Button;obj\Release\90\res\layout\activity_main.xml
 Button;obj\Release\90\res\layout\searchpopup.xml
 cache-path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-CheckBox;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_checkbox_editor.xml
-CheckedTextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_list_editor_item.xml
-color;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\values.xml
-color;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\values.xml
 color;obj\Release\90\res\values\colors.xml
 color;obj\Release\90\res\values\ic_launcher_background.xml
-com.telerik.widget.autocomplete.RadAutoCompleteTextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_rad_autocomplete_editor.xml
-com.telerik.widget.numberpicker.RadNumberPicker;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_number_picker.xml
-com.telerik.widget.segmented.RadSegmentedView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_radio_group_editor.xml
-com.telerik.widget.segmented.RadSegmentedView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_segmented_editor.xml
 corners;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbg.xml
 corners;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbgdark.xml
-corners;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\events_popup_bg.xml
 corners;obj\Release\90\res\drawable\buttonrect.xml
 corners;obj\Release\90\res\drawable\circle_shape.xml
 corners;obj\Release\90\res\drawable\listrect.xml
 corners;obj\Release\90\res\drawable\myrect.xml
 corners;obj\Release\90\res\drawable\shape_listitem.xml
-corners;obj\Release\90\res\drawable\shape_searchdialog.xml
+corners;obj\Release\90\res\drawable\shape_tordetaildialog.xml
 corners;obj\Release\90\res\drawable\texteditrect.xml
+corners;obj\Release\90\res\drawable\textviewbg_rounded.xml
+corners;obj\Release\90\res\drawable\toolbar_shape.xml
 declare-styleable;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\attrs.xml
-declare-styleable;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\values.xml
-dimen;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\values.xml
-dimen;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values-sw320dp-v13\values-sw320dp-v13.xml
-dimen;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values-sw480dp-v13\values-sw480dp-v13.xml
-dimen;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values-sw720dp-v13\values-sw720dp-v13.xml
-EditText;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_date_editor.xml
-EditText;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_decimal_editor.xml
-EditText;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_integer_editor.xml
-EditText;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_text_editor.xml
-EditText;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_time_editor.xml
+declare-styleable;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\attrs.xml
 EditText;obj\Release\90\res\layout\searchpopup.xml
-enum;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\values.xml
+enum;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\attrs.xml
 external-cache-path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-fill;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_default_background.xml
 foreground;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
-FrameLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\layout\trial_message.xml
-FrameLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_default_group_layout.xml
-FrameLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_layout_1.xml
-FrameLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_layout_2.xml
-FrameLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_expandable_group_layout.xml
-FrameLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\number_picker.xml
 gradient;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbg.xml
 gradient;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbgdark.xml
 gradient;obj\Release\90\res\drawable\underline.xml
-ImageButton;obj\Release\90\res\layout\activity_main.xml
+group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked.xml
+group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate.xml
+group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked.xml
 ImageButton;obj\Release\90\res\layout\torrentdetaildialog.xml
 ImageView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingimage.xml
-ImageView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_layout_1.xml
-ImageView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_layout_2.xml
-ImageView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_expandable_group_layout.xml
-ImageView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\suggestion_item_layout.xml
+ImageView;obj\Release\90\res\layout\activity_main.xml
 ImageView;obj\Release\90\res\layout\customview.xml
 ImageView;obj\Release\90\res\layout\customviewxx.xml
 ImageView;obj\Release\90\res\layout\emptyview.xml
 ImageView;obj\Release\90\res\layout\searchpopup.xml
 ImageView;obj\Release\90\res\layout\torrentdetaildialog.xml
-item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_default_background.xml
-item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_focusable_bg.xml
-item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_list_item_states.xml
-item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\events_popup_bg.xml
-item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_active.xml
-item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_normal.xml
-item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_focusable_bg.xml
-item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\values.xml
+item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox.xml
+item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\values.xml
 item;obj\Release\90\res\menu\sourcemenu.xml
 item;obj\Release\90\res\menu\toolmenu.xml
 item;obj\Release\90\res\values\strings.xml
 item;obj\Release\90\res\values\styles.xml
-layer-list;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_default_background.xml
-layer-list;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_focusable_bg.xml
-layer-list;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\events_popup_bg.xml
-layer-list;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_active.xml
-layer-list;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_normal.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_agenda_appointment_view.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_agenda_day_view.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_agenda_month_view.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_agenda_week_view.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_default_group_layout.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_layout_1.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_layout_2.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_expandable_group_layout.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_group_layout.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_linear_layout.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\inline_event.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\popup_event.xml
-LinearLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\suggestion_item_layout.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\activity_main.xml
 LinearLayout;obj\Release\90\res\layout\activity_main.xml
 LinearLayout;obj\Release\90\res\layout\customview.xml
 LinearLayout;obj\Release\90\res\layout\customviewxx.xml
@@ -108,121 +66,111 @@ LinearLayout;obj\Release\90\res\layout\emptyview.xml
 LinearLayout;obj\Release\90\res\layout\listview_header.xml
 LinearLayout;obj\Release\90\res\layout\searchpopup.xml
 LinearLayout;obj\Release\90\res\layout\torrentdetaildialog.xml
-ListView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_list_editor.xml
 ListView;obj\Release\90\res\layout\activity_main.xml
 menu;obj\Release\90\res\menu\sourcemenu.xml
 menu;obj\Release\90\res\menu\toolmenu.xml
-merge;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_all_day_event_view.xml
-merge;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_day_event_view.xml
-padding;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\events_popup_bg.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_indeterminate_to_checked_box_inner_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_indeterminate_to_checked_box_outer_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_indeterminate_to_checked_icon_null_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_checked_box_inner_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_checked_box_outer_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_checked_icon_null_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_checked_icon_null_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_box_inner_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_check_path_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation.xml
+objectAnimator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_icon_null_animation.xml
 padding;obj\Release\90\res\drawable\circle_shape.xml
 padding;obj\Release\90\res\drawable\texteditrect.xml
+padding;obj\Release\90\res\drawable\textviewbg_rounded.xml
+path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked.xml
+path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate.xml
+path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked.xml
+pathInterpolator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\interpolator\btn_checkbox_checked_animation_interpolator_0.xml
+pathInterpolator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\interpolator\btn_checkbox_checked_animation_interpolator_1.xml
+pathInterpolator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\interpolator\btn_checkbox_indeterminate_animation_interpolator_1.xml
+pathInterpolator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\interpolator\btn_checkbox_unchecked_animation_interpolator_0.xml
+pathInterpolator;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\interpolator\btn_checkbox_unchecked_animation_interpolator_1.xml
 paths;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loading.xml
 RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loading.xml
 RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingimage.xml
 RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingprogress.xml
-RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_layout_1.xml
-RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_layout_2.xml
 RelativeLayout;obj\Release\90\res\layout\activity_main.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\attrs.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\strings.xml
+resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\attrs.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\values.xml
-resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\values.xml
-resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values-sw320dp-v13\values-sw320dp-v13.xml
-resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values-sw480dp-v13\values-sw480dp-v13.xml
-resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values-sw720dp-v13\values-sw720dp-v13.xml
+resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\strings.xml
 resources;obj\Release\90\res\values\colors.xml
 resources;obj\Release\90\res\values\ic_launcher_background.xml
 resources;obj\Release\90\res\values\strings.xml
 resources;obj\Release\90\res\values\styles.xml
-SeekBar;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_seek_bar_editor.xml
-selector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_list_item_states.xml
-selector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_focusable_bg.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_indeterminate_to_checked_box_inner_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_indeterminate_to_checked_box_outer_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_indeterminate_to_checked_icon_null_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_checked_box_inner_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_checked_box_outer_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_checked_icon_null_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_checked_box_inner_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_checked_icon_null_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_box_inner_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_box_outer_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_indeterminate_from_unchecked_icon_null_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_box_inner_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_check_path_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_box_inner_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_check_path_merged_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_from_indeterminate_icon_null_animation.xml
+set;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\anim\btn_checkbox_to_unchecked_icon_null_animation.xml
+set;obj\Release\90\res\anim\bottom_to_top.xml
 shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbg.xml
 shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbgdark.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_default_background.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_focusable_bg.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_invalid_background.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_invalid_icon.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_valid_background.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_valid_icon.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\dataform_number_picker_background.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\events_popup_bg.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_active.xml
-shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_normal.xml
 shape;obj\Release\90\res\drawable\buttonrect.xml
 shape;obj\Release\90\res\drawable\circle_shape.xml
 shape;obj\Release\90\res\drawable\listrect.xml
 shape;obj\Release\90\res\drawable\myrect.xml
 shape;obj\Release\90\res\drawable\shape_listitem.xml
-shape;obj\Release\90\res\drawable\shape_searchdialog.xml
+shape;obj\Release\90\res\drawable\shape_tordetaildialog.xml
 shape;obj\Release\90\res\drawable\texteditrect.xml
+shape;obj\Release\90\res\drawable\textviewbg_rounded.xml
+shape;obj\Release\90\res\drawable\toolbar_shape.xml
 shape;obj\Release\90\res\drawable\underline.xml
-size;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_focusable_bg.xml
-size;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_active.xml
-size;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_normal.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_focusable_bg.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_invalid_background.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_invalid_icon.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_valid_background.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_valid_icon.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\dataform_number_picker_background.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\events_popup_bg.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_active.xml
-solid;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable-v21\autocomplete_bg_normal.xml
 solid;obj\Release\90\res\drawable\buttonrect.xml
 solid;obj\Release\90\res\drawable\circle_shape.xml
-solid;obj\Release\90\res\drawable\listrect.xml
 solid;obj\Release\90\res\drawable\myrect.xml
-solid;obj\Release\90\res\drawable\shape_searchdialog.xml
+solid;obj\Release\90\res\drawable\shape_listitem.xml
+solid;obj\Release\90\res\drawable\shape_tordetaildialog.xml
 solid;obj\Release\90\res\drawable\texteditrect.xml
-Spinner;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_spinner_editor.xml
+solid;obj\Release\90\res\drawable\textviewbg_rounded.xml
+solid;obj\Release\90\res\drawable\toolbar_shape.xml
 Spinner;obj\Release\90\res\layout\searchpopup.xml
 string;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\strings.xml
-string;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\values.xml
+string;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\strings.xml
 string;obj\Release\90\res\values\strings.xml
 string-array;obj\Release\90\res\values\strings.xml
-stroke;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\autocomplete_default_background.xml
-stroke;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_invalid_background.xml
-stroke;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\data_form_valid_background.xml
-stroke;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\dataform_number_picker_background.xml
-stroke;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\drawable\events_popup_bg.xml
-stroke;obj\Release\90\res\drawable\buttonrect.xml
 stroke;obj\Release\90\res\drawable\circle_shape.xml
 stroke;obj\Release\90\res\drawable\listrect.xml
 stroke;obj\Release\90\res\drawable\myrect.xml
-stroke;obj\Release\90\res\drawable\shape_listitem.xml
-stroke;obj\Release\90\res\drawable\shape_searchdialog.xml
 stroke;obj\Release\90\res\drawable\texteditrect.xml
-style;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\values\values.xml
 style;obj\Release\90\res\values\styles.xml
-TableLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_root_layout.xml
-TableLayout;obj\Release\90\res\layout\customview.xml
 TableLayout;obj\Release\90\res\layout\customviewxx.xml
-TableRow;obj\Release\90\res\layout\customview.xml
 TableRow;obj\Release\90\res\layout\customviewxx.xml
+target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked_to_indeterminate_animation.xml
+target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked_to_unchecked_animation.xml
+target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate_to_checked_animation.xml
+target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate_to_unchecked_animation.xml
+target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked_to_checked_animation.xml
+target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked_to_indeterminate_animation.xml
 TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loading.xml
 TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingimage.xml
 TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingprogress.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\layout\trial_message.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_agenda_appointment_view.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_agenda_day_view.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_agenda_month_view.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_agenda_week_view.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_all_day_event_view.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\calendar_day_event_view.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_default_group_layout.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_header_layout_1.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_header_layout_2.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_editor_validation_layout_1.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_expandable_group_layout.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_spinner_item.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_text_viewer.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\inline_event.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\number_picker.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\popup_event.xml
-TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\suggestion_item_layout.xml
 TextView;obj\Release\90\res\layout\activity_main.xml
 TextView;obj\Release\90\res\layout\customview.xml
 TextView;obj\Release\90\res\layout\customviewxx.xml
@@ -230,4 +178,10 @@ TextView;obj\Release\90\res\layout\emptyview.xml
 TextView;obj\Release\90\res\layout\listview_header.xml
 TextView;obj\Release\90\res\layout\searchpopup.xml
 TextView;obj\Release\90\res\layout\torrentdetaildialog.xml
-ToggleButton;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\3\jl\res\layout\data_form_toggle_button_editor.xml
+transition;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox.xml
+translate;obj\Release\90\res\anim\bottom_to_top.xml
+vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked.xml
+vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate.xml
+vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked.xml
+View;obj\Release\90\res\layout\customview.xml
+View;obj\Release\90\res\layout\torrentdetaildialog.xml

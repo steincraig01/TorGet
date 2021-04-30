@@ -40,7 +40,6 @@ foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 foreground;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 gradient;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\drawable\roundedbg.xml
 gradient;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\drawable\roundedbgdark.xml
-gradient;obj\Debug\90\res\drawable\shape_listitem.xml
 gradient;obj\Debug\90\res\drawable\underline.xml
 group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_checked.xml
 group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate.xml
@@ -162,9 +161,7 @@ stroke;obj\Debug\90\res\drawable\myrect.xml
 stroke;obj\Debug\90\res\drawable\texteditrect.xml
 style;obj\Debug\90\res\values\styles.xml
 TableLayout;obj\Debug\90\res\layout\customviewxx.xml
-TableLayout;obj\Debug\90\res\layout\torrentdetaildialog.xml
 TableRow;obj\Debug\90\res\layout\customviewxx.xml
-TableRow;obj\Debug\90\res\layout\torrentdetaildialog.xml
 target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_checked_to_indeterminate_animation.xml
 target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_checked_to_unchecked_animation.xml
 target;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate_to_checked_animation.xml

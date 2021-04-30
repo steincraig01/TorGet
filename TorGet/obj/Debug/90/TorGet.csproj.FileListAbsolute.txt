@@ -415,4 +415,3 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_ConvertRes
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\TorGet.csprojAssemblyReference.cache
