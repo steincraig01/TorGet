@@ -134,10 +134,10 @@ namespace TorGet
             torrentDialog.Show();
             torrentDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
             torrentDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);;
-            tvTorName = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentName);
-            tvTorUploaded = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentUploaded);
-            tvTorName.Text = t.Name;
-            tvTorUploaded.Text = t.Uploaded;
+            //tvTorName = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentName);
+            //tvTorUploaded = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentUploaded);
+            //tvTorName.Text = t.Name;
+            //tvTorUploaded.Text = t.Uploaded;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)

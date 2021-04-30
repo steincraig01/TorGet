@@ -72,7 +72,8 @@ namespace TorGet
                     foreach (var parameter in parameters)
                     {
                         if (parameter.Trim().StartsWith("Uploaded"))
-                            torrent.Uploaded = parameter.Trim().Replace("Uploaded", "Date");
+                            torrent.Uploaded = parameter.Trim().Remove(0,9);
+                        //torrent.Uploaded = parameter.Trim().Replace("Uploaded", "");
                         if (parameter.Trim().StartsWith("Size"))
                         {    
                             string[] size = parameter.Trim().Split(' ');

@@ -71,7 +71,7 @@
         android:layout_height="match_parent"
         android:background="@android:color/transparent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="6dp"
+        android:dividerHeight="10dp"
         tools:visibility="gone"
         android:id="@+id/lvresults"/>
 </LinearLayout>

@@ -46,15 +46,15 @@ namespace TorGet
             view = context.LayoutInflater.Inflate(Resource.Layout.CustomView, null);
             //view.FindViewById<TextView>(Resource.Id.tvtoruled).SetPadding(0, 0, 20, 0);
             view.FindViewById<TextView>(Resource.Id.tvtorname).Text = item.Name;
-            view.FindViewById<TextView>(Resource.Id.tvtorsize).Text = item.Size; 
-            view.FindViewById<TextView>(Resource.Id.tvtoruploaded).Text = item.Uploaded;
+            view.FindViewById<TextView>(Resource.Id.tvtorsize).Text = "Size:\n" + item.Size; 
+            view.FindViewById<TextView>(Resource.Id.tvtoruploaded).Text = "Date:\n" + item.Uploaded;
             if (item.Uled == null)
-                view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = "Anonymous";
+                view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = "Uploader:\nAnonymous";
             if (item.Uled != null)
-                view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = item.Uled;
-            view.FindViewById<TextView>(Resource.Id.tvtorseeds).Text = "Seeds: " + item.Seeds.ToString();
-            view.FindViewById<TextView>(Resource.Id.tvtorleech).Text = "Leech: " + item.Leechers.ToString();
-            view.FindViewById<TextView>(Resource.Id.tvtorcategory).Text = item.CategoryParent + " " + "(" + item.Category + ")";
+                view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = "Uploader:\n"+item.Uled;
+            view.FindViewById<TextView>(Resource.Id.tvtorseeds).Text = "Seeds:\n" + item.Seeds.ToString();
+            view.FindViewById<TextView>(Resource.Id.tvtorleech).Text = "Leech:\n" + item.Leechers.ToString();
+            view.FindViewById<TextView>(Resource.Id.tvtorcategory).Text = "Category:\n" + item.CategoryParent + " " + "(" + item.Category + ")";
             //if (item.IsTrusted == true || item.IsVip == true)
                 //view.FindViewById<TextView>(Resource.Id.tvtoruled).SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.ic_verified16_star_blue, 0);
                 //view.FindViewById<ImageView>(Resource.Id.torrenticon).SetImageResource(Resource.Drawable.ic_magnet32_trusted_blue_border);
