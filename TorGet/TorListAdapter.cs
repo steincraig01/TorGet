@@ -44,27 +44,36 @@ namespace TorGet
             View view = convertView;
             view = null;
             view = context.LayoutInflater.Inflate(Resource.Layout.CustomView, null);
-            //view.FindViewById<TextView>(Resource.Id.tvtoruled).SetPadding(0, 0, 20, 0);
             view.FindViewById<TextView>(Resource.Id.tvtorname).Text = item.Name;
-            view.FindViewById<TextView>(Resource.Id.tvtorsize).Text = "Size:\n" + item.Size; 
-            view.FindViewById<TextView>(Resource.Id.tvtoruploaded).Text = "Date:\n" + item.Uploaded;
+            view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorsize).Text = "{md_save 18dp #007ACC} " + item.Size; 
+            view.FindViewById<TextView>(Resource.Id.tvtoruploaded).Text = item.Uploaded;
             if (item.Uled == null)
-                view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = "Uploader:\nAnonymous";
+                view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = "Anonymous";
             if (item.Uled != null)
-                view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = "Uploader:\n"+item.Uled;
-            view.FindViewById<TextView>(Resource.Id.tvtorseeds).Text = "Seeds:\n" + item.Seeds.ToString();
-            view.FindViewById<TextView>(Resource.Id.tvtorleech).Text = "Leech:\n" + item.Leechers.ToString();
-            view.FindViewById<TextView>(Resource.Id.tvtorcategory).Text = "Category:\n" + item.CategoryParent + " " + "(" + item.Category + ")";
-            //if (item.IsTrusted == true || item.IsVip == true)
-                //view.FindViewById<TextView>(Resource.Id.tvtoruled).SetCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, Resource.Drawable.ic_verified16_star_blue, 0);
-                //view.FindViewById<ImageView>(Resource.Id.torrenticon).SetImageResource(Resource.Drawable.ic_magnet32_trusted_blue_border);
-            //if (item.IsVip == true)
-                //view.FindViewById<ImageView>(Resource.Id.torrenticon).SetImageResource(Resource.Drawable.ic_magnet32_trusted_border);
+                view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = item.Uled;
+            view.FindViewById<TextView>(Resource.Id.tvtorseeds).Text = item.Seeds.ToString();
+            view.FindViewById<TextView>(Resource.Id.tvtorleech).Text = item.Leechers.ToString();
+            if (item.CategoryParent == "Audio")
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = "{md_music_note 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
+            if (item.CategoryParent == "Video")
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = "{md_movie 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
+            if (item.CategoryParent == "Applications")
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = "{md_apps 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
+            if (item.CategoryParent == "Games")
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = "{md_games 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
+            if (item.CategoryParent == "Porn")
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = "{md_local_play 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
+            if (item.CategoryParent == "Other")
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = "{md_more 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
+            // view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = item.CategoryParent + " " + "(" + item.Category + ")";
+            if (item.IsTrusted == true || item.IsVip == true)
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtortrusted).Text = "{md_verified_user 18dp #007ACC} Trusted";
+
 
             view.Elevation = 3;
             
             Animation myAnimation = AnimationUtils.LoadAnimation(Application.Context, Resource.Animation.abc_grow_fade_in_from_bottom);
-            myAnimation.Duration = 500;
+            //myAnimation.Duration = 100;
             view.StartAnimation(myAnimation);
 
             return view;

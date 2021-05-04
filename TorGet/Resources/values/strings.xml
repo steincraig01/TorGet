@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TorGet</string>
+    <string name="app_name">TorrentTools</string>
     <string name="action_settings">Settings</string>
     <string-array name="categories">
       <item>All</item>

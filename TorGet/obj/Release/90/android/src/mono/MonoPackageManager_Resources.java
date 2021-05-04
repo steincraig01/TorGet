@@ -1,8 +1,8 @@
 package mono;
 public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
-		/* We need to ensure that "TorGet.dll" comes first in this list. */
-		"TorGet.dll",
+		/* We need to ensure that "torget.dll" comes first in this list. */
+		"torget.dll",
 		"Acr.UserDialogs.dll",
 		"AndHUD.dll",
 		"HtmlAgilityPack.dll",

@@ -1,0 +1,4 @@
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\100\MonoAndroid,Version=v10.0.AssemblyAttributes.cs
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\100\build.props
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\100\adb.props
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\100\TorGet.csprojAssemblyReference.cache

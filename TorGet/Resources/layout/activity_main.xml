@@ -26,7 +26,7 @@
         tools:visibility="gone"
         android:id="@+id/status_layout">
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="Search results for:"
+            android:text="{md_storage} Search results for:"
             android:textColor="@android:color/black"
             android:textSize="16dp"
             android:textStyle="bold"
@@ -34,6 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:gravity="center_vertical"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="15dp"
             android:id="@+id/status_text" />

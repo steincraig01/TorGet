@@ -21,6 +21,9 @@ using JoanZapata.XamarinIconify;
 using JoanZapata.XamarinIconify.Fonts;
 using JoanZapata.XamarinIconify.Widget;
 using Android.Views.Animations;
+using System;
+using Java.Lang;
+using Android.Support.Design.Widget;
 
 namespace TorGet
 {
@@ -44,6 +47,7 @@ namespace TorGet
         TextView tvTorSeedLeech;
         RelativeLayout rlStatusLayout;
         Android.Support.V7.Widget.Toolbar toolbar;
+        Android.Support.V7.Widget.Toolbar detailDialogToolbar;
         IconTextView tvStatusText;
         Typeface customFont;
         RelativeLayout layoutWelcome;
@@ -76,6 +80,7 @@ namespace TorGet
             layoutWelcome = FindViewById<RelativeLayout>(Resource.Id.layout_welcome);
             
             tvStatusText = FindViewById<IconTextView>(Resource.Id.status_text);
+            //tvStatusText.Text = MaterialIcons.md_storage;
             rlStatusLayout = FindViewById<RelativeLayout>(Resource.Id.status_layout);
             rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
             torSearchView = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.menu_search);
@@ -83,12 +88,13 @@ namespace TorGet
             listViewAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_in_bottom);
             statusAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_fade_out);
             welcomeAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_grow_fade_in_from_bottom);
-            welcomeAnimShow.Duration = 3000;
+            welcomeAnimShow.Duration = 1000;
             layoutWelcome.Animation = welcomeAnimShow;
             listViewAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_out_bottom);
             Iconify.with(new MaterialModule());
             layoutWelcome.Visibility = ViewStates.Visible;
             Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+            
             //Check network connection
             //var current = Connectivity.NetworkAccess;
             //if (current != NetworkAccess.Internet)
@@ -124,16 +130,38 @@ namespace TorGet
         {
             var listView = sender as ListView;
             var t = torrents[e.Position];
-            Android.Widget.Toast.MakeText(this, t.Name, Android.Widget.ToastLength.Short).Show();
-            torrentDialog = new Dialog(this);
-            torrentDialog.SetContentView(Resource.Layout.TorrentDetailDialog);
-            torrentDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
+            //Android.Widget.Toast.MakeText(this, t.Name, Android.Widget.ToastLength.Short).Show();
+            Bundle mybundle = new Bundle();
+            mybundle.PutString("torname", t.Name);
+            //mybundle.PutString("torname", t.Name);
+            TorDetailDialogFragment modalBottomSheet = new TorDetailDialogFragment();
+            modalBottomSheet.Arguments = mybundle;
+            modalBottomSheet.Show(SupportFragmentManager, "modalMenu");
+
+            //View dialogView = LayoutInflater.Inflate(Resource.Layout.TorrentDetailDialog, null);
+            //BottomSheetDialog dialog = new BottomSheetDialog(this);
+            //dialog.SetContentView(dialogView);
+            //dialog.Show();
+
+            //FragmentTransaction transaction = FragmentManager.BeginTransaction().SetCustomAnimations(Resource.Animation.abc_grow_fade_in_from_bottom, Resource.Animation.abc_shrink_fade_out_from_bottom) ;
+            //TorDetailDialogFragment detdialog = new TorDetailDialogFragment();
+            //detdialog.Show(transaction, "Dialog Fragment"); 
+
+            //torrentDialog = new Dialog(this);
+            //torrentDialog.SetContentView(Resource.Layout.TorrentDetailDialog);
+            //torrentDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
             torSearchView.ClearFocus();
             torSearchView.SetQuery("", false);
             //MenuItemCompat.CollapseActionView(item);
-            torrentDialog.Show();
-            torrentDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
-            torrentDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);;
+            //torrentDialog.Show();
+            
+           // detailDialogToolbar = torrentDialog.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.tordetaildialog_toolbar);
+            //detailDialogToolbar.SetNavigationIcon(Resource.Drawable.ic_backarrow);
+            //detailDialogToolbar.SetOnMenuItemClickListener(new Android.Support.V7.Widget.Toolbar.on() {
+            
+            //torrentDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.FillParent);
+            //torrentDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);;
+            
             //tvTorName = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentName);
             //tvTorUploaded = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentUploaded);
             //tvTorName.Text = t.Name;
@@ -161,10 +189,12 @@ namespace TorGet
 
             torSearchView.QueryTextSubmit += (s, e) =>
             {
+                
+                Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
                 string query = e.NewText.ToString();
                 rlStatusLayout.Visibility = ViewStates.Gone;
                 listView.Visibility = ViewStates.Gone;
-                Thread thread = new Thread(() =>
+                System.Threading.Thread thread = new System.Threading.Thread(() =>
                 {
                     UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
                     torrents = Tpb.Search(new TpbQuery(query, 0, TpbQueryOrder.BySeeds,TpbTorrentCategory.All));
@@ -176,7 +206,7 @@ namespace TorGet
                     else
                     {
                         
-                        listViewAnimShow.Duration = 500;
+                        //listViewAnimShow.Duration = 200;
                         rlStatusLayout.StartAnimation(statusAnimShow);
                         listView.StartAnimation(listViewAnimShow);
                         RunOnUiThread(() => rlStatusLayout.Visibility = ViewStates.Visible);
@@ -192,7 +222,7 @@ namespace TorGet
                 torSearchView.SetQuery("", false);
                 MenuItemCompat.CollapseActionView(item);
                 tvStatusText.Text = "Search results for: " + e.NewText.ToString();
-                //tvStatusText.Text = "{md_accessibility}";
+                //tvStatusText.Text = MaterialIcons.md_dis;
                 layoutWelcome.Visibility = ViewStates.Gone;
                 
                 e.Handled = true;
@@ -248,27 +278,27 @@ namespace TorGet
             
             edtSearchQuery = searchDialog.FindViewById<EditText>(Resource.Id.edtsearch);
             string query = edtSearchQuery.Text.ToString();
-            Thread thread = new Thread(() =>
+            System.Threading.Thread thread = new System.Threading.Thread(() =>
             {
                 UserDialogs.Instance.ShowLoading("Please Wait …", MaskType.Black);
                 torrents = Tpb.Search(new TpbQuery(query));
                 RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
                 UserDialogs.Instance.HideLoading();
-            }); ;
+            });;
             thread.Start();
             searchDialog.Dismiss();
             searchDialog.Hide(); 
         }
-        //public void BtnClearSearch_Click(object sender, System.EventArgs e)
-        //{
-        //    listView.SetAdapter(null);
-        //    listView.StartAnimation(listViewAnimHide);
-        //    rlStatusLayout.StartAnimation(statusAnimHide);
-        //    listView.Visibility = ViewStates.Gone;
-        //    rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
-        //    var back = this.GetDrawable(Resource.Drawable.buttonrect);
-        //    toolbar.Background = back;
-        //    layoutWelcome.Visibility = ViewStates.Visible;
-        //}
     }
+    //public void BtnClearSearch_Click(object sender, System.EventArgs e)
+    //{
+    //    listView.SetAdapter(null);
+    //    listView.StartAnimation(listViewAnimHide);
+    //    rlStatusLayout.StartAnimation(statusAnimHide);
+    //    listView.Visibility = ViewStates.Gone;
+    //    rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
+    //    var back = this.GetDrawable(Resource.Drawable.buttonrect);
+    //    toolbar.Background = back;
+    //    layoutWelcome.Visibility = ViewStates.Visible;
+    //}
 }

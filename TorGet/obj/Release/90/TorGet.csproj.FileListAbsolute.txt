@@ -1,5 +1,12 @@
-F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\TorGet.dll
-F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\TorGet.pdb
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\x86\Release\TorGet.dll
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\x86\Release\TorGet.pdb
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\x86\Release\com.companyname.torget.apk
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\x86\Release\com.companyname.torget.aab
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\x86\Release\com.companyname.torget-Signed.aab
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\x86\Release\com.companyname.torget-Signed.apk
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\x86\Release\com.companyname.torget-Signed.apk.idsig
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\torget.dll
+F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\torget.pdb
 F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\com.companyname.torget.apk
 F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\com.companyname.torget.aab
 F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\com.companyname.torget-Signed.aab
@@ -8,6 +15,7 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\com.companyname.to
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\build.props
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\adb.props
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\TorGet.csprojAssemblyReference.cache
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\_VerifyXamarinAndroidSupportVersions.stamp
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\stamp\_BuildLibraryImportsCache.stamp
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\res.flag
@@ -27,8 +35,8 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\41\jl\files.
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\R.txt
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\R.cs.flag
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\TorGet.csproj.CoreCompileInputs.cache
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\TorGet.dll
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\TorGet.pdb
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\torget.dll
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\torget.pdb
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\bin\com.companyname.torget.apk
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\bin\base.zip
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\bin\com.companyname.torget.aab
@@ -177,8 +185,8 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Runtime.Serialization.pdb
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Xml.dll
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Xml.pdb
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\TorGet.dll
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\TorGet.pdb
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\torget.dll
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\torget.pdb
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\xamarin-iconify-common.dll
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\xamarin-iconify-material.dll
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\xamarin-iconify.dll
@@ -256,8 +264,6 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc641d0f40866223f90f\IconButton.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc641d0f40866223f90f\IconToggleButton.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc6439b217bab7914f95\ActionSheetListAdapter.java
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64444ce5cfa51aef0d\MainActivity.java
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64444ce5cfa51aef0d\TorListAdapter.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc644ffa86a675c5f86e\ViewContainer.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64692a67b1ffd85ce9\ActivityLifecycleCallbacks.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64713280f994f9b846\IconDrawable.java
@@ -272,6 +278,8 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64b76f6e8b2d8c8db1\LoginAppCompatDialogFragment.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64b76f6e8b2d8c8db1\PromptAppCompatDialogFragment.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64b76f6e8b2d8c8db1\TimeAppCompatDialogFragment.java
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64d217bfd50802b5aa\MainActivity.java
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64d217bfd50802b5aa\TorListAdapter.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64ed83947e49f54016\Border.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64ed83947e49f54016\ContainerLayout.java
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64ed83947e49f54016\CustomHorizontalScrollView.java

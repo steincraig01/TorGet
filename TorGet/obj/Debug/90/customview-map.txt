@@ -1,8 +1,8 @@
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
-android.support.constraint.ConstraintLayout;obj\Debug\90\res\layout\customview.xml
 android.support.constraint.ConstraintLayout;obj\Debug\90\res\layout\torrentdetaildialog.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\activity_main.xml
+android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\torrentdetaildialog.xml
 androidhud.ProgressWheel;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingprogress.xml
 animated-selector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox.xml
 animated-vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_checked_to_indeterminate_animation.xml
@@ -16,6 +16,7 @@ attr;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\90\res\layout\searchpopup.xml
+Button;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 cache-path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
@@ -44,13 +45,13 @@ gradient;obj\Debug\90\res\drawable\underline.xml
 group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_checked.xml
 group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate.xml
 group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_unchecked.xml
-ImageButton;obj\Debug\90\res\layout\torrentdetaildialog.xml
 ImageView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingimage.xml
 ImageView;obj\Debug\90\res\layout\activity_main.xml
 ImageView;obj\Debug\90\res\layout\customview.xml
 ImageView;obj\Debug\90\res\layout\customviewxx.xml
 ImageView;obj\Debug\90\res\layout\emptyview.xml
 ImageView;obj\Debug\90\res\layout\searchpopup.xml
+ImageView;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 ImageView;obj\Debug\90\res\layout\torrentdetaildialog.xml
 item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox.xml
 item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\values\values.xml
@@ -58,13 +59,16 @@ item;obj\Debug\90\res\menu\sourcemenu.xml
 item;obj\Debug\90\res\menu\toolmenu.xml
 item;obj\Debug\90\res\values\strings.xml
 item;obj\Debug\90\res\values\styles.xml
+JoanZapata.XamarinIconify.Widget.IconButton;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\activity_main.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\customview.xml
 LinearLayout;obj\Debug\90\res\layout\activity_main.xml
 LinearLayout;obj\Debug\90\res\layout\customview.xml
 LinearLayout;obj\Debug\90\res\layout\customviewxx.xml
 LinearLayout;obj\Debug\90\res\layout\emptyview.xml
 LinearLayout;obj\Debug\90\res\layout\listview_header.xml
 LinearLayout;obj\Debug\90\res\layout\searchpopup.xml
+LinearLayout;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 LinearLayout;obj\Debug\90\res\layout\torrentdetaildialog.xml
 ListView;obj\Debug\90\res\layout\activity_main.xml
 menu;obj\Debug\90\res\menu\sourcemenu.xml
@@ -103,6 +107,7 @@ RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp
 RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingimage.xml
 RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingprogress.xml
 RelativeLayout;obj\Debug\90\res\layout\activity_main.xml
+RelativeLayout;obj\Debug\90\res\layout\customview.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\values\attrs.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\values\strings.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\values\attrs.xml
@@ -177,11 +182,11 @@ TextView;obj\Debug\90\res\layout\customviewxx.xml
 TextView;obj\Debug\90\res\layout\emptyview.xml
 TextView;obj\Debug\90\res\layout\listview_header.xml
 TextView;obj\Debug\90\res\layout\searchpopup.xml
+TextView;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 TextView;obj\Debug\90\res\layout\torrentdetaildialog.xml
 transition;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox.xml
 translate;obj\Debug\90\res\anim\bottom_to_top.xml
 vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_checked.xml
 vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate.xml
 vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox_unchecked.xml
-View;obj\Debug\90\res\layout\customview.xml
 View;obj\Debug\90\res\layout\torrentdetaildialog.xml

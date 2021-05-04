@@ -46,11 +46,11 @@
           "dependencies": {
             "Acr.UserDialogs": {
               "target": "Package",
-              "version": "[7.1.0.475, )"
+              "version": "[7.1.0.483, )"
             },
             "HtmlAgilityPack": {
               "target": "Package",
-              "version": "[1.11.30, )"
+              "version": "[1.11.33, )"
             },
             "Syncfusion.Xamarin.Buttons.Android": {
               "target": "Package",

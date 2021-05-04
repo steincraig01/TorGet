@@ -31,8 +31,8 @@
 	.section	.rodata.map_aname.5,"aMS",%progbits,1
 	.type	.L.map_aname.5, %object
 .L.map_aname.5:
-	.asciz	"TorGet"
-	.size	.L.map_aname.5, 7
+	.asciz	"Acr.UserDialogs"
+	.size	.L.map_aname.5, 16
 
 	.section	.rodata.map_aname.6,"aMS",%progbits,1
 	.type	.L.map_aname.6, %object
@@ -61,26 +61,26 @@
 	.section	.rodata.map_aname.10,"aMS",%progbits,1
 	.type	.L.map_aname.10, %object
 .L.map_aname.10:
-	.asciz	"Acr.UserDialogs"
-	.size	.L.map_aname.10, 16
+	.asciz	"Mono.Android"
+	.size	.L.map_aname.10, 13
 
 	.section	.rodata.map_aname.11,"aMS",%progbits,1
 	.type	.L.map_aname.11, %object
 .L.map_aname.11:
-	.asciz	"Mono.Android"
-	.size	.L.map_aname.11, 13
+	.asciz	"Xamarin.Android.Support.DrawerLayout"
+	.size	.L.map_aname.11, 37
 
 	.section	.rodata.map_aname.12,"aMS",%progbits,1
 	.type	.L.map_aname.12, %object
 .L.map_aname.12:
-	.asciz	"Xamarin.Android.Support.DrawerLayout"
-	.size	.L.map_aname.12, 37
+	.asciz	"Xamarin.Android.Support.Compat"
+	.size	.L.map_aname.12, 31
 
 	.section	.rodata.map_aname.13,"aMS",%progbits,1
 	.type	.L.map_aname.13, %object
 .L.map_aname.13:
-	.asciz	"Xamarin.Android.Support.Compat"
-	.size	.L.map_aname.13, 31
+	.asciz	"torget"
+	.size	.L.map_aname.13, 7
 
 	.section	.rodata.map_aname.14,"aMS",%progbits,1
 	.type	.L.map_aname.14, %object

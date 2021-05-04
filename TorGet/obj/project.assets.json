@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "MonoAndroid,Version=v9.0": {
-      "Acr.UserDialogs/7.1.0.475": {
+      "Acr.UserDialogs/7.1.0.483": {
         "type": "package",
         "dependencies": {
           "AndHUD": "1.4.2",
@@ -27,7 +27,7 @@
           "lib/MonoAndroid81/AndHUD.dll": {}
         }
       },
-      "HtmlAgilityPack/1.11.30": {
+      "HtmlAgilityPack/1.11.33": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
@@ -848,14 +848,14 @@
     }
   },
   "libraries": {
-    "Acr.UserDialogs/7.1.0.475": {
-      "sha512": "iGW0uda9bmbGcPABm0UzDjSd5DtGwcTCkOg265aUxKhG9IW0HtoNA3gASMXK64hMye2A+9mfkcmWJDOudbhJWw==",
+    "Acr.UserDialogs/7.1.0.483": {
+      "sha512": "Uoo7ZcrHl9SN3M05A5/e3qwUcR7lFhgsSI+7HaVSPnIQcectHNrERJbLoV8HLjDJc+0/3t3tfinxDHu/e2fiMw==",
       "type": "package",
-      "path": "acr.userdialogs/7.1.0.475",
+      "path": "acr.userdialogs/7.1.0.483",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "acr.userdialogs.7.1.0.475.nupkg.sha512",
+        "acr.userdialogs.7.1.0.483.nupkg.sha512",
         "acr.userdialogs.nuspec",
         "lib/monoandroid10.0/Acr.UserDialogs.dll",
         "lib/monoandroid10.0/Acr.UserDialogs.pdb",
@@ -895,14 +895,14 @@
         "lib/MonoAndroid81/AndHUD.dll"
       ]
     },
-    "HtmlAgilityPack/1.11.30": {
-      "sha512": "IuOSVuuHCJKrnAjNe5rZnZCyR/NpXL6ExEL7UiM8h4fnhbt8tLqIKol9q5Lv0uoxWO8fl9Uq+1kpGfMDUdr5zA==",
+    "HtmlAgilityPack/1.11.33": {
+      "sha512": "ccsOdeRuObzQNy3FGLHd0MTmPvEu9nKUYDAqLham1XD3azbU+gcyRF6Hu87A68b7WqGpCdBZiLU7CwJVVmTb6A==",
       "type": "package",
-      "path": "htmlagilitypack/1.11.30",
+      "path": "htmlagilitypack/1.11.33",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "htmlagilitypack.1.11.30.nupkg.sha512",
+        "htmlagilitypack.1.11.33.nupkg.sha512",
         "htmlagilitypack.nuspec",
         "lib/Net35/HtmlAgilityPack.dll",
         "lib/Net35/HtmlAgilityPack.pdb",
@@ -1855,8 +1855,8 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v9.0": [
-      "Acr.UserDialogs >= 7.1.0.475",
-      "HtmlAgilityPack >= 1.11.30",
+      "Acr.UserDialogs >= 7.1.0.483",
+      "HtmlAgilityPack >= 1.11.33",
       "Syncfusion.Xamarin.Buttons.Android >= 18.1.0.52",
       "Xamarin.Android.Support.Constraint.Layout >= 2.0.1",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
@@ -1914,11 +1914,11 @@
         "dependencies": {
           "Acr.UserDialogs": {
             "target": "Package",
-            "version": "[7.1.0.475, )"
+            "version": "[7.1.0.483, )"
           },
           "HtmlAgilityPack": {
             "target": "Package",
-            "version": "[1.11.30, )"
+            "version": "[1.11.33, )"
           },
           "Syncfusion.Xamarin.Buttons.Android": {
             "target": "Package",
