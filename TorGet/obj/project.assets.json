@@ -66,6 +66,15 @@
           "lib/MonoAndroid10/_._": {}
         }
       },
+      "TorrentTitleParser/1.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/TorrentTitleParser.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/TorrentTitleParser.dll": {}
+        }
+      },
       "xamarin-iconify/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -1030,6 +1039,19 @@
         "version.txt"
       ]
     },
+    "TorrentTitleParser/1.0.3": {
+      "sha512": "7I9NYwQMPPsF6eGqt9GJ7vrfw3XbXB5N51u/S2SKg9aczReKVrMf1vSibelkidFdrmFA7GFtmV3TK9PQI4YRkg==",
+      "type": "package",
+      "path": "torrenttitleparser/1.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/TorrentTitleParser.dll",
+        "torrenttitleparser.1.0.3.nupkg.sha512",
+        "torrenttitleparser.nuspec"
+      ]
+    },
     "xamarin-iconify/1.0.0": {
       "sha512": "0RtqYNSeresGXUhcM7rO3BfzIVCn18v6Y4bwTMW3qqsv8epSg0cOXSgCNcJC7dl9NvWHP8rlZhU0ywSu+vFqPA==",
       "type": "package",
@@ -1858,6 +1880,7 @@
       "Acr.UserDialogs >= 7.1.0.483",
       "HtmlAgilityPack >= 1.11.33",
       "Syncfusion.Xamarin.Buttons.Android >= 18.1.0.52",
+      "TorrentTitleParser >= 1.0.3",
       "Xamarin.Android.Support.Constraint.Layout >= 2.0.1",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
       "Xamarin.Android.Support.CustomTabs >= 28.0.0.3",
@@ -1923,6 +1946,10 @@
           "Syncfusion.Xamarin.Buttons.Android": {
             "target": "Package",
             "version": "[18.1.0.52, )"
+          },
+          "TorrentTitleParser": {
+            "target": "Package",
+            "version": "[1.0.3, )"
           },
           "Xamarin.Android.Support.Constraint.Layout": {
             "target": "Package",

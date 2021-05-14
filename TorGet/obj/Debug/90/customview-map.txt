@@ -16,7 +16,6 @@ attr;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\90\res\layout\searchpopup.xml
-Button;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 cache-path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\41\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
@@ -51,7 +50,6 @@ ImageView;obj\Debug\90\res\layout\customview.xml
 ImageView;obj\Debug\90\res\layout\customviewxx.xml
 ImageView;obj\Debug\90\res\layout\emptyview.xml
 ImageView;obj\Debug\90\res\layout\searchpopup.xml
-ImageView;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 ImageView;obj\Debug\90\res\layout\torrentdetaildialog.xml
 item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\drawable\btn_checkbox.xml
 item;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\values\values.xml
@@ -59,9 +57,9 @@ item;obj\Debug\90\res\menu\sourcemenu.xml
 item;obj\Debug\90\res\menu\toolmenu.xml
 item;obj\Debug\90\res\values\strings.xml
 item;obj\Debug\90\res\values\styles.xml
-JoanZapata.XamarinIconify.Widget.IconButton;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\activity_main.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\customview.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 LinearLayout;obj\Debug\90\res\layout\activity_main.xml
 LinearLayout;obj\Debug\90\res\layout\customview.xml
 LinearLayout;obj\Debug\90\res\layout\customviewxx.xml

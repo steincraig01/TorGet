@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[18.1.0.52, )"
             },
+            "TorrentTitleParser": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Xamarin.Android.Support.Constraint.Layout": {
               "target": "Package",
               "version": "[2.0.1, )"

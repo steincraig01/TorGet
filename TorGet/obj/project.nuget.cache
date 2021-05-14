@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wZsBa59/yLYuE1kxkeFpG7hsLFNIg7M4dG2WiLElv7oTihn3lzPgVhGMFRJAbDJHbRGmceM84HE0Uwyly8VUhw==",
+  "dgSpecHash": "cjYUK3I35YsnS/STAt0nGJojT4ptaDm8TWCYSBQQyz+rejbrKqMaAXreMCLUFfbqTeXQzTurKVcA+wIWzU2mAA==",
   "success": true,
   "projectFilePath": "F:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\Owner\\.nuget\\packages\\syncfusion.licensing\\18.1.0.52\\syncfusion.licensing.18.1.0.52.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\syncfusion.xamarin.buttons.android\\18.1.0.52\\syncfusion.xamarin.buttons.android.18.1.0.52.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\torrenttitleparser\\1.0.3\\torrenttitleparser.1.0.3.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\xamarin-iconify\\1.0.0\\xamarin-iconify.1.0.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\xamarin-iconify-common\\1.0.0\\xamarin-iconify-common.1.0.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\xamarin-iconify-material\\1.0.0\\xamarin-iconify-material.1.0.0.nupkg.sha512",

@@ -1,6 +1,9 @@
 TorGet.MainActivity, torget;crc64d217bfd50802b5aa.MainActivity
 TorGet.MainActivity;crc64d217bfd50802b5aa.MainActivity
 torget.MainActivity;crc64d217bfd50802b5aa.MainActivity
+TorGet.TorDetailDialogFragment, torget;crc64d217bfd50802b5aa.TorDetailDialogFragment
+TorGet.TorDetailDialogFragment;crc64d217bfd50802b5aa.TorDetailDialogFragment
+torget.TorDetailDialogFragment;crc64d217bfd50802b5aa.TorDetailDialogFragment
 TorGet.TorListAdapter, torget;crc64d217bfd50802b5aa.TorListAdapter
 TorGet.TorListAdapter;crc64d217bfd50802b5aa.TorListAdapter
 torget.TorListAdapter;crc64d217bfd50802b5aa.TorListAdapter

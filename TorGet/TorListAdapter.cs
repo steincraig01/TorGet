@@ -45,7 +45,7 @@ namespace TorGet
             view = null;
             view = context.LayoutInflater.Inflate(Resource.Layout.CustomView, null);
             view.FindViewById<TextView>(Resource.Id.tvtorname).Text = item.Name;
-            view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorsize).Text = "{md_save 18dp #007ACC} " + item.Size; 
+            view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorsize).Text = item.Size; 
             view.FindViewById<TextView>(Resource.Id.tvtoruploaded).Text = item.Uploaded;
             if (item.Uled == null)
                 view.FindViewById<TextView>(Resource.Id.tvtoruled).Text = "Anonymous";

@@ -1,8 +1,8 @@
 adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
-android.support.constraint.ConstraintLayout;obj\Release\90\res\layout\customview.xml
 android.support.constraint.ConstraintLayout;obj\Release\90\res\layout\torrentdetaildialog.xml
 android.support.v7.widget.Toolbar;obj\Release\90\res\layout\activity_main.xml
+android.support.v7.widget.Toolbar;obj\Release\90\res\layout\torrentdetaildialog.xml
 androidhud.ProgressWheel;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingprogress.xml
 animated-selector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox.xml
 animated-vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked_to_indeterminate_animation.xml
@@ -44,7 +44,6 @@ gradient;obj\Release\90\res\drawable\underline.xml
 group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked.xml
 group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate.xml
 group;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked.xml
-ImageButton;obj\Release\90\res\layout\torrentdetaildialog.xml
 ImageView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingimage.xml
 ImageView;obj\Release\90\res\layout\activity_main.xml
 ImageView;obj\Release\90\res\layout\customview.xml
@@ -59,12 +58,15 @@ item;obj\Release\90\res\menu\toolmenu.xml
 item;obj\Release\90\res\values\strings.xml
 item;obj\Release\90\res\values\styles.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\activity_main.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\customview.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\torrentbottomsheetlayout.xml
 LinearLayout;obj\Release\90\res\layout\activity_main.xml
 LinearLayout;obj\Release\90\res\layout\customview.xml
 LinearLayout;obj\Release\90\res\layout\customviewxx.xml
 LinearLayout;obj\Release\90\res\layout\emptyview.xml
 LinearLayout;obj\Release\90\res\layout\listview_header.xml
 LinearLayout;obj\Release\90\res\layout\searchpopup.xml
+LinearLayout;obj\Release\90\res\layout\torrentbottomsheetlayout.xml
 LinearLayout;obj\Release\90\res\layout\torrentdetaildialog.xml
 ListView;obj\Release\90\res\layout\activity_main.xml
 menu;obj\Release\90\res\menu\sourcemenu.xml
@@ -103,6 +105,7 @@ RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\
 RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingimage.xml
 RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingprogress.xml
 RelativeLayout;obj\Release\90\res\layout\activity_main.xml
+RelativeLayout;obj\Release\90\res\layout\customview.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\attrs.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\strings.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\attrs.xml
@@ -177,11 +180,11 @@ TextView;obj\Release\90\res\layout\customviewxx.xml
 TextView;obj\Release\90\res\layout\emptyview.xml
 TextView;obj\Release\90\res\layout\listview_header.xml
 TextView;obj\Release\90\res\layout\searchpopup.xml
+TextView;obj\Release\90\res\layout\torrentbottomsheetlayout.xml
 TextView;obj\Release\90\res\layout\torrentdetaildialog.xml
 transition;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox.xml
 translate;obj\Release\90\res\anim\bottom_to_top.xml
 vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_checked.xml
 vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_indeterminate.xml
 vector;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\drawable\btn_checkbox_unchecked.xml
-View;obj\Release\90\res\layout\customview.xml
 View;obj\Release\90\res\layout\torrentdetaildialog.xml

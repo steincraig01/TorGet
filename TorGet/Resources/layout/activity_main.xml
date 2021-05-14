@@ -21,13 +21,13 @@
     <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:background="@android:color/white"
         tools:visibility="gone"
         android:id="@+id/status_layout">
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="{md_storage} Search results for:"
-            android:textColor="@android:color/black"
+            android:text="Search results for:"
+            
             android:textSize="16dp"
             android:textStyle="bold"
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:layout_centerVertical="true"
             android:gravity="center_vertical"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="8dp"
             android:id="@+id/status_text" />
     </RelativeLayout>
     <RelativeLayout

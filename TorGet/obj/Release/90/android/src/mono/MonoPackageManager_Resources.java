@@ -8,6 +8,7 @@ public class MonoPackageManager_Resources {
 		"HtmlAgilityPack.dll",
 		"Syncfusion.Buttons.Android.dll",
 		"Syncfusion.Licensing.dll",
+		"TorrentTitleParser.dll",
 		"xamarin-iconify-common.dll",
 		"xamarin-iconify-material.dll",
 		"xamarin-iconify.dll",

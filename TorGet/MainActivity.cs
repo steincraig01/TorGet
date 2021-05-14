@@ -24,6 +24,8 @@ using Android.Views.Animations;
 using System;
 using Java.Lang;
 using Android.Support.Design.Widget;
+using System.Net;
+
 
 namespace TorGet
 {
@@ -57,6 +59,7 @@ namespace TorGet
         Animation statusAnimHide;
         Animation listViewAnimHide;
         Animation welcomeAnimShow;
+        bool IsConnected;
 
 
 
@@ -68,17 +71,18 @@ namespace TorGet
             base.OnCreate(savedInstanceState);
             UserDialogs.Init(this);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+
             SetContentView(Resource.Layout.activity_main);
             customFont = Typeface.CreateFromAsset(Application.Assets, "commonfont.ttf");
             listView = FindViewById<ListView>(Resource.Id.lvresults);
             listView.ItemClick += OnListItemClick;
-            listView.SetPadding(10, 10, 10, 10);
+            listView.SetPadding(16, 16, 16, 16);
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "TorrentTools";
             //btnClearSearch.Click += BtnClearSearch_Click;
             layoutWelcome = FindViewById<RelativeLayout>(Resource.Id.layout_welcome);
-            
+
             tvStatusText = FindViewById<IconTextView>(Resource.Id.status_text);
             //tvStatusText.Text = MaterialIcons.md_storage;
             rlStatusLayout = FindViewById<RelativeLayout>(Resource.Id.status_layout);
@@ -93,8 +97,10 @@ namespace TorGet
             listViewAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_out_bottom);
             Iconify.with(new MaterialModule());
             layoutWelcome.Visibility = ViewStates.Visible;
-            Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
-            
+            IsConnected = true;
+
+            //Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+
             //Check network connection
             //var current = Connectivity.NetworkAccess;
             //if (current != NetworkAccess.Internet)
@@ -105,8 +111,9 @@ namespace TorGet
 
         protected override void OnStart()
         {
-           // Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+            //Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
             //layoutWelcome.Visibility = ViewStates.Visible;
+            CheckInternetConnection();
             base.OnStart();
         }
 
@@ -115,9 +122,28 @@ namespace TorGet
 
             var access = e.NetworkAccess;
             var profiles = e.ConnectionProfiles;
-            if (access == NetworkAccess.None)
-                Toast.MakeText(this, "No internet connection detected", ToastLength.Short).Show();
+            if (access == Xamarin.Essentials.NetworkAccess.None)
+                IsConnected = false;
+            CheckInternetConnection();
+            //Toast.MakeText(this, "No internet connection detected", ToastLength.Short).Show();
 
+        }
+
+        public void CheckInternetConnection()
+        {
+            string CheckUrl = "http://google.com";
+            try
+            {
+                HttpWebRequest iNetRequest = (HttpWebRequest)WebRequest.Create(CheckUrl);
+                iNetRequest.Timeout = 5000;
+                WebResponse iNetResponse = iNetRequest.GetResponse();
+                iNetResponse.Close();
+                IsConnected = true;
+            }
+            catch (WebException ex)
+            {
+                IsConnected = false;
+            }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
@@ -133,10 +159,13 @@ namespace TorGet
             //Android.Widget.Toast.MakeText(this, t.Name, Android.Widget.ToastLength.Short).Show();
             Bundle mybundle = new Bundle();
             mybundle.PutString("torname", t.Name);
+            mybundle.PutString("magnet", t.Magnet);
+            mybundle.PutString("pageurl", t.TpbPage);
             //mybundle.PutString("torname", t.Name);
             TorDetailDialogFragment modalBottomSheet = new TorDetailDialogFragment();
             modalBottomSheet.Arguments = mybundle;
             modalBottomSheet.Show(SupportFragmentManager, "modalMenu");
+
 
             //View dialogView = LayoutInflater.Inflate(Resource.Layout.TorrentDetailDialog, null);
             //BottomSheetDialog dialog = new BottomSheetDialog(this);
@@ -150,18 +179,20 @@ namespace TorGet
             //torrentDialog = new Dialog(this);
             //torrentDialog.SetContentView(Resource.Layout.TorrentDetailDialog);
             //torrentDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
+            
             torSearchView.ClearFocus();
             torSearchView.SetQuery("", false);
+           
             //MenuItemCompat.CollapseActionView(item);
             //torrentDialog.Show();
-            
-           // detailDialogToolbar = torrentDialog.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.tordetaildialog_toolbar);
+
+            // detailDialogToolbar = torrentDialog.FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.tordetaildialog_toolbar);
             //detailDialogToolbar.SetNavigationIcon(Resource.Drawable.ic_backarrow);
             //detailDialogToolbar.SetOnMenuItemClickListener(new Android.Support.V7.Widget.Toolbar.on() {
-            
+
             //torrentDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.FillParent);
             //torrentDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);;
-            
+
             //tvTorName = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentName);
             //tvTorUploaded = torrentDialog.FindViewById<TextView>(Resource.Id.tvTorrentUploaded);
             //tvTorName.Text = t.Name;
@@ -170,7 +201,7 @@ namespace TorGet
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            
+
             MenuInflater.Inflate(Resource.Menu.toolmenu, menu);
             var item = menu.FindItem(Resource.Id.menu_search);
             var searchItem = MenuItemCompat.GetActionView(item);
@@ -182,50 +213,58 @@ namespace TorGet
             var id = torSearchView.Context.Resources.GetIdentifier("search_src_text", "id", PackageName);
             var searchEditText = torSearchView.FindViewById<EditText>(id);
             var searchIcon = torSearchView.FindViewById<ImageView>(simgid);
-            
+
             searchIcon.SetColorFilter(Android.Graphics.Color.White);
             searchEditText.SetTextColor(Android.Graphics.Color.White);
             searchEditText.SetHintTextColor(Android.Graphics.Color.White);
 
             torSearchView.QueryTextSubmit += (s, e) =>
             {
-                
+
                 Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
-                string query = e.NewText.ToString();
-                rlStatusLayout.Visibility = ViewStates.Gone;
-                listView.Visibility = ViewStates.Gone;
-                System.Threading.Thread thread = new System.Threading.Thread(() =>
+                if (IsConnected == true)
                 {
-                    UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
-                    torrents = Tpb.Search(new TpbQuery(query, 0, TpbQueryOrder.BySeeds,TpbTorrentCategory.All));
-                    if (torrents.Count == 0)
+                    string query = e.NewText.ToString();
+                    rlStatusLayout.Visibility = ViewStates.Gone;
+                    listView.Visibility = ViewStates.Gone;
+                    System.Threading.Thread thread = new System.Threading.Thread(() =>
                     {
-                        RunOnUiThread(() => Toast.MakeText(this, "No results found for " + query, ToastLength.Short).Show());
-                        
-                    }
-                    else
-                    {
-                        
-                        //listViewAnimShow.Duration = 200;
-                        rlStatusLayout.StartAnimation(statusAnimShow);
-                        listView.StartAnimation(listViewAnimShow);
-                        RunOnUiThread(() => rlStatusLayout.Visibility = ViewStates.Visible);
-                        RunOnUiThread(() => listView.Visibility = ViewStates.Visible);
-                        RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
-                        
-                    };
-                    
-                    UserDialogs.Instance.HideLoading();
-                }); ;
-                thread.Start();
-                torSearchView.ClearFocus();
-                torSearchView.SetQuery("", false);
-                MenuItemCompat.CollapseActionView(item);
-                tvStatusText.Text = "Search results for: " + e.NewText.ToString();
-                //tvStatusText.Text = MaterialIcons.md_dis;
-                layoutWelcome.Visibility = ViewStates.Gone;
-                
-                e.Handled = true;
+                        UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
+                        torrents = Tpb.Search(new TpbQuery(query, 0, TpbQueryOrder.BySeeds, TpbTorrentCategory.All));
+                        if (torrents.Count == 0)
+                        {
+                            RunOnUiThread(() => Toast.MakeText(this, "No results found for " + query, ToastLength.Short).Show());
+
+                        }
+                        else
+                        {
+
+                            //listViewAnimShow.Duration = 200;
+                            rlStatusLayout.StartAnimation(statusAnimShow);
+                            listView.StartAnimation(listViewAnimShow);
+                            RunOnUiThread(() => rlStatusLayout.Visibility = ViewStates.Visible);
+                            RunOnUiThread(() => listView.Visibility = ViewStates.Visible);
+                            RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
+
+                        };
+
+                        UserDialogs.Instance.HideLoading();
+                    }); ;
+                    thread.Start();
+                    torSearchView.ClearFocus();
+                    torSearchView.SetQuery("", false);
+                    MenuItemCompat.CollapseActionView(item);
+                    tvStatusText.Text = "Search results for: " + e.NewText.ToString();
+                    //tvStatusText.Text = MaterialIcons.md_dis;
+                    layoutWelcome.Visibility = ViewStates.Gone;
+
+                    e.Handled = true;
+                }
+                else
+                {
+                    torSearchView.ClearFocus();
+                    Toast.MakeText(this, "No internet connection detected!", ToastLength.Long).Show();
+                };
             };
             //return true;
             return base.OnCreateOptionsMenu(menu);
@@ -235,18 +274,18 @@ namespace TorGet
         {
             if (item.TitleFormatted.ToString() == "Sea")
             {
-                
+
                 searchDialog = new Dialog(this);
-                
+
                 searchDialog.SetContentView(Resource.Layout.searchpopup);
                 searchDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
                 //searchDialog.Window.ClearFlags(WindowManagerFlags.DimBehind);
-                
+
                 searchDialog.Show();
                 searchDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
-                
+
                 searchDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);
-               
+
                 spinnerCategory = searchDialog.FindViewById<Spinner>(Resource.Id.spinner_category);
                 //spinnerProvider = searchDialog.FindViewById<Spinner>(Resource.Id.spinner_provider);
                 //spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
@@ -261,7 +300,7 @@ namespace TorGet
 
                 btnSearch = searchDialog.FindViewById<Button>(Resource.Id.btnsearch);
                 btnSearch.Click += BtnSearch_Click;
-                
+
             }
 
             if (item.TitleFormatted.ToString() == "Searc")
@@ -270,12 +309,12 @@ namespace TorGet
 
 
             }
-                //Toast.MakeText(this, "Action selected: " + item.TitleFormatted, ToastLength.Short).Show();
-                return base.OnOptionsItemSelected(item);
+            //Toast.MakeText(this, "Action selected: " + item.TitleFormatted, ToastLength.Short).Show();
+            return base.OnOptionsItemSelected(item);
         }
         private void BtnSearch_Click(object sender, System.EventArgs e)
         {
-            
+
             edtSearchQuery = searchDialog.FindViewById<EditText>(Resource.Id.edtsearch);
             string query = edtSearchQuery.Text.ToString();
             System.Threading.Thread thread = new System.Threading.Thread(() =>
@@ -284,10 +323,10 @@ namespace TorGet
                 torrents = Tpb.Search(new TpbQuery(query));
                 RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
                 UserDialogs.Instance.HideLoading();
-            });;
+            }); ;
             thread.Start();
             searchDialog.Dismiss();
-            searchDialog.Hide(); 
+            searchDialog.Hide();
         }
     }
     //public void BtnClearSearch_Click(object sender, System.EventArgs e)
