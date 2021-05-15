@@ -8,7 +8,7 @@ androiddextool=d8
 androidlinktool=
 androidpackageformat=apk
 embedassembliesintoapk=false
-androidlinkmode=sdkonly
+androidlinkmode=none
 androidlinkskip=
 androidsdkbuildtoolsversion=30.0.2
 androidsdkpath=c:\program files (x86)\android\android-sdk\
@@ -24,7 +24,7 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=637557248975737342
+_nugetassetstimestamp=637566844792119366
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a

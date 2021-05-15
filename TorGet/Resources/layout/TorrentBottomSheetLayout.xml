@@ -7,7 +7,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="4dp"
     android:elevation="3dp">
   
     <LinearLayout
@@ -15,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
+        android:elevation="4dp"
         android:background="#007ACC"
         android:orientation="horizontal">
         
@@ -22,30 +22,26 @@
             android:id="@+id/tvtorname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            
             android:layout_gravity="center_vertical"
             android:text="Avengers Infinity War 2019 Bluray Rip RTG 1080p english 2020"
             android:textColor="@android:color/white"
-            android:textSize="18dp"
+            android:textSize="22dp"
             android:textStyle="bold"/>
     </LinearLayout>
-    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        
         android:id="@+id/download"
         android:background="?android:attr/selectableItemBackground"
         android:padding="8dp">
 
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            
-            
-            android:text="{md_file_download 24dp}    Open Magnet Link"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:text="{md_cloud_download 24dp}   Download Torrent"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
     </LinearLayout>
@@ -58,10 +54,11 @@
         android:padding="8dp">
 
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
-            android:text="{md_content_copy 24dp}    Copy Magnet Link"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:text="{md_content_paste 24dp}    Copy to Clipboard"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
     </LinearLayout>
@@ -76,7 +73,8 @@
         <JoanZapata.XamarinIconify.Widget.IconTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
             android:text="{md_share 24dp}    Share Magnet Link"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
@@ -92,7 +90,8 @@
         <JoanZapata.XamarinIconify.Widget.IconTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
             android:text="{md_open_in_browser 24dp}    Open in Browser"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
@@ -108,7 +107,8 @@
         <JoanZapata.XamarinIconify.Widget.IconTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
             android:text="{md_open_in_browser 24dp}    Add to Bookmarks"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>

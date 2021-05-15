@@ -5,16 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="#F4F4F4"
+    android:background="@android:color/white"
+    android:clipToPadding="false"
+    android:clipChildren="false"
     android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:elevation="3dp"
-        android:background="@drawable/toolbar_shape"
+        android:elevation="4dp"
         app:title="TorrentTools"
-        
+        android:background="@drawable/toolbar_shape"
         app:collapseIcon="@drawable/ic_backarrow"
         app:titleTextColor="@android:color/white">
     </android.support.v7.widget.Toolbar>
@@ -24,10 +25,10 @@
         android:layout_height="40dp"
         android:background="@android:color/white"
         tools:visibility="gone"
+        android:elevation="7dp"
         android:id="@+id/status_layout">
         <JoanZapata.XamarinIconify.Widget.IconTextView
             android:text="Search results for:"
-            
             android:textSize="16dp"
             android:textStyle="bold"
             android:layout_width="wrap_content"
@@ -45,7 +46,7 @@
         android:layout_gravity="center_vertical"
         android:animateLayoutChanges="true"
         android:visibility="gone"
-        android:id="@+id/layout_welcome" >
+        android:id="@+id/layout_welcome">
         <ImageView
             android:src="@drawable/magnet128_solid"
             android:layout_width="wrap_content"
@@ -70,9 +71,12 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/transparent"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="10dp"
+        android:padding="8dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:background="@android:color/white"
+        android:divider="@android:color/white"
+        android:dividerHeight="15dp"
         tools:visibility="gone"
         android:id="@+id/lvresults"/>
 </LinearLayout>

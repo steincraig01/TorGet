@@ -37,7 +37,7 @@ namespace TorGet
         Android.Support.V7.Widget.SearchView torSearchView;
         Button btnSearch;
         EditText edtSearchQuery;
-        Dialog searchDialog;
+        Dialog FilterDialog;
         Dialog torrentDialog;
         Spinner spinnerCategory;
 
@@ -73,13 +73,13 @@ namespace TorGet
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
             SetContentView(Resource.Layout.activity_main);
-            customFont = Typeface.CreateFromAsset(Application.Assets, "commonfont.ttf");
             listView = FindViewById<ListView>(Resource.Id.lvresults);
             listView.ItemClick += OnListItemClick;
-            listView.SetPadding(16, 16, 16, 16);
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "TorrentTools";
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_action_menu);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             //btnClearSearch.Click += BtnClearSearch_Click;
             layoutWelcome = FindViewById<RelativeLayout>(Resource.Id.layout_welcome);
 
@@ -96,6 +96,7 @@ namespace TorGet
             layoutWelcome.Animation = welcomeAnimShow;
             listViewAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_out_bottom);
             Iconify.with(new MaterialModule());
+            Iconify.with(new FontAwesomeModule());
             layoutWelcome.Visibility = ViewStates.Visible;
             IsConnected = true;
 
@@ -113,7 +114,7 @@ namespace TorGet
         {
             //Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
             //layoutWelcome.Visibility = ViewStates.Visible;
-            CheckInternetConnection();
+            //CheckInternetConnection();
             base.OnStart();
         }
 
@@ -272,34 +273,34 @@ namespace TorGet
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            if (item.TitleFormatted.ToString() == "Sea")
+            if (item.TitleFormatted.ToString() == "Filter")
             {
 
-                searchDialog = new Dialog(this);
+                FilterDialog = new Dialog(this);
 
-                searchDialog.SetContentView(Resource.Layout.searchpopup);
-                searchDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
+                FilterDialog.SetContentView(Resource.Layout.sort_filter_layout);
+                FilterDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
                 //searchDialog.Window.ClearFlags(WindowManagerFlags.DimBehind);
 
-                searchDialog.Show();
-                searchDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
+                FilterDialog.Show();
+                FilterDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
 
-                searchDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);
+                FilterDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);
 
-                spinnerCategory = searchDialog.FindViewById<Spinner>(Resource.Id.spinner_category);
+                //spinnerCategory = FilterDialog.FindViewById<Spinner>(Resource.Id.spinCategory);
                 //spinnerProvider = searchDialog.FindViewById<Spinner>(Resource.Id.spinner_provider);
                 //spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
 
-                var adapterCategory = ArrayAdapter.CreateFromResource(this, Resource.Array.categories, Android.Resource.Layout.SimpleSpinnerItem);
-                adapterCategory.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                spinnerCategory.Adapter = adapterCategory;
+                //var adapterCategory = ArrayAdapter.CreateFromResource(this, Resource.Array.categories, Android.Resource.Layout.SimpleSpinnerItem);
+                //adapterCategory.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+                //spinnerCategory.Adapter = adapterCategory;
 
                 //var adapterProvider = ArrayAdapter.CreateFromResource(this, Resource.Array.providers, Android.Resource.Layout.SimpleSpinnerItem);
                 //adapterProvider.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
                 //spinnerProvider.Adapter = adapterProvider;
 
-                btnSearch = searchDialog.FindViewById<Button>(Resource.Id.btnsearch);
-                btnSearch.Click += BtnSearch_Click;
+                //btnSearch = searchDialog.FindViewById<Button>(Resource.Id.btnsearch);
+                //btnSearch.Click += BtnSearch_Click;
 
             }
 
@@ -315,18 +316,18 @@ namespace TorGet
         private void BtnSearch_Click(object sender, System.EventArgs e)
         {
 
-            edtSearchQuery = searchDialog.FindViewById<EditText>(Resource.Id.edtsearch);
-            string query = edtSearchQuery.Text.ToString();
-            System.Threading.Thread thread = new System.Threading.Thread(() =>
-            {
-                UserDialogs.Instance.ShowLoading("Please Wait …", MaskType.Black);
-                torrents = Tpb.Search(new TpbQuery(query));
-                RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
-                UserDialogs.Instance.HideLoading();
-            }); ;
-            thread.Start();
-            searchDialog.Dismiss();
-            searchDialog.Hide();
+            //edtSearchQuery = searchDialog.FindViewById<EditText>(Resource.Id.edtsearch);
+            //string query = edtSearchQuery.Text.ToString();
+            //System.Threading.Thread thread = new System.Threading.Thread(() =>
+            //{
+            //    UserDialogs.Instance.ShowLoading("Please Wait …", MaskType.Black);
+            //    torrents = Tpb.Search(new TpbQuery(query));
+            //    RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
+            //    UserDialogs.Instance.HideLoading();
+            //}); ;
+           // thread.Start();
+            //searchDialog.Dismiss();
+            //searchDialog.Hide();
         }
     }
     //public void BtnClearSearch_Click(object sender, System.EventArgs e)

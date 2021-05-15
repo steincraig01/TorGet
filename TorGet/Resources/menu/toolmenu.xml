@@ -10,14 +10,9 @@
      app:actionViewClass="android.support.v7.widget.SearchView" />
   
   <item
-       android:id="@+id/menu_filter"
-       android:icon="@drawable/ic_action_filter_alt"
+       android:id="@+id/menu_sort"
+       android:icon="@drawable/ic_action_sort"
        android:title="Filter"
-       app:showAsAction="ifRoom"/>
-  
-  <item
-       android:id="@+id/menu_settings"
-       android:icon="@drawable/ic_action_menu"
-       app:showAsAction="always"
-       android:title="Settings" />
+       app:showAsAction="always"/>
+
 </menu>

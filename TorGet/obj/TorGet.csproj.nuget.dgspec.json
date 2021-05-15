@@ -52,10 +52,6 @@
               "target": "Package",
               "version": "[1.11.33, )"
             },
-            "Syncfusion.Xamarin.Buttons.Android": {
-              "target": "Package",
-              "version": "[18.1.0.52, )"
-            },
             "TorrentTitleParser": {
               "target": "Package",
               "version": "[1.0.3, )"
@@ -83,6 +79,10 @@
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.6.1, )"
+            },
+            "xamarin-iconify-fontawesome": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             },
             "xamarin-iconify-material": {
               "target": "Package",

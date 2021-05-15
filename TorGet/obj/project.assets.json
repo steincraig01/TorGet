@@ -36,27 +36,6 @@
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
         }
       },
-      "Syncfusion.Licensing/18.1.0.52": {
-        "type": "package",
-        "compile": {
-          "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Syncfusion.Licensing.dll": {}
-        }
-      },
-      "Syncfusion.Xamarin.Buttons.Android/18.1.0.52": {
-        "type": "package",
-        "dependencies": {
-          "Syncfusion.Licensing": "18.1.0.52"
-        },
-        "compile": {
-          "lib/MonoAndroid10/Syncfusion.Buttons.Android.dll": {}
-        },
-        "runtime": {
-          "lib/MonoAndroid10/Syncfusion.Buttons.Android.dll": {}
-        }
-      },
       "System.Numerics.Vectors/4.5.0": {
         "type": "package",
         "compile": {
@@ -94,6 +73,19 @@
         },
         "runtime": {
           "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-common.dll": {}
+        }
+      },
+      "xamarin-iconify-fontawesome/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "xamarin-iconify": "1.0.0",
+          "xamarin-iconify-common": "1.0.0"
+        },
+        "compile": {
+          "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-fontawesome.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-fontawesome.dll": {}
         }
       },
       "xamarin-iconify-material/1.0.0": {
@@ -952,46 +944,6 @@
         "lib/uap10.0/HtmlAgilityPack.pri"
       ]
     },
-    "Syncfusion.Licensing/18.1.0.52": {
-      "sha512": "EYmBknWQ+ipVo/WgE3kS6uSNhY7ZVSFabFbUrMx4Mk824v8kUfE9bKh8rr/Ft9ujkbeq1E120Q63Oj8Bq7I4bQ==",
-      "type": "package",
-      "path": "syncfusion.licensing/18.1.0.52",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Licensing.dll",
-        "lib/Xamarin.Mac/Syncfusion.Licensing.dll",
-        "lib/Xamarin.iOS10/Syncfusion.Licensing.dll",
-        "lib/net20/Syncfusion.Licensing.dll",
-        "lib/net35/Syncfusion.Licensing.dll",
-        "lib/net40/Syncfusion.Licensing.dll",
-        "lib/net45/Syncfusion.Licensing.dll",
-        "lib/net451/Syncfusion.Licensing.dll",
-        "lib/net46/Syncfusion.Licensing.dll",
-        "lib/netcoreapp3.0/Syncfusion.Licensing.dll",
-        "lib/netstandard1.0/Syncfusion.Licensing.dll",
-        "lib/netstandard1.2/Syncfusion.Licensing.dll",
-        "lib/netstandard1.4/Syncfusion.Licensing.dll",
-        "lib/netstandard2.0/Syncfusion.Licensing.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
-        "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.18.1.0.52.nupkg.sha512",
-        "syncfusion.licensing.nuspec"
-      ]
-    },
-    "Syncfusion.Xamarin.Buttons.Android/18.1.0.52": {
-      "sha512": "S4Y99lynlKXKW2KfP65A7L8LFKFuslISLpV5a7x+SzdOVfckQFTvTkyXtwP6WUeQp3hiQ9P7TK1gbL8+FYVdeg==",
-      "type": "package",
-      "path": "syncfusion.xamarin.buttons.android/18.1.0.52",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/MonoAndroid10/Syncfusion.Buttons.Android.XML",
-        "lib/MonoAndroid10/Syncfusion.Buttons.Android.dll",
-        "syncfusion.xamarin.buttons.android.18.1.0.52.nupkg.sha512",
-        "syncfusion.xamarin.buttons.android.nuspec"
-      ]
-    },
     "System.Numerics.Vectors/4.5.0": {
       "sha512": "QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
       "type": "package",
@@ -1074,6 +1026,18 @@
         "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-common.dll",
         "xamarin-iconify-common.1.0.0.nupkg.sha512",
         "xamarin-iconify-common.nuspec"
+      ]
+    },
+    "xamarin-iconify-fontawesome/1.0.0": {
+      "sha512": "mrI3uOHQxM3KqSVdZuSGI5COlebUqC58ucliO5JFef6xqJwQmiy+6+EYO1QfB9DcG1U0bPPJ23sLz1lKi4fSZw==",
+      "type": "package",
+      "path": "xamarin-iconify-fontawesome/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-fontawesome.dll",
+        "xamarin-iconify-fontawesome.1.0.0.nupkg.sha512",
+        "xamarin-iconify-fontawesome.nuspec"
       ]
     },
     "xamarin-iconify-material/1.0.0": {
@@ -1879,7 +1843,6 @@
     "MonoAndroid,Version=v9.0": [
       "Acr.UserDialogs >= 7.1.0.483",
       "HtmlAgilityPack >= 1.11.33",
-      "Syncfusion.Xamarin.Buttons.Android >= 18.1.0.52",
       "TorrentTitleParser >= 1.0.3",
       "Xamarin.Android.Support.Constraint.Layout >= 2.0.1",
       "Xamarin.Android.Support.Core.Utils >= 28.0.0.3",
@@ -1887,6 +1850,7 @@
       "Xamarin.Android.Support.Design >= 28.0.0.3",
       "Xamarin.Android.Support.v7.AppCompat >= 28.0.0.3",
       "Xamarin.Essentials >= 1.6.1",
+      "xamarin-iconify-fontawesome >= 1.0.0",
       "xamarin-iconify-material >= 1.0.0"
     ]
   },
@@ -1943,10 +1907,6 @@
             "target": "Package",
             "version": "[1.11.33, )"
           },
-          "Syncfusion.Xamarin.Buttons.Android": {
-            "target": "Package",
-            "version": "[18.1.0.52, )"
-          },
           "TorrentTitleParser": {
             "target": "Package",
             "version": "[1.0.3, )"
@@ -1974,6 +1934,10 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.6.1, )"
+          },
+          "xamarin-iconify-fontawesome": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           },
           "xamarin-iconify-material": {
             "target": "Package",
