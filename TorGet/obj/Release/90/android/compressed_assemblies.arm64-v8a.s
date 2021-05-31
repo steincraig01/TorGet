@@ -44,7 +44,7 @@
 
 	/* 4: Mono.Android.dll */
 	/* uncompressed_file_size */
-	.word	1427456
+	.word	1431040
 	/* loaded */
 	.byte	0
 	/* data */
@@ -242,7 +242,7 @@
 
 	/* 26: Xamarin.Android.Support.Compat.dll */
 	/* uncompressed_file_size */
-	.word	178688
+	.word	185344
 	/* loaded */
 	.byte	0
 	/* data */
@@ -323,7 +323,7 @@
 
 	/* 35: Xamarin.Android.Support.Design.dll */
 	/* uncompressed_file_size */
-	.word	50176
+	.word	63488
 	/* loaded */
 	.byte	0
 	/* data */
@@ -449,7 +449,7 @@
 
 	/* 49: Xamarin.Android.Support.v7.AppCompat.dll */
 	/* uncompressed_file_size */
-	.word	432128
+	.word	434688
 	/* loaded */
 	.byte	0
 	/* data */
@@ -494,7 +494,7 @@
 
 	/* 54: torget.dll */
 	/* uncompressed_file_size */
-	.word	233472
+	.word	235520
 	/* loaded */
 	.byte	0
 	/* data */
@@ -519,32 +519,41 @@
 	.zero	3
 	.xword	compressed_assembly_data_56
 
-	/* 57: xamarin-iconify-material.dll */
+	/* 57: xamarin-iconify-material-community.dll */
 	/* uncompressed_file_size */
-	.word	137728
+	.word	227840
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
 	.xword	compressed_assembly_data_57
 
-	/* 58: xamarin-iconify.dll */
+	/* 58: xamarin-iconify-material.dll */
 	/* uncompressed_file_size */
-	.word	18944
+	.word	137728
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
 	.xword	compressed_assembly_data_58
 
-	.size	.L.compressed_assembly_descriptors, 944
+	/* 59: xamarin-iconify.dll */
+	/* uncompressed_file_size */
+	.word	18944
+	/* loaded */
+	.byte	0
+	/* data */
+	.zero	3
+	.xword	compressed_assembly_data_59
+
+	.size	.L.compressed_assembly_descriptors, 960
 	.section	.data.compressed_assemblies,"aw",@progbits
 	.type	compressed_assemblies, @object
 	.p2align	3
 	.global	compressed_assemblies
 compressed_assemblies:
 	/* count */
-	.word	59
+	.word	60
 	/* descriptors */
 	.zero	4
 	.xword	.L.compressed_assembly_descriptors

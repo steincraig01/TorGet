@@ -9,6 +9,7 @@ public class MonoPackageManager_Resources {
 		"TorrentTitleParser.dll",
 		"xamarin-iconify-common.dll",
 		"xamarin-iconify-fontawesome.dll",
+		"xamarin-iconify-material-community.dll",
 		"xamarin-iconify-material.dll",
 		"xamarin-iconify.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",

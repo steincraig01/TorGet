@@ -9,7 +9,8 @@
     android:clipToPadding="false"
     android:clipChildren="false"
     android:layout_height="match_parent">
-    <android.support.v7.widget.Toolbar
+    
+        <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -19,7 +20,7 @@
         app:collapseIcon="@drawable/ic_backarrow"
         app:titleTextColor="@android:color/white">
     </android.support.v7.widget.Toolbar>
-    <RelativeLayout
+        <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="40dp"

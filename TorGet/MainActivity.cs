@@ -25,22 +25,23 @@ using System;
 using Java.Lang;
 using Android.Support.Design.Widget;
 using System.Net;
-
+using Android.Text;
 
 namespace TorGet
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
+        
         List<Torrent> torrents;
         ListView listView;
         Android.Support.V7.Widget.SearchView torSearchView;
-        Button btnSearch;
-        EditText edtSearchQuery;
-        Dialog FilterDialog;
+        Android.Support.Design.Button.MaterialButton btnSaveFilters, btnCancelFilters;
+        RadioGroup rgCategories, rgOrderBy;
+        RadioButton rbSelectedCategory, rbSelectedOrderBy;
+        int selectedCatId, selectedOrderById;
+        Dialog filterDialog;
         Dialog torrentDialog;
-        Spinner spinnerCategory;
-
         TextView tvTorName;
         TextView tvTorUploaded;
         TextView tvTorUploader;
@@ -51,7 +52,6 @@ namespace TorGet
         Android.Support.V7.Widget.Toolbar toolbar;
         Android.Support.V7.Widget.Toolbar detailDialogToolbar;
         IconTextView tvStatusText;
-        Typeface customFont;
         RelativeLayout layoutWelcome;
         ImageButton btnClearSearch;
         Animation statusAnimShow;
@@ -59,11 +59,9 @@ namespace TorGet
         Animation statusAnimHide;
         Animation listViewAnimHide;
         Animation welcomeAnimShow;
+        int searchCategory;
+        TpbQueryOrder searchOrder;
         bool IsConnected;
-
-
-
-
 
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -71,7 +69,7 @@ namespace TorGet
             base.OnCreate(savedInstanceState);
             UserDialogs.Init(this);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-
+   
             SetContentView(Resource.Layout.activity_main);
             listView = FindViewById<ListView>(Resource.Id.lvresults);
             listView.ItemClick += OnListItemClick;
@@ -97,8 +95,11 @@ namespace TorGet
             listViewAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_out_bottom);
             Iconify.with(new MaterialModule());
             Iconify.with(new FontAwesomeModule());
+            Iconify.with(new MaterialCommunityModule());
             layoutWelcome.Visibility = ViewStates.Visible;
             IsConnected = true;
+            searchCategory = TpbTorrentCategory.All;
+            searchOrder = TpbQueryOrder.ByDefault;
 
             //Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
 
@@ -109,6 +110,7 @@ namespace TorGet
             // Toast.MakeText(this, "No internet connection detected", ToastLength.Short).Show();
             // }
         }
+
 
         protected override void OnStart()
         {
@@ -180,10 +182,10 @@ namespace TorGet
             //torrentDialog = new Dialog(this);
             //torrentDialog.SetContentView(Resource.Layout.TorrentDetailDialog);
             //torrentDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
-            
+
             torSearchView.ClearFocus();
             torSearchView.SetQuery("", false);
-           
+
             //MenuItemCompat.CollapseActionView(item);
             //torrentDialog.Show();
 
@@ -214,10 +216,11 @@ namespace TorGet
             var id = torSearchView.Context.Resources.GetIdentifier("search_src_text", "id", PackageName);
             var searchEditText = torSearchView.FindViewById<EditText>(id);
             var searchIcon = torSearchView.FindViewById<ImageView>(simgid);
-
             searchIcon.SetColorFilter(Android.Graphics.Color.White);
             searchEditText.SetTextColor(Android.Graphics.Color.White);
             searchEditText.SetHintTextColor(Android.Graphics.Color.White);
+            
+
 
             torSearchView.QueryTextSubmit += (s, e) =>
             {
@@ -231,30 +234,28 @@ namespace TorGet
                     System.Threading.Thread thread = new System.Threading.Thread(() =>
                     {
                         UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
-                        torrents = Tpb.Search(new TpbQuery(query, 0, TpbQueryOrder.BySeeds, TpbTorrentCategory.All));
+                        torrents = Tpb.Search(new TpbQuery(query, 0, searchOrder, searchCategory));
                         if (torrents.Count == 0)
                         {
                             RunOnUiThread(() => Toast.MakeText(this, "No results found for " + query, ToastLength.Short).Show());
-
                         }
                         else
                         {
-
                             //listViewAnimShow.Duration = 200;
                             rlStatusLayout.StartAnimation(statusAnimShow);
                             listView.StartAnimation(listViewAnimShow);
                             RunOnUiThread(() => rlStatusLayout.Visibility = ViewStates.Visible);
                             RunOnUiThread(() => listView.Visibility = ViewStates.Visible);
                             RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
-
                         };
 
                         UserDialogs.Instance.HideLoading();
                     }); ;
                     thread.Start();
                     torSearchView.ClearFocus();
-                    torSearchView.SetQuery("", false);
-                    MenuItemCompat.CollapseActionView(item);
+                    
+                    //torSearchView.SetQuery("", false);
+                    //MenuItemCompat.CollapseActionView(item);
                     tvStatusText.Text = "Search results for: " + e.NewText.ToString();
                     //tvStatusText.Text = MaterialIcons.md_dis;
                     layoutWelcome.Visibility = ViewStates.Gone;
@@ -271,53 +272,120 @@ namespace TorGet
             return base.OnCreateOptionsMenu(menu);
         }
 
+
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             if (item.TitleFormatted.ToString() == "Filter")
             {
-
-                FilterDialog = new Dialog(this);
-
-                FilterDialog.SetContentView(Resource.Layout.sort_filter_layout);
-                FilterDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
+                filterDialog = new Dialog(this);
+                filterDialog.SetContentView(Resource.Layout.sort_filter_layout);
+                filterDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
                 //searchDialog.Window.ClearFlags(WindowManagerFlags.DimBehind);
 
-                FilterDialog.Show();
-                FilterDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
+                filterDialog.Show();
+                filterDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.WrapContent);
+                filterDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);
+                btnSaveFilters = filterDialog.FindViewById<Android.Support.Design.Button.MaterialButton>(Resource.Id.btnSaveFilters);
+                btnSaveFilters.Click += BtnSaveFilters_Click;
+                btnCancelFilters = filterDialog.FindViewById<Android.Support.Design.Button.MaterialButton>(Resource.Id.btnCancelFilters);
+                btnCancelFilters.Click += (s, e) => { filterDialog.Dismiss(); };
+                rgCategories = filterDialog.FindViewById<RadioGroup>(Resource.Id.rgCategory);
+                rgOrderBy = filterDialog.FindViewById<RadioGroup>(Resource.Id.rgOrderBy);
+                //Toast.MakeText(this, selectedCatId.ToString(), ToastLength.Short).Show();
+                if (selectedCatId != 0)
+                    rgCategories.Check(selectedCatId);
+                if (selectedOrderById != 0)
+                    rgOrderBy.Check(selectedOrderById);
 
-                FilterDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);
 
-                //spinnerCategory = FilterDialog.FindViewById<Spinner>(Resource.Id.spinCategory);
-                //spinnerProvider = searchDialog.FindViewById<Spinner>(Resource.Id.spinner_provider);
                 //spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-
-                //var adapterCategory = ArrayAdapter.CreateFromResource(this, Resource.Array.categories, Android.Resource.Layout.SimpleSpinnerItem);
-                //adapterCategory.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                //spinnerCategory.Adapter = adapterCategory;
-
-                //var adapterProvider = ArrayAdapter.CreateFromResource(this, Resource.Array.providers, Android.Resource.Layout.SimpleSpinnerItem);
-                //adapterProvider.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-                //spinnerProvider.Adapter = adapterProvider;
 
                 //btnSearch = searchDialog.FindViewById<Button>(Resource.Id.btnsearch);
                 //btnSearch.Click += BtnSearch_Click;
 
             }
-
-            if (item.TitleFormatted.ToString() == "Searc")
+            //torSearchView.Close += (s, e) => { Toast.MakeText(this, "CLOSE ", ToastLength.Short).Show(); };
+            if (item.ItemId == Android.Resource.Id.Home)
             {
-                SetContentView(Resource.Layout.searchpopup);
-
+                //    SetContentView(Resource.Layout.searchpopup);
+                
 
             }
+            Toast.MakeText(this, item.ItemId.ToString(), ToastLength.Short).Show();
             //Toast.MakeText(this, "Action selected: " + item.TitleFormatted, ToastLength.Short).Show();
             return base.OnOptionsItemSelected(item);
         }
-        private void BtnSearch_Click(object sender, System.EventArgs e)
+        private void BtnSaveFilters_Click(object sender, System.EventArgs e)
         {
+            Toast.MakeText(this, "Search Filters Saved", ToastLength.Short).Show();
+            
+            selectedCatId = rgCategories.CheckedRadioButtonId;
+            selectedOrderById = rgOrderBy.CheckedRadioButtonId;
+            rbSelectedCategory = filterDialog.FindViewById<RadioButton>(selectedCatId);
+            rbSelectedOrderBy = filterDialog.FindViewById<RadioButton>(selectedOrderById);
+            switch (rbSelectedCategory.Text)
+            {
+                case "All":
+                    searchCategory = TpbTorrentCategory.All;
+                    break;
 
-            //edtSearchQuery = searchDialog.FindViewById<EditText>(Resource.Id.edtsearch);
-            //string query = edtSearchQuery.Text.ToString();
+                case "Audio":
+                    searchCategory = TpbTorrentCategory.AllAudio;
+                    break;
+
+                case "Video":
+                    searchCategory = TpbTorrentCategory.AllVideo;
+                    break;
+
+                case "Applications":
+                    searchCategory = TpbTorrentCategory.AllApplication;
+                    break;
+
+                case "Games":
+                    searchCategory = TpbTorrentCategory.AllGames;
+                    break;
+
+                case "Porn":
+                    searchCategory = TpbTorrentCategory.AllPorn;
+                    break;
+
+                case "Other":
+                    searchCategory = TpbTorrentCategory.AllOther;
+                    break;
+            }
+
+            switch (rbSelectedOrderBy.Text)
+            {
+                case "Default":
+                    searchOrder = TpbQueryOrder.ByDefault;
+                    break;
+
+                case "Name":
+                    searchOrder = TpbQueryOrder.ByName;
+                    break;
+
+                case "Date":
+                    searchOrder = TpbQueryOrder.ByUploaded;
+                    break;
+
+                case "Size":
+                    searchOrder = TpbQueryOrder.BySize;
+                    break;
+
+                case "Seeds":
+                    searchOrder = TpbQueryOrder.BySeeds;
+                    break;
+
+                case "Leechers":
+                    searchOrder = TpbQueryOrder.ByLeechers;
+                    break;
+
+                case "Uploader":
+                    searchOrder = TpbQueryOrder.ByUledBy;
+                    break;
+            }
+            filterDialog.Dismiss();
+
             //System.Threading.Thread thread = new System.Threading.Thread(() =>
             //{
             //    UserDialogs.Instance.ShowLoading("Please Wait …", MaskType.Black);
@@ -325,20 +393,11 @@ namespace TorGet
             //    RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
             //    UserDialogs.Instance.HideLoading();
             //}); ;
-           // thread.Start();
+            // thread.Start();
             //searchDialog.Dismiss();
             //searchDialog.Hide();
         }
+        
     }
-    //public void BtnClearSearch_Click(object sender, System.EventArgs e)
-    //{
-    //    listView.SetAdapter(null);
-    //    listView.StartAnimation(listViewAnimHide);
-    //    rlStatusLayout.StartAnimation(statusAnimHide);
-    //    listView.Visibility = ViewStates.Gone;
-    //    rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
-    //    var back = this.GetDrawable(Resource.Drawable.buttonrect);
-    //    toolbar.Background = back;
-    //    layoutWelcome.Visibility = ViewStates.Visible;
-    //}
+   
 }

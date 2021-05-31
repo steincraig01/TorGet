@@ -7,6 +7,8 @@
     android:background="@drawable/filterdialog_shape"
     android:layout_margin="8dp"
     android:elevation="4dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <LinearLayout
@@ -21,7 +23,8 @@
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:textColor="@android:color/white"
-            android:text="{md_sort 32dp}   Refine Search"
+            android:textStyle="bold"
+            android:text="Refine Search"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
     </LinearLayout>
@@ -38,8 +41,8 @@
             android:layout_weight="1"
             android:orientation="vertical">
             <JoanZapata.XamarinIconify.Widget.IconTextView
-                android:text="Filter By"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Category"
+                android:textSize="18dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#007ACC"
@@ -49,56 +52,55 @@
                 android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioGroup1">
+                android:id="@+id/rgCategory">
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="All"
-                    android:id="@+id/radioButton1" />
+                    android:id="@+id/rbCatAll" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Audio"
-                    android:id="@+id/radioButton2" />
+                    android:id="@+id/rbCatAudio" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Video"
-                    android:id="@+id/radioButton3" />
+                    android:id="@+id/rbCatVideo" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Applications"
-                    android:id="@+id/radioButton4" />
+                    android:id="@+id/rbCatApps" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Games"
-                    android:id="@+id/radioButton5" />
+                    android:id="@+id/rbCatGames" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Porn"
-                    android:id="@+id/radioButton6" />
+                    android:id="@+id/rbCatPorn" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Other"
-                    android:id="@+id/radioButton7" />
+                    android:id="@+id/rbCatOther" />
             </RadioGroup>
         </LinearLayout>
-        
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="8dp"
-           
             android:orientation="vertical">
             <JoanZapata.XamarinIconify.Widget.IconTextView
                 android:text="Sort By"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="18dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#007ACC"
@@ -107,45 +109,73 @@
                 android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/radioGroup1">
+                android:id="@+id/rgOrderBy">
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="Default"
-                    android:id="@+id/radioButton1" />
+                    android:id="@+id/rbOrdDefault" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name"
-                    android:id="@+id/radioButton2" />
+                    android:id="@+id/rbOrdName" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date"
-                    android:id="@+id/radioButton3" />
+                    android:id="@+id/rbOrdDate" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Size"
-                    android:id="@+id/radioButton4" />
+                    android:id="@+id/rbOrdSize" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Seeds"
-                    android:id="@+id/radioButton5" />
+                    android:id="@+id/rbOrdSeeds" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Leechers"
-                    android:id="@+id/radioButton6" />
+                    android:id="@+id/rbOrdLeechers" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Uploader"
-                    android:id="@+id/radioButton7" />
+                    android:id="@+id/rbOrdUploader" />
             </RadioGroup>
         </LinearLayout>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp">
+        
+            <android.support.design.button.MaterialButton
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentEnd="true"
+            android:elevation="4dp"
+            android:text="Save"
+            android:id="@+id/btnSaveFilters" />
+        <android.support.design.button.MaterialButton
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/holo_red_light"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:text="Cancel"
+            android:id="@+id/btnCancelFilters" />
+
+    </RelativeLayout>
 
 </LinearLayout>

@@ -1,6 +1,7 @@
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 android.support.constraint.ConstraintLayout;obj\Debug\90\res\layout\torrentdetaildialog.xml
+android.support.design.button.MaterialButton;obj\Debug\90\res\layout\sort_filter_layout.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\activity_main.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\torrentdetaildialog.xml
 androidhud.ProgressWheel;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingprogress.xml
@@ -73,6 +74,7 @@ RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp
 RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingprogress.xml
 RelativeLayout;obj\Debug\90\res\layout\activity_main.xml
 RelativeLayout;obj\Debug\90\res\layout\customview.xml
+RelativeLayout;obj\Debug\90\res\layout\sort_filter_layout.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\values\attrs.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\values\strings.xml
 resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\values\strings.xml

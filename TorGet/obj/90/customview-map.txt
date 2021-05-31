@@ -1,0 +1,137 @@
+adaptive-icon;obj\\90\res\mipmap-anydpi-v26\ic_launcher.xml
+adaptive-icon;obj\\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+android.support.constraint.ConstraintLayout;obj\\90\res\layout\torrentdetaildialog.xml
+android.support.design.button.MaterialButton;obj\\90\res\layout\sort_filter_layout.xml
+android.support.v7.widget.Toolbar;obj\\90\res\layout\activity_main.xml
+android.support.v7.widget.Toolbar;obj\\90\res\layout\torrentdetaildialog.xml
+androidhud.ProgressWheel;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loadingprogress.xml
+attr;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\values\attrs.xml
+background;obj\\90\res\mipmap-anydpi-v26\ic_launcher.xml
+background;obj\\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+Button;obj\\90\res\layout\searchpopup.xml
+cache-path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+color;obj\\90\res\values\colors.xml
+color;obj\\90\res\values\ic_launcher_background.xml
+corners;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\drawable\roundedbg.xml
+corners;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\drawable\roundedbgdark.xml
+corners;obj\\90\res\drawable\bottomsheet_shape.xml
+corners;obj\\90\res\drawable\buttonrect.xml
+corners;obj\\90\res\drawable\circle_shape.xml
+corners;obj\\90\res\drawable\filterdialog_shape.xml
+corners;obj\\90\res\drawable\listrect.xml
+corners;obj\\90\res\drawable\myrect.xml
+corners;obj\\90\res\drawable\shape_listitem.xml
+corners;obj\\90\res\drawable\shape_tordetaildialog.xml
+corners;obj\\90\res\drawable\texteditrect.xml
+corners;obj\\90\res\drawable\textviewbg_rounded.xml
+corners;obj\\90\res\drawable\toolbar_shape.xml
+corners;obj\\90\res\drawable\topcorners_shape.xml
+declare-styleable;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\values\attrs.xml
+EditText;obj\\90\res\layout\searchpopup.xml
+external-cache-path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+external-path;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+foreground;obj\\90\res\mipmap-anydpi-v26\ic_launcher.xml
+foreground;obj\\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
+gradient;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\drawable\roundedbg.xml
+gradient;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\drawable\roundedbgdark.xml
+gradient;obj\\90\res\drawable\underline.xml
+ImageView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loadingimage.xml
+ImageView;obj\\90\res\layout\activity_main.xml
+ImageView;obj\\90\res\layout\customview.xml
+ImageView;obj\\90\res\layout\customviewxx.xml
+ImageView;obj\\90\res\layout\emptyview.xml
+ImageView;obj\\90\res\layout\searchpopup.xml
+ImageView;obj\\90\res\layout\torrentdetaildialog.xml
+item;obj\\90\res\menu\sourcemenu.xml
+item;obj\\90\res\menu\toolmenu.xml
+item;obj\\90\res\values\strings.xml
+item;obj\\90\res\values\styles.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\\90\res\layout\activity_main.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\\90\res\layout\customview.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\\90\res\layout\sort_filter_layout.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\\90\res\layout\torrentbottomsheetlayout.xml
+LinearLayout;obj\\90\res\layout\activity_main.xml
+LinearLayout;obj\\90\res\layout\customview.xml
+LinearLayout;obj\\90\res\layout\customviewxx.xml
+LinearLayout;obj\\90\res\layout\emptyview.xml
+LinearLayout;obj\\90\res\layout\listview_header.xml
+LinearLayout;obj\\90\res\layout\searchpopup.xml
+LinearLayout;obj\\90\res\layout\sort_filter_layout.xml
+LinearLayout;obj\\90\res\layout\torrentbottomsheetlayout.xml
+LinearLayout;obj\\90\res\layout\torrentdetaildialog.xml
+ListView;obj\\90\res\layout\activity_main.xml
+menu;obj\\90\res\menu\sourcemenu.xml
+menu;obj\\90\res\menu\toolmenu.xml
+padding;obj\\90\res\drawable\circle_shape.xml
+padding;obj\\90\res\drawable\texteditrect.xml
+padding;obj\\90\res\drawable\textviewbg_rounded.xml
+paths;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+ProgressBar;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loading.xml
+RadioButton;obj\\90\res\layout\sort_filter_layout.xml
+RadioGroup;obj\\90\res\layout\sort_filter_layout.xml
+RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loading.xml
+RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loadingimage.xml
+RelativeLayout;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loadingprogress.xml
+RelativeLayout;obj\\90\res\layout\activity_main.xml
+RelativeLayout;obj\\90\res\layout\customview.xml
+RelativeLayout;obj\\90\res\layout\sort_filter_layout.xml
+resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\values\attrs.xml
+resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\values\strings.xml
+resources;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\2\jl\res\values\strings.xml
+resources;obj\\90\res\values\colors.xml
+resources;obj\\90\res\values\ic_launcher_background.xml
+resources;obj\\90\res\values\strings.xml
+resources;obj\\90\res\values\styles.xml
+set;obj\\90\res\anim\bottom_to_top.xml
+shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\drawable\roundedbg.xml
+shape;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\drawable\roundedbgdark.xml
+shape;obj\\90\res\drawable\bottomsheet_shape.xml
+shape;obj\\90\res\drawable\buttonrect.xml
+shape;obj\\90\res\drawable\circle_shape.xml
+shape;obj\\90\res\drawable\filterdialog_shape.xml
+shape;obj\\90\res\drawable\listrect.xml
+shape;obj\\90\res\drawable\myrect.xml
+shape;obj\\90\res\drawable\shape_listitem.xml
+shape;obj\\90\res\drawable\shape_tordetaildialog.xml
+shape;obj\\90\res\drawable\texteditrect.xml
+shape;obj\\90\res\drawable\textviewbg_rounded.xml
+shape;obj\\90\res\drawable\toolbar_shape.xml
+shape;obj\\90\res\drawable\topcorners_shape.xml
+shape;obj\\90\res\drawable\underline.xml
+solid;obj\\90\res\drawable\bottomsheet_shape.xml
+solid;obj\\90\res\drawable\buttonrect.xml
+solid;obj\\90\res\drawable\circle_shape.xml
+solid;obj\\90\res\drawable\filterdialog_shape.xml
+solid;obj\\90\res\drawable\myrect.xml
+solid;obj\\90\res\drawable\shape_listitem.xml
+solid;obj\\90\res\drawable\shape_tordetaildialog.xml
+solid;obj\\90\res\drawable\texteditrect.xml
+solid;obj\\90\res\drawable\textviewbg_rounded.xml
+solid;obj\\90\res\drawable\toolbar_shape.xml
+solid;obj\\90\res\drawable\topcorners_shape.xml
+Spinner;obj\\90\res\layout\searchpopup.xml
+string;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\values\strings.xml
+string;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\2\jl\res\values\strings.xml
+string;obj\\90\res\values\strings.xml
+string-array;obj\\90\res\values\strings.xml
+stroke;obj\\90\res\drawable\circle_shape.xml
+stroke;obj\\90\res\drawable\filterdialog_shape.xml
+stroke;obj\\90\res\drawable\listrect.xml
+stroke;obj\\90\res\drawable\myrect.xml
+stroke;obj\\90\res\drawable\texteditrect.xml
+style;obj\\90\res\values\styles.xml
+TableLayout;obj\\90\res\layout\customviewxx.xml
+TableRow;obj\\90\res\layout\customviewxx.xml
+TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loading.xml
+TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loadingimage.xml
+TextView;F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\90\lp\1\jl\res\layout\loadingprogress.xml
+TextView;obj\\90\res\layout\activity_main.xml
+TextView;obj\\90\res\layout\customview.xml
+TextView;obj\\90\res\layout\customviewxx.xml
+TextView;obj\\90\res\layout\emptyview.xml
+TextView;obj\\90\res\layout\listview_header.xml
+TextView;obj\\90\res\layout\searchpopup.xml
+TextView;obj\\90\res\layout\torrentbottomsheetlayout.xml
+TextView;obj\\90\res\layout\torrentdetaildialog.xml
+translate;obj\\90\res\anim\bottom_to_top.xml
+View;obj\\90\res\layout\torrentdetaildialog.xml

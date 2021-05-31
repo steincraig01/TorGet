@@ -87,6 +87,10 @@
             "xamarin-iconify-material": {
               "target": "Package",
               "version": "[1.0.0, )"
+            },
+            "xamarin-iconify-material-community": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           }
         }

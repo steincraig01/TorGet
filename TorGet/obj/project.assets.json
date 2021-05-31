@@ -101,6 +101,19 @@
           "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-material.dll": {}
         }
       },
+      "xamarin-iconify-material-community/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "xamarin-iconify": "1.0.0",
+          "xamarin-iconify-common": "1.0.0"
+        },
+        "compile": {
+          "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-material-community.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-material-community.dll": {}
+        }
+      },
       "Xamarin.Android.Arch.Core.Common/1.1.1.3": {
         "type": "package",
         "dependencies": {
@@ -1052,6 +1065,18 @@
         "xamarin-iconify-material.nuspec"
       ]
     },
+    "xamarin-iconify-material-community/1.0.0": {
+      "sha512": "OdKsgU+UVEH5tmUlcGUI3Xp3aHKZ2SDSJrLA/CxWFFBiS3IhsmNiTNMnsWoevCztGQ2yRlyarIgw8iOaJAADqg==",
+      "type": "package",
+      "path": "xamarin-iconify-material-community/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10/xamarin-iconify-material-community.dll",
+        "xamarin-iconify-material-community.1.0.0.nupkg.sha512",
+        "xamarin-iconify-material-community.nuspec"
+      ]
+    },
     "Xamarin.Android.Arch.Core.Common/1.1.1.3": {
       "sha512": "ss+hnEoFeyxLgHk3TrCBqTMkK6ZJqhq382AONzdVGg7cyVibvBMWPX2Xp5byB8tvRJOMRIWZnqyqgpYQIagkZA==",
       "type": "package",
@@ -1851,7 +1876,8 @@
       "Xamarin.Android.Support.v7.AppCompat >= 28.0.0.3",
       "Xamarin.Essentials >= 1.6.1",
       "xamarin-iconify-fontawesome >= 1.0.0",
-      "xamarin-iconify-material >= 1.0.0"
+      "xamarin-iconify-material >= 1.0.0",
+      "xamarin-iconify-material-community >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1940,6 +1966,10 @@
             "version": "[1.0.0, )"
           },
           "xamarin-iconify-material": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
+          "xamarin-iconify-material-community": {
             "target": "Package",
             "version": "[1.0.0, )"
           }

@@ -60,7 +60,7 @@ namespace TorGet
             }
             var holder = (ViewHolder)view.Tag;
             holder.Name.Text = item.Name;
-            holder.Size.Text = item.Size;
+            holder.Size.Text = "{mdi_content_save 18dp #007ACC} " + item.Size;
             holder.Uploaded.Text = item.Uploaded;
             holder.Seeds.Text = item.Seeds.ToString();
             holder.Leechers.Text = item.Leechers.ToString();

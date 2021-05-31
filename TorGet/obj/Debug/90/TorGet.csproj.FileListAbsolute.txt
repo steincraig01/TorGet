@@ -21,10 +21,16 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_BuildLibra
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\res.flag
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\files.cache
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\files.cache
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\14\jl\files.cache
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\15\jl\files.cache
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\17\jl\files.cache
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\21\jl\files.cache
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\23\jl\files.cache
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\33\jl\files.cache
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\34\jl\files.cache
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\35\jl\files.cache
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\36\jl\files.cache
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\40\jl\files.cache
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\R.txt
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\R.cs.flag
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\TorGet.csproj.CoreCompileInputs.cache
@@ -213,6 +219,8 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\to
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\torget.pdb
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\TorrentTitleParser.dll
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\xamarin-iconify-common.dll
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\xamarin-iconify-fontawesome.dll
+F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\xamarin-iconify-material-community.dll
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\xamarin-iconify-material.dll
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\xamarin-iconify.dll
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\Xamarin.Android.Arch.Core.Common.dll
@@ -410,10 +418,3 @@ F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_ConvertRes
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\14\jl\files.cache
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\17\jl\files.cache
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\21\jl\files.cache
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\23\jl\files.cache
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\33\jl\files.cache
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\40\jl\files.cache
-F:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\xamarin-iconify-fontawesome.dll
