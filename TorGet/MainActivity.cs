@@ -32,25 +32,18 @@ namespace TorGet
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        
-        List<Torrent> torrents;
+        public static MainActivity Instance;
+        public List<Torrent> torrents;
         ListView listView;
         Android.Support.V7.Widget.SearchView torSearchView;
         Android.Support.Design.Button.MaterialButton btnSaveFilters, btnCancelFilters;
         RadioGroup rgCategories, rgOrderBy;
         RadioButton rbSelectedCategory, rbSelectedOrderBy;
-        int selectedCatId, selectedOrderById;
+        public int selectedCatId, selectedOrderById;
         Dialog filterDialog;
         Dialog torrentDialog;
-        TextView tvTorName;
-        TextView tvTorUploaded;
-        TextView tvTorUploader;
-        TextView tvTorCategory;
-        TextView tvTorSize;
-        TextView tvTorSeedLeech;
         RelativeLayout rlStatusLayout;
-        Android.Support.V7.Widget.Toolbar toolbar;
-        Android.Support.V7.Widget.Toolbar detailDialogToolbar;
+        public Android.Support.V7.Widget.Toolbar toolbar;
         IconTextView tvStatusText;
         RelativeLayout layoutWelcome;
         ImageButton btnClearSearch;
@@ -59,9 +52,9 @@ namespace TorGet
         Animation statusAnimHide;
         Animation listViewAnimHide;
         Animation welcomeAnimShow;
-        int searchCategory;
-        TpbQueryOrder searchOrder;
-        bool IsConnected;
+        public int searchCategory;
+        public TpbQueryOrder searchOrder;
+        public bool IsConnected;
 
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -69,20 +62,18 @@ namespace TorGet
             base.OnCreate(savedInstanceState);
             UserDialogs.Init(this);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-   
             SetContentView(Resource.Layout.activity_main);
+            Instance = this;
             listView = FindViewById<ListView>(Resource.Id.lvresults);
             listView.ItemClick += OnListItemClick;
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "TorrentTools";
-            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_action_menu);
-            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            //btnClearSearch.Click += BtnClearSearch_Click;
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_backarrow);
+            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             layoutWelcome = FindViewById<RelativeLayout>(Resource.Id.layout_welcome);
 
             tvStatusText = FindViewById<IconTextView>(Resource.Id.status_text);
-            //tvStatusText.Text = MaterialIcons.md_storage;
             rlStatusLayout = FindViewById<RelativeLayout>(Resource.Id.status_layout);
             rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
             torSearchView = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.menu_search);
@@ -93,13 +84,20 @@ namespace TorGet
             welcomeAnimShow.Duration = 1000;
             layoutWelcome.Animation = welcomeAnimShow;
             listViewAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_out_bottom);
+            
             Iconify.with(new MaterialModule());
             Iconify.with(new FontAwesomeModule());
             Iconify.with(new MaterialCommunityModule());
-            layoutWelcome.Visibility = ViewStates.Visible;
+            //layoutWelcome.Visibility = ViewStates.Visible;
+            //LoadFragment("SearchFragment");
             IsConnected = true;
             searchCategory = TpbTorrentCategory.All;
             searchOrder = TpbQueryOrder.ByDefault;
+
+            var searchFragment = new SearchFragment();
+            SupportFragmentManager.BeginTransaction()
+                .Replace(Resource.Id.content_frame, searchFragment)
+                .Commit();
 
             //Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
 
@@ -111,14 +109,32 @@ namespace TorGet
             // }
         }
 
-
-        protected override void OnStart()
+        public void LoadFragment(string fragmentName)
         {
+            Android.Support.V4.App.Fragment fragment = null;
+
+            if (fragmentName == "SearchFragment")
+                fragment = new SearchFragment();
+            if (fragmentName == "SearchResultsFragment")
+                fragment = new SearchResultsFragment();
+
+            if (fragment == null)
+                return;
+
+
+            SupportFragmentManager.BeginTransaction()
+                .Replace(Resource.Id.content_frame, fragment)
+                .AddToBackStack(null)
+                .Commit();
+        }
+
+        //protected override void OnStart()
+        //{
             //Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
             //layoutWelcome.Visibility = ViewStates.Visible;
             //CheckInternetConnection();
-            base.OnStart();
-        }
+            //base.OnStart();
+        //}
 
         public void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
         {
@@ -225,7 +241,6 @@ namespace TorGet
             torSearchView.QueryTextSubmit += (s, e) =>
             {
 
-                Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
                 if (IsConnected == true)
                 {
                     string query = e.NewText.ToString();
@@ -272,6 +287,28 @@ namespace TorGet
             return base.OnCreateOptionsMenu(menu);
         }
 
+        public void ShowFilterDialog(System.Object o, EventArgs e)
+        {
+            filterDialog = new Dialog(this);
+            filterDialog.SetContentView(Resource.Layout.sort_filter_layout);
+            filterDialog.Window.SetSoftInputMode(SoftInput.AdjustResize);
+            //searchDialog.Window.ClearFlags(WindowManagerFlags.DimBehind);
+
+            filterDialog.Show();
+            filterDialog.Window.SetLayout(LayoutParams.FillParent, LayoutParams.FillParent);
+            filterDialog.Window.SetBackgroundDrawableResource(Resource.Color.mtrl_btn_transparent_bg_color);
+            btnSaveFilters = filterDialog.FindViewById<Android.Support.Design.Button.MaterialButton>(Resource.Id.btnSaveFilters);
+            btnSaveFilters.Click += BtnSaveFilters_Click;
+            btnCancelFilters = filterDialog.FindViewById<Android.Support.Design.Button.MaterialButton>(Resource.Id.btnCancelFilters);
+            btnCancelFilters.Click += (s, e) => { filterDialog.Dismiss(); };
+            rgCategories = filterDialog.FindViewById<RadioGroup>(Resource.Id.rgCategory);
+            rgOrderBy = filterDialog.FindViewById<RadioGroup>(Resource.Id.rgOrderBy);
+            //Toast.MakeText(this, selectedCatId.ToString(), ToastLength.Short).Show();
+            if (selectedCatId != 0)
+                rgCategories.Check(selectedCatId);
+            if (selectedOrderById != 0)
+                rgOrderBy.Check(selectedOrderById);
+        }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -298,23 +335,17 @@ namespace TorGet
                     rgOrderBy.Check(selectedOrderById);
 
 
-                //spinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-
-                //btnSearch = searchDialog.FindViewById<Button>(Resource.Id.btnsearch);
-                //btnSearch.Click += BtnSearch_Click;
-
             }
-            //torSearchView.Close += (s, e) => { Toast.MakeText(this, "CLOSE ", ToastLength.Short).Show(); };
+ 
             if (item.ItemId == Android.Resource.Id.Home)
             {
-                //    SetContentView(Resource.Layout.searchpopup);
-                
-
+                this.OnBackPressed();
             }
-            Toast.MakeText(this, item.ItemId.ToString(), ToastLength.Short).Show();
+            //Toast.MakeText(this, item.ItemId.ToString(), ToastLength.Short).Show();
             //Toast.MakeText(this, "Action selected: " + item.TitleFormatted, ToastLength.Short).Show();
             return base.OnOptionsItemSelected(item);
         }
+        
         private void BtnSaveFilters_Click(object sender, System.EventArgs e)
         {
             Toast.MakeText(this, "Search Filters Saved", ToastLength.Short).Show();

@@ -24,7 +24,7 @@
             android:textSize="20dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            android:text="Refine Search"
+            android:text="Search Filters"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
     </LinearLayout>
@@ -58,36 +58,37 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="All"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbCatAll" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Audio"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbCatAudio" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Video"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbCatVideo" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Applications"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbCatApps" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Games"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbCatGames" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Porn"
-                    android:id="@+id/rbCatPorn" />
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="Other"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbCatOther" />
             </RadioGroup>
         </LinearLayout>
@@ -115,37 +116,38 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:text="Default"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbOrdDefault" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Name"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbOrdName" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbOrdDate" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Size"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbOrdSize" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Seeds"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbOrdSeeds" />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Leechers"
+                    android:textColor="@android:color/white"
                     android:id="@+id/rbOrdLeechers" />
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Uploader"
-                    android:id="@+id/rbOrdUploader" />
             </RadioGroup>
         </LinearLayout>
     </LinearLayout>
@@ -171,7 +173,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_alignParentStart="true"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:text="Cancel"
             android:id="@+id/btnCancelFilters" />

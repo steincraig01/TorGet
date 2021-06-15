@@ -107,7 +107,7 @@ namespace TorGet
 
 
 
-            view.Elevation = 8;
+            view.Elevation = 4;
 
             Animation myAnimation = AnimationUtils.LoadAnimation(Application.Context, Resource.Animation.abc_grow_fade_in_from_bottom);
             //myAnimation.Duration = 100;

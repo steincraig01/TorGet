@@ -1,27 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj": {}
+    "D:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj": {}
   },
   "projects": {
-    "F:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj": {
+    "D:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj",
+        "projectUniqueName": "D:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj",
         "projectName": "TorGet",
-        "projectPath": "F:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj",
-        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-        "outputPath": "F:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\obj\\",
+        "projectPath": "D:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj",
+        "packagesPath": "C:\\Users\\owner\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -29,10 +26,7 @@
           "monoandroid90"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Xamarin\\18.1.0.52\\Xamarin\\lib": {},
-          "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\Xamarin\\18.1.0.52\\Xamarin\\nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

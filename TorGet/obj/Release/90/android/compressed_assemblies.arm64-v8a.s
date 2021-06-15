@@ -35,7 +35,7 @@
 
 	/* 3: Java.Interop.dll */
 	/* uncompressed_file_size */
-	.word	165376
+	.word	164352
 	/* loaded */
 	.byte	0
 	/* data */
@@ -44,7 +44,7 @@
 
 	/* 4: Mono.Android.dll */
 	/* uncompressed_file_size */
-	.word	1431040
+	.word	1427456
 	/* loaded */
 	.byte	0
 	/* data */
@@ -62,7 +62,7 @@
 
 	/* 6: System.Core.dll */
 	/* uncompressed_file_size */
-	.word	320512
+	.word	76288
 	/* loaded */
 	.byte	0
 	/* data */
@@ -96,464 +96,239 @@
 	.zero	3
 	.xword	compressed_assembly_data_9
 
-	/* 10: System.Runtime.Serialization.dll */
-	/* uncompressed_file_size */
-	.word	5632
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_10
-
-	/* 11: System.Web.Services.dll */
+	/* 10: System.Web.Services.dll */
 	/* uncompressed_file_size */
 	.word	35840
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_11
+	.xword	compressed_assembly_data_10
 
-	/* 12: System.Xml.dll */
+	/* 11: System.Xml.dll */
 	/* uncompressed_file_size */
 	.word	1100288
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_12
+	.xword	compressed_assembly_data_11
 
-	/* 13: System.dll */
+	/* 12: System.dll */
 	/* uncompressed_file_size */
 	.word	806912
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_13
+	.xword	compressed_assembly_data_12
 
-	/* 14: TorrentTitleParser.dll */
+	/* 13: TorrentTitleParser.dll */
 	/* uncompressed_file_size */
 	.word	13824
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
+	.xword	compressed_assembly_data_13
+
+	/* 14: Xamarin.Android.Arch.Lifecycle.Common.dll */
+	/* uncompressed_file_size */
+	.word	14336
+	/* loaded */
+	.byte	0
+	/* data */
+	.zero	3
 	.xword	compressed_assembly_data_14
 
-	/* 15: Xamarin.Android.Arch.Core.Common.dll */
+	/* 15: Xamarin.Android.Arch.Lifecycle.LiveData.Core.dll */
 	/* uncompressed_file_size */
-	.word	5120
+	.word	14848
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
 	.xword	compressed_assembly_data_15
 
-	/* 16: Xamarin.Android.Arch.Core.Runtime.dll */
+	/* 16: Xamarin.Android.Arch.Lifecycle.ViewModel.dll */
 	/* uncompressed_file_size */
-	.word	5120
+	.word	8704
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
 	.xword	compressed_assembly_data_16
 
-	/* 17: Xamarin.Android.Arch.Lifecycle.Common.dll */
+	/* 17: Xamarin.Android.Support.Compat.dll */
 	/* uncompressed_file_size */
-	.word	14848
+	.word	183808
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
 	.xword	compressed_assembly_data_17
 
-	/* 18: Xamarin.Android.Arch.Lifecycle.LiveData.Core.dll */
-	/* uncompressed_file_size */
-	.word	14848
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_18
-
-	/* 19: Xamarin.Android.Arch.Lifecycle.LiveData.dll */
-	/* uncompressed_file_size */
-	.word	5632
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_19
-
-	/* 20: Xamarin.Android.Arch.Lifecycle.Runtime.dll */
-	/* uncompressed_file_size */
-	.word	5120
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_20
-
-	/* 21: Xamarin.Android.Arch.Lifecycle.ViewModel.dll */
-	/* uncompressed_file_size */
-	.word	9216
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_21
-
-	/* 22: Xamarin.Android.Support.Animated.Vector.Drawable.dll */
-	/* uncompressed_file_size */
-	.word	6144
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_22
-
-	/* 23: Xamarin.Android.Support.Annotations.dll */
-	/* uncompressed_file_size */
-	.word	5632
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_23
-
-	/* 24: Xamarin.Android.Support.AsyncLayoutInflater.dll */
-	/* uncompressed_file_size */
-	.word	5120
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_24
-
-	/* 25: Xamarin.Android.Support.Collections.dll */
-	/* uncompressed_file_size */
-	.word	5120
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_25
-
-	/* 26: Xamarin.Android.Support.Compat.dll */
-	/* uncompressed_file_size */
-	.word	185344
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_26
-
-	/* 27: Xamarin.Android.Support.Constraint.Layout.Solver.dll */
+	/* 18: Xamarin.Android.Support.Constraint.Layout.Solver.dll */
 	/* uncompressed_file_size */
 	.word	429056
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_27
+	.xword	compressed_assembly_data_18
 
-	/* 28: Xamarin.Android.Support.Constraint.Layout.dll */
+	/* 19: Xamarin.Android.Support.Constraint.Layout.dll */
 	/* uncompressed_file_size */
 	.word	443392
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_28
+	.xword	compressed_assembly_data_19
 
-	/* 29: Xamarin.Android.Support.CoordinaterLayout.dll */
+	/* 20: Xamarin.Android.Support.CoordinaterLayout.dll */
 	/* uncompressed_file_size */
-	.word	65536
+	.word	65024
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_29
+	.xword	compressed_assembly_data_20
 
-	/* 30: Xamarin.Android.Support.Core.UI.dll */
+	/* 21: Xamarin.Android.Support.CursorAdapter.dll */
 	/* uncompressed_file_size */
-	.word	6144
+	.word	28672
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_30
+	.xword	compressed_assembly_data_21
 
-	/* 31: Xamarin.Android.Support.Core.Utils.dll */
+	/* 22: Xamarin.Android.Support.Design.dll */
 	/* uncompressed_file_size */
-	.word	6144
+	.word	57856
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_31
+	.xword	compressed_assembly_data_22
 
-	/* 32: Xamarin.Android.Support.CursorAdapter.dll */
-	/* uncompressed_file_size */
-	.word	29184
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_32
-
-	/* 33: Xamarin.Android.Support.CustomTabs.dll */
-	/* uncompressed_file_size */
-	.word	9728
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_33
-
-	/* 34: Xamarin.Android.Support.CustomView.dll */
-	/* uncompressed_file_size */
-	.word	5632
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_34
-
-	/* 35: Xamarin.Android.Support.Design.dll */
-	/* uncompressed_file_size */
-	.word	63488
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_35
-
-	/* 36: Xamarin.Android.Support.DocumentFile.dll */
-	/* uncompressed_file_size */
-	.word	5120
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_36
-
-	/* 37: Xamarin.Android.Support.DrawerLayout.dll */
+	/* 23: Xamarin.Android.Support.DrawerLayout.dll */
 	/* uncompressed_file_size */
 	.word	36352
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_37
+	.xword	compressed_assembly_data_23
 
-	/* 38: Xamarin.Android.Support.Fragment.dll */
+	/* 24: Xamarin.Android.Support.Fragment.dll */
 	/* uncompressed_file_size */
-	.word	149504
+	.word	148992
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_38
+	.xword	compressed_assembly_data_24
 
-	/* 39: Xamarin.Android.Support.Interpolator.dll */
+	/* 25: Xamarin.Android.Support.Loader.dll */
 	/* uncompressed_file_size */
-	.word	5120
+	.word	34304
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_39
+	.xword	compressed_assembly_data_25
 
-	/* 40: Xamarin.Android.Support.Loader.dll */
+	/* 26: Xamarin.Android.Support.v7.AppCompat.dll */
 	/* uncompressed_file_size */
-	.word	34816
+	.word	433664
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_40
+	.xword	compressed_assembly_data_26
 
-	/* 41: Xamarin.Android.Support.LocalBroadcastManager.dll */
+	/* 27: Xamarin.Essentials.dll */
 	/* uncompressed_file_size */
-	.word	5120
+	.word	28160
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_41
+	.xword	compressed_assembly_data_27
 
-	/* 42: Xamarin.Android.Support.Print.dll */
+	/* 28: mscorlib.dll */
 	/* uncompressed_file_size */
-	.word	5120
+	.word	1969664
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_42
+	.xword	compressed_assembly_data_28
 
-	/* 43: Xamarin.Android.Support.SlidingPaneLayout.dll */
+	/* 29: torget.dll */
 	/* uncompressed_file_size */
-	.word	5632
+	.word	241152
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_43
+	.xword	compressed_assembly_data_29
 
-	/* 44: Xamarin.Android.Support.SwipeRefreshLayout.dll */
-	/* uncompressed_file_size */
-	.word	5120
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_44
-
-	/* 45: Xamarin.Android.Support.Transition.dll */
-	/* uncompressed_file_size */
-	.word	10752
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_45
-
-	/* 46: Xamarin.Android.Support.Vector.Drawable.dll */
-	/* uncompressed_file_size */
-	.word	5632
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_46
-
-	/* 47: Xamarin.Android.Support.VersionedParcelable.dll */
-	/* uncompressed_file_size */
-	.word	6656
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_47
-
-	/* 48: Xamarin.Android.Support.ViewPager.dll */
-	/* uncompressed_file_size */
-	.word	5632
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_48
-
-	/* 49: Xamarin.Android.Support.v7.AppCompat.dll */
-	/* uncompressed_file_size */
-	.word	434688
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_49
-
-	/* 50: Xamarin.Android.Support.v7.CardView.dll */
+	/* 30: xamarin-iconify-common.dll */
 	/* uncompressed_file_size */
 	.word	5120
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_50
+	.xword	compressed_assembly_data_30
 
-	/* 51: Xamarin.Android.Support.v7.RecyclerView.dll */
-	/* uncompressed_file_size */
-	.word	7168
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_51
-
-	/* 52: Xamarin.Essentials.dll */
-	/* uncompressed_file_size */
-	.word	37376
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_52
-
-	/* 53: mscorlib.dll */
-	/* uncompressed_file_size */
-	.word	1985024
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_53
-
-	/* 54: torget.dll */
-	/* uncompressed_file_size */
-	.word	235520
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_54
-
-	/* 55: xamarin-iconify-common.dll */
-	/* uncompressed_file_size */
-	.word	5120
-	/* loaded */
-	.byte	0
-	/* data */
-	.zero	3
-	.xword	compressed_assembly_data_55
-
-	/* 56: xamarin-iconify-fontawesome.dll */
+	/* 31: xamarin-iconify-fontawesome.dll */
 	/* uncompressed_file_size */
 	.word	162304
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_56
+	.xword	compressed_assembly_data_31
 
-	/* 57: xamarin-iconify-material-community.dll */
+	/* 32: xamarin-iconify-material-community.dll */
 	/* uncompressed_file_size */
 	.word	227840
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_57
+	.xword	compressed_assembly_data_32
 
-	/* 58: xamarin-iconify-material.dll */
+	/* 33: xamarin-iconify-material.dll */
 	/* uncompressed_file_size */
 	.word	137728
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_58
+	.xword	compressed_assembly_data_33
 
-	/* 59: xamarin-iconify.dll */
+	/* 34: xamarin-iconify.dll */
 	/* uncompressed_file_size */
 	.word	18944
 	/* loaded */
 	.byte	0
 	/* data */
 	.zero	3
-	.xword	compressed_assembly_data_59
+	.xword	compressed_assembly_data_34
 
-	.size	.L.compressed_assembly_descriptors, 960
+	.size	.L.compressed_assembly_descriptors, 560
 	.section	.data.compressed_assemblies,"aw",@progbits
 	.type	compressed_assemblies, @object
 	.p2align	3
 	.global	compressed_assemblies
 compressed_assemblies:
 	/* count */
-	.word	60
+	.word	35
 	/* descriptors */
 	.zero	4
 	.xword	.L.compressed_assembly_descriptors

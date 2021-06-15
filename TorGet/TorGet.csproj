@@ -98,12 +98,16 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryListAdapter.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Fragment1.cs" />
     <Compile Include="MainActivity.cs" />
     <AndroidResource Include="Resources\layout\CustomView.xml" />
+    <Compile Include="OrderListAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchFragment.cs" />
+    <Compile Include="SearchResultsFragment.cs" />
     <Compile Include="TableItem.cs" />
     <Compile Include="TorDetailDialogFragment.cs" />
     <Compile Include="TorListAdapter.cs" />
@@ -509,6 +513,41 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\topcorners_shape.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\search_fragment.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shape_searchbar.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shape_spinner_category.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\spinner_item_category.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\spinner_item_order.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\search_results_fragment.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shape_spinner_order.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -1,0 +1,2 @@
+<!-- res/drawable/myrect.xml --><shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android"><solid android:color="@color/colorBGDarkAccent" /> --&gt;
+  <!-- <stroke android:color="@color/colorAppBlue" android:width="1dp" /> --><corners android:radius="4dp" /><!-- <gradient android:startColor="#007ACC" android:endColor="#ABC8FA" android:type="linear" android:angle="270"  /> --></shape>

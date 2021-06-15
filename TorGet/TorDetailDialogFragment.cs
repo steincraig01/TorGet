@@ -70,7 +70,14 @@ namespace TorGet
         {
             var uri = Android.Net.Uri.Parse(Arguments.GetString("magnet"));
             Intent torrentIntent = new Intent(Intent.ActionView, uri);
-            StartActivity(torrentIntent);
+            try
+            {
+                StartActivity(torrentIntent);
+            }
+            catch (ActivityNotFoundException)
+            {
+                Android.Widget.Toast.MakeText(Application.Context, "No Torrent Client Found!", Android.Widget.ToastLength.Short).Show();
+            }
             Dialog.Dismiss();
             //Android.Widget.Toast.MakeText(Application.Context, Arguments.GetString("torname"), Android.Widget.ToastLength.Short).Show();
         }

@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/colorBGDark"
     android:clipToPadding="false"
     android:clipChildren="false"
     android:layout_height="match_parent">
-    
-        <android.support.v7.widget.Toolbar
+
+    <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -20,7 +20,11 @@
         app:collapseIcon="@drawable/ic_backarrow"
         app:titleTextColor="@android:color/white">
     </android.support.v7.widget.Toolbar>
-        <RelativeLayout
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/content_frame"/>
+    <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="40dp"
