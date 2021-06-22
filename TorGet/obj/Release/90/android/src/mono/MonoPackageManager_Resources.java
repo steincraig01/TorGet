@@ -6,6 +6,7 @@ public class MonoPackageManager_Resources {
 		"Acr.UserDialogs.dll",
 		"AndHUD.dll",
 		"HtmlAgilityPack.dll",
+		"Newtonsoft.Json.dll",
 		"TorrentTitleParser.dll",
 		"xamarin-iconify-common.dll",
 		"xamarin-iconify-fontawesome.dll",
@@ -26,6 +27,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.Loader.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.Essentials.dll",
+		"YTS.dll",
 	};
 	public static String[] Dependencies = new String[]{
 	};

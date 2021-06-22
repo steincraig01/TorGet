@@ -51,7 +51,7 @@ namespace TorGet
                         // First a: Everything except seed/leechers and categories
                         if (aNode.GetAttributeValue("class", "").Contains("detLink"))
                         {
-                            torrent.TpbPage = aNode.Attributes.ElementAt(0).Value;
+                            torrent.PageUrl = aNode.Attributes.ElementAt(0).Value;
                             torrent.Name = aNode.InnerText;
                         }
                         if (aNode.GetAttributeValue("href", "").Contains("magnet:?"))
@@ -85,6 +85,7 @@ namespace TorGet
                             {
                                 string[] size = parameter.Trim().Split(' ');
                                 torrent.Size = string.Join(" ", size.Skip(1));
+                                torrent.Size = torrent.Size.Replace("i", "");
                             }
                         }
                     }
@@ -106,6 +107,8 @@ namespace TorGet
                             }
                         }
                     }
+
+                    torrent.Provider = "TPB";
 
                     if (torrent.Name != null)
                         torrentList.Add(torrent);

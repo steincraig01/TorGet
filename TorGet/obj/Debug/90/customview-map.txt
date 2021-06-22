@@ -11,6 +11,7 @@ background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\90\res\layout\searchpopup.xml
 cache-path;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+CheckBox;obj\Debug\90\res\layout\search_fragment.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
 corners;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\drawable\roundedbg.xml
@@ -25,6 +26,7 @@ corners;obj\Debug\90\res\drawable\shape_listitem.xml
 corners;obj\Debug\90\res\drawable\shape_searchbar.xml
 corners;obj\Debug\90\res\drawable\shape_spinner_category.xml
 corners;obj\Debug\90\res\drawable\shape_spinner_order.xml
+corners;obj\Debug\90\res\drawable\shape_spinner_provider.xml
 corners;obj\Debug\90\res\drawable\shape_tordetaildialog.xml
 corners;obj\Debug\90\res\drawable\texteditrect.xml
 corners;obj\Debug\90\res\drawable\textviewbg_rounded.xml
@@ -45,6 +47,7 @@ ImageView;obj\Debug\90\res\layout\activity_main.xml
 ImageView;obj\Debug\90\res\layout\customview.xml
 ImageView;obj\Debug\90\res\layout\customviewxx.xml
 ImageView;obj\Debug\90\res\layout\emptyview.xml
+ImageView;obj\Debug\90\res\layout\search_fragment.xml
 ImageView;obj\Debug\90\res\layout\searchpopup.xml
 ImageView;obj\Debug\90\res\layout\torrentdetaildialog.xml
 item;obj\Debug\90\res\menu\sourcemenu.xml
@@ -56,6 +59,7 @@ JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\customview
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\sort_filter_layout.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\spinner_item_category.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\spinner_item_order.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\spinner_item_provider.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 LinearLayout;obj\Debug\90\res\layout\activity_main.xml
 LinearLayout;obj\Debug\90\res\layout\customview.xml
@@ -68,6 +72,7 @@ LinearLayout;obj\Debug\90\res\layout\searchpopup.xml
 LinearLayout;obj\Debug\90\res\layout\sort_filter_layout.xml
 LinearLayout;obj\Debug\90\res\layout\spinner_item_category.xml
 LinearLayout;obj\Debug\90\res\layout\spinner_item_order.xml
+LinearLayout;obj\Debug\90\res\layout\spinner_item_provider.xml
 LinearLayout;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 LinearLayout;obj\Debug\90\res\layout\torrentdetaildialog.xml
 ListView;obj\Debug\90\res\layout\activity_main.xml
@@ -110,6 +115,7 @@ shape;obj\Debug\90\res\drawable\shape_listitem.xml
 shape;obj\Debug\90\res\drawable\shape_searchbar.xml
 shape;obj\Debug\90\res\drawable\shape_spinner_category.xml
 shape;obj\Debug\90\res\drawable\shape_spinner_order.xml
+shape;obj\Debug\90\res\drawable\shape_spinner_provider.xml
 shape;obj\Debug\90\res\drawable\shape_tordetaildialog.xml
 shape;obj\Debug\90\res\drawable\texteditrect.xml
 shape;obj\Debug\90\res\drawable\textviewbg_rounded.xml
@@ -125,6 +131,7 @@ solid;obj\Debug\90\res\drawable\shape_listitem.xml
 solid;obj\Debug\90\res\drawable\shape_searchbar.xml
 solid;obj\Debug\90\res\drawable\shape_spinner_category.xml
 solid;obj\Debug\90\res\drawable\shape_spinner_order.xml
+solid;obj\Debug\90\res\drawable\shape_spinner_provider.xml
 solid;obj\Debug\90\res\drawable\shape_tordetaildialog.xml
 solid;obj\Debug\90\res\drawable\texteditrect.xml
 solid;obj\Debug\90\res\drawable\textviewbg_rounded.xml
@@ -156,6 +163,7 @@ TextView;obj\Debug\90\res\layout\search_results_fragment.xml
 TextView;obj\Debug\90\res\layout\searchpopup.xml
 TextView;obj\Debug\90\res\layout\spinner_item_category.xml
 TextView;obj\Debug\90\res\layout\spinner_item_order.xml
+TextView;obj\Debug\90\res\layout\spinner_item_provider.xml
 TextView;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 TextView;obj\Debug\90\res\layout\torrentdetaildialog.xml
 translate;obj\Debug\90\res\anim\bottom_to_top.xml

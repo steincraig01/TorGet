@@ -96,6 +96,9 @@
     <Reference Include="Mono.Android" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="YTS">
+      <HintPath>..\..\..\GitHub\YTS.NET\bin\Release\netstandard2.0\YTS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoryListAdapter.cs" />
@@ -104,6 +107,7 @@
     <Compile Include="MainActivity.cs" />
     <AndroidResource Include="Resources\layout\CustomView.xml" />
     <Compile Include="OrderListAdapter.cs" />
+    <Compile Include="ProviderListAdapter.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SearchFragment.cs" />
@@ -117,6 +121,7 @@
     <Compile Include="TpbQueryOrder.cs" />
     <Compile Include="TpbTorrentCategory.cs" />
     <Compile Include="ViewHolder.cs" />
+    <Compile Include="YifiYts.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\commonfont.ttf" />
@@ -156,6 +161,9 @@
     </PackageReference>
     <PackageReference Include="HtmlAgilityPack">
       <Version>1.11.33</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="TorrentTitleParser">
       <Version>1.0.3</Version>
@@ -548,6 +556,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\shape_spinner_order.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\spinner_item_provider.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\shape_spinner_provider.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

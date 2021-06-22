@@ -584,6 +584,8 @@ D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\res\layout\spinne
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\res\layout\spinner_item_order.xml
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\res\layout\search_results_fragment.xml
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\res\drawable\shape_spinner_order.xml
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\res\layout\spinner_item_provider.xml
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\res\drawable\shape_spinner_provider.xml
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\uploadflags.txt
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\resolvedassemblies.hash
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\Acr.UserDialogs.dll
@@ -753,6 +755,7 @@ D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\src\crc64
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\src\crc64d217bfd50802b5aa\CategoryListAdapter.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\src\crc64d217bfd50802b5aa\MainActivity.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\src\crc64d217bfd50802b5aa\OrderListAdapter.java
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\src\crc64d217bfd50802b5aa\ProviderListAdapter.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\src\crc64d217bfd50802b5aa\SearchFragment.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\src\crc64d217bfd50802b5aa\SearchResultsFragment.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\src\crc64d217bfd50802b5aa\TorDetailDialogFragment.java
@@ -842,3 +845,9 @@ D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_ConvertRes
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_GenerateJavaStubs.stamp
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\YTS.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Debug\YTS.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Debug\YTS.pdb
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\TorGet.csproj.CopyComplete
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\android\assets\YTS.pdb

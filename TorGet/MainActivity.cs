@@ -179,7 +179,7 @@ namespace TorGet
             Bundle mybundle = new Bundle();
             mybundle.PutString("torname", t.Name);
             mybundle.PutString("magnet", t.Magnet);
-            mybundle.PutString("pageurl", t.TpbPage);
+            mybundle.PutString("pageurl", t.PageUrl);
             //mybundle.PutString("torname", t.Name);
             TorDetailDialogFragment modalBottomSheet = new TorDetailDialogFragment();
             modalBottomSheet.Arguments = mybundle;

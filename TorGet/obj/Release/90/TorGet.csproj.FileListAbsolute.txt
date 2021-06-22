@@ -578,7 +578,6 @@ D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64692a67b1ffd85ce9\ActivityLifecycleCallbacks.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64713280f994f9b846\IconDrawable.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64a0e0a82d0db9a07d\ActivityLifecycleContextListener.java
-D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64a0e0a82d0db9a07d\ConnectivityBroadcastReceiver.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64b76f6e8b2d8c8db1\AbstractAppCompatDialogFragment_1.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64b76f6e8b2d8c8db1\ActionSheetAppCompatDialogFragment.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64b76f6e8b2d8c8db1\AlertAppCompatDialogFragment.java
@@ -636,3 +635,18 @@ D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\res\layout\sear
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64d217bfd50802b5aa\SearchResultsFragment.java
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\res\drawable\shape_spinner_category.xml
 D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\res\drawable\shape_spinner_order.xml
+D:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\YTS.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\bin\Release\YTS.pdb
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\TorGet.csproj.CopyComplete
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\res\layout\spinner_item_provider.xml
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\res\drawable\shape_spinner_provider.xml
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\Newtonsoft.Json.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Data.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Data.pdb
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Runtime.Serialization.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Runtime.Serialization.pdb
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Xml.Linq.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\System.Xml.Linq.pdb
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\YTS.dll
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\assets\YTS.pdb
+D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\android\src\crc64d217bfd50802b5aa\ProviderListAdapter.java

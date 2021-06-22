@@ -45,6 +45,7 @@ namespace TorGet
             MainActivity.Instance.toolbar.SetTitle(Resource.String.search_results_title);
             MainActivity.Instance.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             MainActivity.Instance.SupportActionBar.SetDisplayShowHomeEnabled(true);
+            MainActivity.Instance.toolbar.Visibility = Android.Views.ViewStates.Visible;
             lvResults = view.FindViewById<ListView>(Resource.Id.lvSearchResults);
             listViewAnimShow = AnimationUtils.LoadAnimation(Application.Context, Resource.Animation.abc_slide_in_bottom);
             lvResults.ItemClick += OnListItemClick;
@@ -66,7 +67,7 @@ namespace TorGet
             Bundle mybundle = new Bundle();
             mybundle.PutString("torname", t.Name);
             mybundle.PutString("magnet", t.Magnet);
-            mybundle.PutString("pageurl", t.TpbPage);
+            mybundle.PutString("pageurl", t.PageUrl);
             //mybundle.PutString("torname", t.Name);
             TorDetailDialogFragment modalBottomSheet = new TorDetailDialogFragment();
             modalBottomSheet.Arguments = mybundle;
@@ -115,6 +116,7 @@ namespace TorGet
 
                     UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
                     MainActivity.Instance.torrents = Tpb.Search(new TpbQuery(searchQuery, 0, searchOrder, searchCategory));
+                    MainActivity.Instance.torrents.AddRange(YifiYts.Search(searchQuery));
                     if (MainActivity.Instance.torrents.Count == 0)
                     {
                         MainActivity.Instance.RunOnUiThread(() => Toast.MakeText(Application.Context, "No results found for " + searchQuery, ToastLength.Short).Show());
@@ -123,7 +125,7 @@ namespace TorGet
                     {
                         //listViewAnimShow.Duration = 200;
 
-                        lvResults.StartAnimation(listViewAnimShow);
+                        //lvResults.StartAnimation(listViewAnimShow);
 
                         //MainActivity.Instance.RunOnUiThread(() => listView.Visibility = ViewStates.Visible);
                         MainActivity.Instance.RunOnUiThread(() => lvResults.Adapter = new TorListAdapter(MainActivity.Instance, MainActivity.Instance.torrents));

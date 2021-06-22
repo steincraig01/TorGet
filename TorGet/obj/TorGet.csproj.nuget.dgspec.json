@@ -46,6 +46,10 @@
               "target": "Package",
               "version": "[1.11.33, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "TorrentTitleParser": {
               "target": "Package",
               "version": "[1.0.3, )"

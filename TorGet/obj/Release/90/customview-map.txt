@@ -2,7 +2,6 @@ adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
 adaptive-icon;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 android.support.constraint.ConstraintLayout;obj\Release\90\res\layout\torrentdetaildialog.xml
 android.support.design.button.MaterialButton;obj\Release\90\res\layout\search_fragment.xml
-android.support.design.button.MaterialButton;obj\Release\90\res\layout\search_results_fragment.xml
 android.support.design.button.MaterialButton;obj\Release\90\res\layout\sort_filter_layout.xml
 android.support.v7.widget.Toolbar;obj\Release\90\res\layout\activity_main.xml
 android.support.v7.widget.Toolbar;obj\Release\90\res\layout\torrentdetaildialog.xml
@@ -12,6 +11,7 @@ background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Release\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Release\90\res\layout\searchpopup.xml
 cache-path;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
+CheckBox;obj\Release\90\res\layout\search_fragment.xml
 color;obj\Release\90\res\values\colors.xml
 color;obj\Release\90\res\values\ic_launcher_background.xml
 corners;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbg.xml
@@ -24,13 +24,12 @@ corners;obj\Release\90\res\drawable\listrect.xml
 corners;obj\Release\90\res\drawable\myrect.xml
 corners;obj\Release\90\res\drawable\shape_listitem.xml
 corners;obj\Release\90\res\drawable\shape_searchbar.xml
-corners;obj\Release\90\res\drawable\shape_spinner.xml
 corners;obj\Release\90\res\drawable\shape_spinner_category.xml
 corners;obj\Release\90\res\drawable\shape_spinner_order.xml
+corners;obj\Release\90\res\drawable\shape_spinner_provider.xml
 corners;obj\Release\90\res\drawable\shape_tordetaildialog.xml
 corners;obj\Release\90\res\drawable\texteditrect.xml
 corners;obj\Release\90\res\drawable\textviewbg_rounded.xml
-corners;obj\Release\90\res\drawable\toolbar_shape.xml
 corners;obj\Release\90\res\drawable\topcorners_shape.xml
 declare-styleable;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\attrs.xml
 EditText;obj\Release\90\res\layout\searchpopup.xml
@@ -43,12 +42,12 @@ gradient;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\j
 gradient;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbgdark.xml
 gradient;obj\Release\90\res\drawable\underline.xml
 ImageButton;obj\Release\90\res\layout\search_fragment.xml
-ImageButton;obj\Release\90\res\layout\search_results_fragment.xml
 ImageView;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\layout\loadingimage.xml
 ImageView;obj\Release\90\res\layout\activity_main.xml
 ImageView;obj\Release\90\res\layout\customview.xml
 ImageView;obj\Release\90\res\layout\customviewxx.xml
 ImageView;obj\Release\90\res\layout\emptyview.xml
+ImageView;obj\Release\90\res\layout\search_fragment.xml
 ImageView;obj\Release\90\res\layout\searchpopup.xml
 ImageView;obj\Release\90\res\layout\torrentdetaildialog.xml
 item;obj\Release\90\res\menu\sourcemenu.xml
@@ -60,8 +59,8 @@ JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\customvi
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\sort_filter_layout.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\spinner_item_category.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\spinner_item_order.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\spinner_item_provider.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Release\90\res\layout\torrentbottomsheetlayout.xml
-JoanZapata.XamarinIconify.Widget.IconToggleButton;obj\Release\90\res\layout\search_fragment.xml
 LinearLayout;obj\Release\90\res\layout\activity_main.xml
 LinearLayout;obj\Release\90\res\layout\customview.xml
 LinearLayout;obj\Release\90\res\layout\customviewxx.xml
@@ -73,6 +72,7 @@ LinearLayout;obj\Release\90\res\layout\searchpopup.xml
 LinearLayout;obj\Release\90\res\layout\sort_filter_layout.xml
 LinearLayout;obj\Release\90\res\layout\spinner_item_category.xml
 LinearLayout;obj\Release\90\res\layout\spinner_item_order.xml
+LinearLayout;obj\Release\90\res\layout\spinner_item_provider.xml
 LinearLayout;obj\Release\90\res\layout\torrentbottomsheetlayout.xml
 LinearLayout;obj\Release\90\res\layout\torrentdetaildialog.xml
 ListView;obj\Release\90\res\layout\activity_main.xml
@@ -102,7 +102,6 @@ resources;obj\Release\90\res\values\ic_launcher_background.xml
 resources;obj\Release\90\res\values\strings.xml
 resources;obj\Release\90\res\values\styles.xml
 SearchView;obj\Release\90\res\layout\search_fragment.xml
-SearchView;obj\Release\90\res\layout\search_results_fragment.xml
 set;obj\Release\90\res\anim\bottom_to_top.xml
 shape;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbg.xml
 shape;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\drawable\roundedbgdark.xml
@@ -114,9 +113,9 @@ shape;obj\Release\90\res\drawable\listrect.xml
 shape;obj\Release\90\res\drawable\myrect.xml
 shape;obj\Release\90\res\drawable\shape_listitem.xml
 shape;obj\Release\90\res\drawable\shape_searchbar.xml
-shape;obj\Release\90\res\drawable\shape_spinner.xml
 shape;obj\Release\90\res\drawable\shape_spinner_category.xml
 shape;obj\Release\90\res\drawable\shape_spinner_order.xml
+shape;obj\Release\90\res\drawable\shape_spinner_provider.xml
 shape;obj\Release\90\res\drawable\shape_tordetaildialog.xml
 shape;obj\Release\90\res\drawable\texteditrect.xml
 shape;obj\Release\90\res\drawable\textviewbg_rounded.xml
@@ -130,16 +129,15 @@ solid;obj\Release\90\res\drawable\filterdialog_shape.xml
 solid;obj\Release\90\res\drawable\myrect.xml
 solid;obj\Release\90\res\drawable\shape_listitem.xml
 solid;obj\Release\90\res\drawable\shape_searchbar.xml
-solid;obj\Release\90\res\drawable\shape_spinner.xml
 solid;obj\Release\90\res\drawable\shape_spinner_category.xml
 solid;obj\Release\90\res\drawable\shape_spinner_order.xml
+solid;obj\Release\90\res\drawable\shape_spinner_provider.xml
 solid;obj\Release\90\res\drawable\shape_tordetaildialog.xml
 solid;obj\Release\90\res\drawable\texteditrect.xml
 solid;obj\Release\90\res\drawable\textviewbg_rounded.xml
 solid;obj\Release\90\res\drawable\toolbar_shape.xml
 solid;obj\Release\90\res\drawable\topcorners_shape.xml
 Spinner;obj\Release\90\res\layout\search_fragment.xml
-Spinner;obj\Release\90\res\layout\search_results_fragment.xml
 Spinner;obj\Release\90\res\layout\searchpopup.xml
 string;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\1\jl\res\values\strings.xml
 string;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Release\90\lp\2\jl\res\values\strings.xml
@@ -148,7 +146,6 @@ string-array;obj\Release\90\res\values\strings.xml
 stroke;obj\Release\90\res\drawable\circle_shape.xml
 stroke;obj\Release\90\res\drawable\listrect.xml
 stroke;obj\Release\90\res\drawable\myrect.xml
-stroke;obj\Release\90\res\drawable\shape_searchbar.xml
 stroke;obj\Release\90\res\drawable\texteditrect.xml
 style;obj\Release\90\res\values\styles.xml
 TableLayout;obj\Release\90\res\layout\customviewxx.xml
@@ -166,6 +163,7 @@ TextView;obj\Release\90\res\layout\search_results_fragment.xml
 TextView;obj\Release\90\res\layout\searchpopup.xml
 TextView;obj\Release\90\res\layout\spinner_item_category.xml
 TextView;obj\Release\90\res\layout\spinner_item_order.xml
+TextView;obj\Release\90\res\layout\spinner_item_provider.xml
 TextView;obj\Release\90\res\layout\torrentbottomsheetlayout.xml
 TextView;obj\Release\90\res\layout\torrentdetaildialog.xml
 translate;obj\Release\90\res\anim\bottom_to_top.xml

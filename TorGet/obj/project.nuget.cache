@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "W3KYp+Pp4ohLQMAxtPJ/USQEGna82BFE7SNp8USlqFxO3PaVHrn5F9xBjDLmSraJ0fdJsClETUMhTUa3jG+OIQ==",
+  "dgSpecHash": "XplIlF72cTNkxY/aSWOu2XRJs7iheei6ePBeMZfpi8kONuBx5TkSQUx8ZpGn8wWS/lB7yAKa61rw+7KMJKIdQg==",
   "success": true,
   "projectFilePath": "D:\\Documents\\Visual Studio Projects\\TorGet\\TorGet\\TorGet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\owner\\.nuget\\packages\\acr.userdialogs\\7.1.0.483\\acr.userdialogs.7.1.0.483.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\andhud\\1.4.2\\andhud.1.4.2.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\htmlagilitypack\\1.11.33\\htmlagilitypack.1.11.33.nupkg.sha512",
+    "C:\\Users\\owner\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\torrenttitleparser\\1.0.3\\torrenttitleparser.1.0.3.nupkg.sha512",
     "C:\\Users\\owner\\.nuget\\packages\\xamarin-iconify\\1.0.0\\xamarin-iconify.1.0.0.nupkg.sha512",

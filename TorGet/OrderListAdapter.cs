@@ -41,38 +41,38 @@ namespace TorGet
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
-            var category = orderFilters[position];
+            var order = orderFilters[position];
             View view = convertView;
 
             view = context.LayoutInflater.Inflate(Resource.Layout.spinner_item_order, null);
             //view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.categoryName).Text = category.ToString();
 
-            if (category.ToString() == "Default")
+            if (order.ToString() == "Default")
             {
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{md_reorder 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.orderName).Text = "Default";
             }
-            if (category.ToString() == "Name")
+            if (order.ToString() == "Name")
             {
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{md_sort_by_alpha 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.orderName).Text = "Name";
             }
-            if (category.ToString() == "Date")
+            if (order.ToString() == "Date")
             {
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{md_query_builder 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.orderName).Text = "Date";
             }
-            if (category.ToString() == "Size")
+            if (order.ToString() == "Size")
             {
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{md_sd_card 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.orderName).Text = "Size";
             }
-            if (category.ToString() == "Seeders")
+            if (order.ToString() == "Seeders")
             {
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{md_file_upload 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.orderName).Text = "Seeders";
             }
-            if (category.ToString() == "Leechers")
+            if (order.ToString() == "Leechers")
             {
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{md_get_app 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.orderName).Text = "Leechers";
