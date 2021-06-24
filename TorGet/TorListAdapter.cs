@@ -50,20 +50,20 @@ namespace TorGet
                 {
                     Name = view.FindViewById<TextView>(Resource.Id.tvtorname),
                     Size = view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorsize),
-                    Uploaded = view.FindViewById<TextView>(Resource.Id.tvtoruploaded),
+                    Uploaded = view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtoruploaded),
                     Uploader = view.FindViewById<TextView>(Resource.Id.tvtoruled),
-                    Seeds = view.FindViewById<TextView>(Resource.Id.tvtorseeds),
-                    Leechers = view.FindViewById<TextView>(Resource.Id.tvtorleech),
+                    Seeds = view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorseeds),
+                    Leechers = view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorleech),
                     Category = view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory),
                     Trusted = view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtortrusted)
                 };
             }
             var holder = (ViewHolder)view.Tag;
             holder.Name.Text = item.Name;
-            holder.Size.Text = "{mdi_content_save 18dp #007ACC} " + item.Size;
-            holder.Uploaded.Text = item.Uploaded;
-            holder.Seeds.Text = item.Seeds.ToString();
-            holder.Leechers.Text = item.Leechers.ToString();
+            holder.Size.Text = item.Size;
+            holder.Uploaded.Text = "{md_query_builder 18dp #007ACC} " + item.Uploaded;
+            holder.Seeds.Text = "{fa_arrow_up #007ACC} " + item.Seeds.ToString();
+            holder.Leechers.Text = "{fa_arrow_down #007ACC} " + item.Leechers.ToString();
 
             //view.FindViewById<TextView>(Resource.Id.tvtorname).Text = item.Name;
             //view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorsize).Text = item.Size;
@@ -80,7 +80,7 @@ namespace TorGet
                 holder.Category.Text = "{md_music_note 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
             //view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = "{md_music_note 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
             if (item.CategoryParent == "Video")
-                holder.Category.Text = "{md_movie 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
+                holder.Category.Text = "{md_ondemand_video 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
             //view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = "{md_movie 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
             if (item.CategoryParent == "Applications")
                 holder.Category.Text = "{md_apps 18dp #007ACC} " + item.CategoryParent + " " + "(" + item.Category + ")";
@@ -97,11 +97,11 @@ namespace TorGet
             // view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtorcategory).Text = item.CategoryParent + " " + "(" + item.Category + ")";
             if (item.IsTrusted == true || item.IsVip == true)
             {
-                holder.Trusted.Text = "{md_verified_user 18dp #66C10A} Trusted";
+                holder.Trusted.Text = "{md_verified_user 18dp #66C10A}";
             }
             else
             {
-                holder.Trusted.Text = "{md_help 18dp} Unknown";
+                holder.Trusted.Text = "{md_help 18dp}";
             };
                 //view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvtortrusted).Text = "{md_verified_user 18dp #007ACC} Trusted";
 

@@ -31,7 +31,7 @@ namespace TorGet
 
         System.String[] categories = { "All", "Audio", "Video", "Applications", "Games", "Other" };
         System.String[] orderFilters = { "Default", "Name", "Date", "Size", "Seeders", "Leechers" };
-        System.String[] providers = { "All", "TPB", "YTS", "RARBG", "KAT" };
+        System.String[] providers = { "All", "TPB", "YTS", "1337x", "RARBG", "KAT" };
         public override void OnCreate(Bundle savedInstanceState)
         {
 
@@ -44,10 +44,9 @@ namespace TorGet
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
+           
             isRecording = false;
             var view = inflater.Inflate(Resource.Layout.search_fragment, container, false);
-            var searchBG = view.FindViewById<LinearLayout>(Resource.Id.layoutSearchBG);
             MainActivity.Instance.toolbar.SetTitle(Resource.String.search_title);
             MainActivity.Instance.SupportActionBar.SetDisplayHomeAsUpEnabled(false);
             MainActivity.Instance.toolbar.Visibility = Android.Views.ViewStates.Gone;
@@ -55,7 +54,10 @@ namespace TorGet
             var speakButton = view.FindViewById<ImageButton>(Resource.Id.ibSpeak);
             speakButton.SetImageDrawable(new IconDrawable(Application.Context, MaterialIcons.md_mic.ToString()).actionBarSize().colorRes(Resource.Color.colorTextWhite));
             speakButton.Click += MainActivity.Instance.ShowFilterDialog;
-
+            
+            //Clear searchview focus when background tapped
+            var searchBG = view.FindViewById<LinearLayout>(Resource.Id.layoutSearchBG);
+            searchBG.Click += (s, e) => { searchView.ClearFocus(); };
 
 
 

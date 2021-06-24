@@ -58,7 +58,7 @@ namespace TorGet
                 view.FindViewById<TextView>(Resource.Id.providerName).Text = "TPB";
             }
 
-            if (provider.ToString() == "YIFI")
+            if (provider.ToString() == "YTS")
             {
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_music_note 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.providerName).Text = "YIFI";
@@ -74,7 +74,16 @@ namespace TorGet
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_games 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.providerName).Text = "RARBG";
             }
-          
+
+            if (provider.ToString() == "1337x")
+            {
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_games 18dp #007ACC}";
+                view.FindViewById<TextView>(Resource.Id.providerName).Text = "1337x";
+            }
+
+
+            
+
 
             //view = null;
             //if (view == null)

@@ -15,10 +15,10 @@ namespace TorGet
     {
         public TextView Name { get; set; }
         public JoanZapata.XamarinIconify.Widget.IconTextView Size { get; set; }
-        public TextView Uploaded { get; set; }
+        public JoanZapata.XamarinIconify.Widget.IconTextView Uploaded { get; set; }
         public TextView Uploader { get; set; }
-        public TextView Seeds { get; set; }
-        public TextView Leechers { get; set; }
+        public JoanZapata.XamarinIconify.Widget.IconTextView Seeds { get; set; }
+        public JoanZapata.XamarinIconify.Widget.IconTextView Leechers { get; set; }
         public JoanZapata.XamarinIconify.Widget.IconTextView Category { get; set; }
         public JoanZapata.XamarinIconify.Widget.IconTextView Trusted { get; set; }
     }

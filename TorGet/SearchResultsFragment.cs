@@ -110,30 +110,40 @@ namespace TorGet
         {
             if (MainActivity.Instance.IsConnected == true)
             {
-
-                System.Threading.Thread thread = new System.Threading.Thread(() =>
+                try
                 {
+                    //TODO - Create seperate thread for each search provider
+                    System.Threading.Thread thread = new System.Threading.Thread(() =>
+                    {
 
-                    UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
-                    MainActivity.Instance.torrents = Tpb.Search(new TpbQuery(searchQuery, 0, searchOrder, searchCategory));
-                    MainActivity.Instance.torrents.AddRange(YifiYts.Search(searchQuery));
-                    if (MainActivity.Instance.torrents.Count == 0)
-                    {
-                        MainActivity.Instance.RunOnUiThread(() => Toast.MakeText(Application.Context, "No results found for " + searchQuery, ToastLength.Short).Show());
-                    }
-                    else
-                    {
+                        UserDialogs.Instance.ShowLoading("Searching ThePirateBay, Please Wait …", MaskType.Black);
+                        MainActivity.Instance.torrents = Tpb.Search(new TpbQuery(searchQuery, 0, searchOrder, searchCategory));
+                        UserDialogs.Instance.ShowLoading("Searching YTS, Please Wait …", MaskType.Black);
+                        MainActivity.Instance.torrents.AddRange(YifiYts.Search(searchQuery));
+                        UserDialogs.Instance.ShowLoading("Preparing results, Please Wait …", MaskType.Black);
+                        MainActivity.Instance.torrents.Sort((x, y) => y.Seeds.CompareTo(x.Seeds));
+                        if (MainActivity.Instance.torrents.Count == 0)
+                        {
+                            MainActivity.Instance.RunOnUiThread(() => Toast.MakeText(Application.Context, "No results found for " + searchQuery, ToastLength.Short).Show());
+                        }
+                        else
+                        {
                         //listViewAnimShow.Duration = 200;
 
                         //lvResults.StartAnimation(listViewAnimShow);
 
                         //MainActivity.Instance.RunOnUiThread(() => listView.Visibility = ViewStates.Visible);
                         MainActivity.Instance.RunOnUiThread(() => lvResults.Adapter = new TorListAdapter(MainActivity.Instance, MainActivity.Instance.torrents));
-                    };
+                        };
 
-                    UserDialogs.Instance.HideLoading();
-                }); ;
-                thread.Start();
+                        UserDialogs.Instance.HideLoading();
+                    }); ;
+                    thread.Start();
+                }
+                catch(System.Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.ToString());
+                }
                 //torSearchView.ClearFocus();
 
                 //torSearchView.SetQuery("", false);

@@ -20,8 +20,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
+            
             app:srcCompat="@drawable/ic_magnet48_trusted_blue_border" />
+        <JoanZapata.XamarinIconify.Widget.IconTextView
+            android:id="@+id/tvtortrusted"
+            android:text="?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-16dp"
+            android:layout_below="@+id/imageView"
+            android:layout_alignEnd="@+id/imageView"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/tvtorname"
             android:layout_width="wrap_content"
@@ -40,14 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp">
-        <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:id="@+id/tvtortrusted"
-            android:text="{md_help 18dp} Unknown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvtorname"
-            android:layout_alignParentStart="true"
-            android:textStyle="bold" />
+        
         <JoanZapata.XamarinIconify.Widget.IconTextView
             android:id="@+id/tvtorcategory"
             android:text="Video (HD - TV Shows)"
@@ -61,8 +63,7 @@
             android:id="@+id/tvtorsize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvtorname"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
             android:textStyle="bold"
             android:text="125.5MiB"/>
     </RelativeLayout>
@@ -71,21 +72,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp">
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="{md_today 18dp #007ACC} Uploaded"
+            android:text="{md_today 18dp #007ACC}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:textStyle="bold"
-            android:id="@+id/textView3" />
-        <TextView
-            android:id="@+id/tvtoruploaded"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView3"
-            android:layout_alignParentStart="true"
-            android:text="02-03 20"
-            android:textStyle="bold"/>
+            android:id="@+id/tvtoruploaded" />
         <JoanZapata.XamarinIconify.Widget.IconTextView
             android:text="{md_person 18dp #007ACC} Uploader "
             android:layout_width="wrap_content"
@@ -104,42 +97,22 @@
             android:textStyle="bold" />
         
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="{fa_arrow_up #007ACC} Seeds "
+            android:text="{fa_arrow_up #007ACC} "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/tvtorseeds"
+            android:layout_toStartOf="@+id/tvtorleech"
             android:textStyle="bold"
-            android:id="@+id/textView5" />
-        <TextView
-            android:id="@+id/tvtorseeds"
-            android:minWidth="16dp"
-            android:textAlignment="viewEnd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:text="2034"
-            android:textStyle="bold"/>
+            android:id="@+id/tvtorseeds" />
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="{fa_arrow_down #007ACC} Leech"
-            
+            android:text="{fa_arrow_down #007ACC} "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView5"
-            android:layout_alignStart="@+id/textView5"
-            android:textStyle="bold"
-            android:id="@+id/textView6" />
-        <TextView
-            android:id="@+id/tvtorleech"
-            android:minWidth="16dp"
-            android:textAlignment="viewEnd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvtorseeds"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:text="10"
-            android:textStyle="bold"/>
+            
+            android:textStyle="bold"
+            android:id="@+id/tvtorleech" />
 
     </RelativeLayout>
     

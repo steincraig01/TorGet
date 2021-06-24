@@ -17,8 +17,8 @@ namespace TorGet
         public static List<Torrent> ytsTorrentList = new List<Torrent>();
         public static List<Torrent> Search(string query)
         {
-            //clear torrentlist each search?
             ytsTorrentList.Clear();
+            
             try
             {
                 var API = new YTS.Services(new Uri("https://yts.mx/api/v2"));
@@ -26,6 +26,7 @@ namespace TorGet
                 var Response = API.GetMovieList(Limit: 50, Page: 1, MovieQuality.All, Query: query, SortBy: SortBy.Seeds, OrderBy: OrderBy.Decending);
                 var Movies = Response.Data.Movies;
                 //System.Diagnostics.Debug.WriteLine(Movies.Count().ToString());
+                
                 var trackers = new string[] // Creating Trackers For Torrent
                 {
                     "udp://glotorrents.pw:6969/announce",
@@ -38,14 +39,13 @@ namespace TorGet
                     "udp://tracker.internetwarriors.net:1337"
                 };
 
-
                 foreach (var movie in Movies)
                 {
                     foreach (var t in movie.Torrents)
                     {
                         Torrent torrent = new Torrent();
                         
-                        torrent.Name = movie.Title + " (" + movie.Year.ToString() + ") " + t.Quality + " " + t.Type.ToUpper() + " - YIFI";
+                        torrent.Name = movie.Title.Replace("&", "And") + " (" + movie.Year.ToString() + ") " + t.Quality + " " + t.Type.ToUpper() + " - YIFI";
                         torrent.Uploaded = t.DateUploaded.ToShortDateString();
                         torrent.Size = t.Size;
                         torrent.Uled = "YIFI";
@@ -60,13 +60,10 @@ namespace TorGet
                         torrent.MovieID = movie.ID;
                         ytsTorrentList.Add(torrent);
 
-                    }
-                       //t.Quality == "1080p") // Checks If The Torrent Is 1080p
-                            
-                    
-
+                    }   
                 }
             }
+            
             catch (Exception ex)
             {
 
@@ -75,5 +72,7 @@ namespace TorGet
 
             return ytsTorrentList;
         }
+
     }
+
 }

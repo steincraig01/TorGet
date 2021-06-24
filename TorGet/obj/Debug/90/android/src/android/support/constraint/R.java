@@ -947,18 +947,18 @@ public final class R {
 		public static final int text2 = 0x7f090130;
 		public static final int textSpacerNoButtons = 0x7f090131;
 		public static final int textSpacerNoTitle = 0x7f090132;
-		public static final int time = 0x7f09013e;
-		public static final int title = 0x7f09013f;
-		public static final int titleDividerNoCustom = 0x7f090140;
-		public static final int title_template = 0x7f090141;
-		public static final int top = 0x7f090144;
-		public static final int topPanel = 0x7f090145;
-		public static final int triangle = 0x7f090150;
-		public static final int uniform = 0x7f09015b;
-		public static final int up = 0x7f09015d;
-		public static final int visible = 0x7f090160;
-		public static final int wrap = 0x7f090162;
-		public static final int wrap_content = 0x7f090163;
+		public static final int time = 0x7f09013b;
+		public static final int title = 0x7f09013c;
+		public static final int titleDividerNoCustom = 0x7f09013d;
+		public static final int title_template = 0x7f09013e;
+		public static final int top = 0x7f090141;
+		public static final int topPanel = 0x7f090142;
+		public static final int triangle = 0x7f09014d;
+		public static final int uniform = 0x7f090158;
+		public static final int up = 0x7f09015a;
+		public static final int visible = 0x7f09015d;
+		public static final int wrap = 0x7f09015f;
+		public static final int wrap_content = 0x7f090160;
 	}
 	public static final class integer {
 		public static final int abc_config_activityDefaultDur = 0x7f0a0000;

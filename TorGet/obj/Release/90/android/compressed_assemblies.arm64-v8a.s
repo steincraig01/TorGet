@@ -314,7 +314,7 @@
 
 	/* 34: torget.dll */
 	/* uncompressed_file_size */
-	.word	244736
+	.word	245248
 	/* loaded */
 	.byte	0
 	/* data */
