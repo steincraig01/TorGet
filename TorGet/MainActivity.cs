@@ -26,10 +26,11 @@ using Java.Lang;
 using Android.Support.Design.Widget;
 using System.Net;
 using Android.Text;
+using System.Threading.Tasks;
 
 namespace TorGet
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppThemeDark", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         public static MainActivity Instance;
@@ -46,6 +47,8 @@ namespace TorGet
         public Android.Support.V7.Widget.Toolbar toolbar;
         IconTextView tvStatusText;
         RelativeLayout layoutWelcome;
+        LinearLayout llMainActivity;
+        Snackbar sbMainactivity;
         ImageButton btnClearSearch;
         Animation statusAnimShow;
         Animation listViewAnimShow;
@@ -64,32 +67,30 @@ namespace TorGet
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             SetContentView(Resource.Layout.activity_main);
             Instance = this;
-            listView = FindViewById<ListView>(Resource.Id.lvresults);
-            listView.ItemClick += OnListItemClick;
+            
             toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             SetSupportActionBar(toolbar);
             SupportActionBar.Title = "TorrentTools";
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_backarrow);
-            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            layoutWelcome = FindViewById<RelativeLayout>(Resource.Id.layout_welcome);
+            llMainActivity = FindViewById<LinearLayout>(Resource.Id.llMainActivity);
+            //Instantiate torrent list to ensure not null when using AddRange function
+            torrents = new List<Torrent>();
 
-            tvStatusText = FindViewById<IconTextView>(Resource.Id.status_text);
-            rlStatusLayout = FindViewById<RelativeLayout>(Resource.Id.status_layout);
-            rlStatusLayout.Visibility = Android.Views.ViewStates.Gone;
-            torSearchView = FindViewById<Android.Support.V7.Widget.SearchView>(Resource.Id.menu_search);
+            
             statusAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_in_top);
             listViewAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_in_bottom);
             statusAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_fade_out);
             welcomeAnimShow = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_grow_fade_in_from_bottom);
             welcomeAnimShow.Duration = 1000;
-            layoutWelcome.Animation = welcomeAnimShow;
+           
             listViewAnimHide = AnimationUtils.LoadAnimation(this, Resource.Animation.abc_slide_out_bottom);
             
             Iconify.with(new MaterialModule());
             Iconify.with(new FontAwesomeModule());
             Iconify.with(new MaterialCommunityModule());
-            //layoutWelcome.Visibility = ViewStates.Visible;
-            //LoadFragment("SearchFragment");
+            Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
+            Task checkConnectionTask = new Task(() => CheckInternetConnection());
+            checkConnectionTask.Start();
             IsConnected = true;
             searchCategory = TpbTorrentCategory.All;
             searchOrder = TpbQueryOrder.ByDefault;
@@ -99,14 +100,6 @@ namespace TorGet
                 .Replace(Resource.Id.content_frame, searchFragment)
                 .Commit();
 
-            //Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
-
-            //Check network connection
-            //var current = Connectivity.NetworkAccess;
-            //if (current != NetworkAccess.Internet)
-            //{
-            // Toast.MakeText(this, "No internet connection detected", ToastLength.Short).Show();
-            // }
         }
 
         public void LoadFragment(string fragmentName)
@@ -162,6 +155,8 @@ namespace TorGet
             catch (WebException ex)
             {
                 IsConnected = false;
+                RunOnUiThread(() => Toast.MakeText(this, "No internet connection detected!", ToastLength.Long).Show());
+                //Snackbar.Make(llMainActivity, "I'm a snackbar!", Snackbar.LengthIndefinite).Show();
             }
         }
 
@@ -222,68 +217,8 @@ namespace TorGet
         {
 
             MenuInflater.Inflate(Resource.Menu.toolmenu, menu);
-            var item = menu.FindItem(Resource.Id.menu_search);
-            var searchItem = MenuItemCompat.GetActionView(item);
-            torSearchView = searchItem.JavaCast<Android.Support.V7.Widget.SearchView>();
-            torSearchView.SetIconifiedByDefault(false);
-            torSearchView.QueryHint = "Torrent Search...";
-            //torSearchView.SubmitButtonEnabled = true;
-            var simgid = torSearchView.Context.Resources.GetIdentifier("search_mag_icon", "id", PackageName);
-            var id = torSearchView.Context.Resources.GetIdentifier("search_src_text", "id", PackageName);
-            var searchEditText = torSearchView.FindViewById<EditText>(id);
-            var searchIcon = torSearchView.FindViewById<ImageView>(simgid);
-            searchIcon.SetColorFilter(Android.Graphics.Color.White);
-            searchEditText.SetTextColor(Android.Graphics.Color.White);
-            searchEditText.SetHintTextColor(Android.Graphics.Color.White);
             
 
-
-            torSearchView.QueryTextSubmit += (s, e) =>
-            {
-
-                if (IsConnected == true)
-                {
-                    string query = e.NewText.ToString();
-                    rlStatusLayout.Visibility = ViewStates.Gone;
-                    listView.Visibility = ViewStates.Gone;
-                    System.Threading.Thread thread = new System.Threading.Thread(() =>
-                    {
-                        UserDialogs.Instance.ShowLoading("Searching, Please Wait …", MaskType.Black);
-                        torrents = Tpb.Search(new TpbQuery(query, 0, searchOrder, searchCategory));
-                        if (torrents.Count == 0)
-                        {
-                            RunOnUiThread(() => Toast.MakeText(this, "No results found for " + query, ToastLength.Short).Show());
-                        }
-                        else
-                        {
-                            //listViewAnimShow.Duration = 200;
-                            rlStatusLayout.StartAnimation(statusAnimShow);
-                            listView.StartAnimation(listViewAnimShow);
-                            RunOnUiThread(() => rlStatusLayout.Visibility = ViewStates.Visible);
-                            RunOnUiThread(() => listView.Visibility = ViewStates.Visible);
-                            RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
-                        };
-
-                        UserDialogs.Instance.HideLoading();
-                    }); ;
-                    thread.Start();
-                    torSearchView.ClearFocus();
-                    
-                    //torSearchView.SetQuery("", false);
-                    //MenuItemCompat.CollapseActionView(item);
-                    tvStatusText.Text = "Search results for: " + e.NewText.ToString();
-                    //tvStatusText.Text = MaterialIcons.md_dis;
-                    layoutWelcome.Visibility = ViewStates.Gone;
-
-                    e.Handled = true;
-                }
-                else
-                {
-                    torSearchView.ClearFocus();
-                    Toast.MakeText(this, "No internet connection detected!", ToastLength.Long).Show();
-                };
-            };
-            //return true;
             return base.OnCreateOptionsMenu(menu);
         }
 
@@ -416,17 +351,6 @@ namespace TorGet
                     break;
             }
             filterDialog.Dismiss();
-
-            //System.Threading.Thread thread = new System.Threading.Thread(() =>
-            //{
-            //    UserDialogs.Instance.ShowLoading("Please Wait …", MaskType.Black);
-            //    torrents = Tpb.Search(new TpbQuery(query));
-            //    RunOnUiThread(() => listView.Adapter = new TorListAdapter(this, torrents));
-            //    UserDialogs.Instance.HideLoading();
-            //}); ;
-            // thread.Start();
-            //searchDialog.Dismiss();
-            //searchDialog.Hide();
         }
         
     }

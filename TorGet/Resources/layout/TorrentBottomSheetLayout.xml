@@ -6,6 +6,7 @@
     android:id="@+id/tordetdiag_linearlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/bgColor"
     android:orientation="vertical"
     android:elevation="3dp">
   
@@ -15,7 +16,7 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:elevation="4dp"
-        android:background="#007ACC"
+        android:background="@color/colorBGDarkAccent"
         android:orientation="horizontal">
         
         <TextView
@@ -24,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:text="Avengers Infinity War 2019 Bluray Rip RTG 1080p english 2020"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorTextWhite"
             android:textSize="22dp"
             android:textStyle="bold"/>
     </LinearLayout>
@@ -40,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColor"
             android:text="{md_cloud_download 24dp}   Download Torrent"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
@@ -57,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColor"
             android:text="{md_content_paste 24dp}    Copy to Clipboard"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
@@ -74,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColor"
             android:text="{md_share 24dp}    Share Magnet Link"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
@@ -91,7 +92,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColor"
             android:text="{md_open_in_browser 24dp}    Open in Browser"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>
@@ -108,7 +109,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:textColor="@android:color/black"
+            android:textColor="?android:attr/textColor"
             android:text="{md_open_in_browser 24dp}    Add to Bookmarks"
             android:layout_gravity="center_vertical"
             android:padding="8dp"/>

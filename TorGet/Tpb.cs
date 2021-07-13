@@ -79,13 +79,41 @@ namespace TorGet
                         foreach (var parameter in parameters)
                         {
                             if (parameter.Trim().StartsWith("Uploaded"))
+                            {
                                 torrent.Uploaded = parameter.Trim().Remove(0, 9);
+                                if (torrent.Uploaded.StartsWith("Today"))
+                                    torrent.Uploaded = DateTime.Now.ToString("d/M/yyyy");
+                                if (torrent.Uploaded.StartsWith("Y-day"))
+                                    torrent.Uploaded = DateTime.Now.AddDays(-1).ToString("d/M/yyyy");
+                                if (torrent.Uploaded.Contains("ago"))
+                                    torrent.Uploaded = DateTime.Now.ToString("d/M/yyyy");
+                                //last 3 days
+                                if (torrent.Uploaded.IndexOf("-") == 2 && torrent.Uploaded.IndexOf(":") == 8)
+                                {
+                                    var m = torrent.Uploaded.Substring(0, 2);
+                                    var d = torrent.Uploaded.Substring(3, 2);
+                                    var y = DateTime.Now.Year;
+                                    torrent.Uploaded = d + "/" + m + "/" + y;
+                                }
+                                //format normal date
+                                if (torrent.Uploaded.IndexOf("-") == 2 && torrent.Uploaded.Length == 10)
+                                {
+                                    var m = torrent.Uploaded.Substring(0, 2);
+                                    var d = torrent.Uploaded.Substring(3, 2);
+                                    var y = torrent.Uploaded.Substring(6, 4);
+                                    //torrent.Uploaded = "test";
+                                    torrent.Uploaded = d + "/" + m + "/" + y;
+                                }
+
+
+                            }
                             //torrent.Uploaded = parameter.Trim().Replace("Uploaded", "");
                             if (parameter.Trim().StartsWith("Size"))
                             {
                                 string[] size = parameter.Trim().Split(' ');
                                 torrent.Size = string.Join(" ", size.Skip(1));
                                 torrent.Size = torrent.Size.Replace("i", "");
+                                
                             }
                         }
                     }

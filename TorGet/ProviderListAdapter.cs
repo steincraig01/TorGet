@@ -52,37 +52,41 @@ namespace TorGet
                 view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_dashboard 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.providerName).Text = "All";
             }
-            if (provider.ToString() == "TPB")
+            if (provider.ToString() == "ThePirateBay")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_music_note 18dp #007ACC}";
-                view.FindViewById<TextView>(Resource.Id.providerName).Text = "TPB";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{mdi_web 18dp #007ACC}";
+                view.FindViewById<TextView>(Resource.Id.providerName).Text = "ThePirateBay";
             }
 
-            if (provider.ToString() == "YTS")
+            if (provider.ToString() == "YIFY")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_music_note 18dp #007ACC}";
-                view.FindViewById<TextView>(Resource.Id.providerName).Text = "YIFI";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{mdi_web 18dp #007ACC}";
+                view.FindViewById<TextView>(Resource.Id.providerName).Text = "YTS";
             }
 
-            if (provider.ToString() == "KAT")
+            if (provider.ToString() == "KickassTorrents")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_desktop_windows 18dp #007ACC}";
-                view.FindViewById<TextView>(Resource.Id.providerName).Text = "KAT";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{mdi_web 18dp #007ACC}";
+                view.FindViewById<TextView>(Resource.Id.providerName).Text = "KickassTorrents";
             }
             if (provider.ToString() == "RARBG")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_games 18dp #007ACC}";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{mdi_web 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.providerName).Text = "RARBG";
             }
 
             if (provider.ToString() == "1337x")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{md_games 18dp #007ACC}";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{mdi_web 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.providerName).Text = "1337x";
+            }
+            if (provider.ToString() == "EZTV")
+            {
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.providerIcon).Text = "{mdi_web 18dp #007ACC}";
+                view.FindViewById<TextView>(Resource.Id.providerName).Text = "EZTV";
             }
 
 
-            
 
 
             //view = null;

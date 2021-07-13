@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- Other values-->
+  <attr name="bgColor" format="reference" />
+  <attr name="bgColorAccent" format="reference" />
+  <attr name="toolbarColor" format="reference" />
+  <attr name="navbarColor" format="reference" />
+
+</resources>

@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:elevation="3dp"
-        android:background="@drawable/toolbar_shape"
+        android:background="@drawable/shape_toolbar"
         app:title="Torrent Details"
         android:layout_marginBottom="8dp"
         

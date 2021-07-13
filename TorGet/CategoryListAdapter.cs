@@ -54,7 +54,7 @@ namespace TorGet
             }
             if (category.ToString() == "Audio")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.categoryIcon).Text = "{md_music_note 18dp #007ACC}";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.categoryIcon).Text = "{mdi_music_box_outline 20dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.categoryName).Text = "Audio";
             }
             if (category.ToString() == "Video")
@@ -69,7 +69,7 @@ namespace TorGet
             }
             if (category.ToString() == "Games")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.categoryIcon).Text = "{md_games 18dp #007ACC}";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.categoryIcon).Text = "{mdi_google_controller 20dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.categoryName).Text = "Games";
             }
             if (category.ToString() == "Other")

@@ -7,11 +7,11 @@ android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\activity_main.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\torrentdetaildialog.xml
 androidhud.ProgressWheel;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingprogress.xml
 attr;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\values\attrs.xml
+attr;obj\Debug\90\res\values\attrs.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\ic_launcher_round.xml
 Button;obj\Debug\90\res\layout\searchpopup.xml
 cache-path;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
-CheckBox;obj\Debug\90\res\layout\search_fragment.xml
 color;obj\Debug\90\res\values\colors.xml
 color;obj\Debug\90\res\values\ic_launcher_background.xml
 corners;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\drawable\roundedbg.xml
@@ -22,8 +22,12 @@ corners;obj\Debug\90\res\drawable\circle_shape.xml
 corners;obj\Debug\90\res\drawable\filterdialog_shape.xml
 corners;obj\Debug\90\res\drawable\listrect.xml
 corners;obj\Debug\90\res\drawable\myrect.xml
+corners;obj\Debug\90\res\drawable\shape_leechers.xml
 corners;obj\Debug\90\res\drawable\shape_listitem.xml
+corners;obj\Debug\90\res\drawable\shape_listitem_header.xml
+corners;obj\Debug\90\res\drawable\shape_listitem_selected.xml
 corners;obj\Debug\90\res\drawable\shape_searchbar.xml
+corners;obj\Debug\90\res\drawable\shape_seeders.xml
 corners;obj\Debug\90\res\drawable\shape_spinner_category.xml
 corners;obj\Debug\90\res\drawable\shape_spinner_order.xml
 corners;obj\Debug\90\res\drawable\shape_spinner_provider.xml
@@ -32,6 +36,7 @@ corners;obj\Debug\90\res\drawable\texteditrect.xml
 corners;obj\Debug\90\res\drawable\textviewbg_rounded.xml
 corners;obj\Debug\90\res\drawable\topcorners_shape.xml
 declare-styleable;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\values\attrs.xml
+dimen;obj\Debug\90\res\values\values.xml
 EditText;obj\Debug\90\res\layout\searchpopup.xml
 external-cache-path;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 external-path;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -42,8 +47,8 @@ gradient;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\
 gradient;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\drawable\roundedbgdark.xml
 gradient;obj\Debug\90\res\drawable\underline.xml
 ImageButton;obj\Debug\90\res\layout\search_fragment.xml
+ImageButton;obj\Debug\90\res\layout\search_results_fragment.xml
 ImageView;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingimage.xml
-ImageView;obj\Debug\90\res\layout\activity_main.xml
 ImageView;obj\Debug\90\res\layout\customview.xml
 ImageView;obj\Debug\90\res\layout\customviewxx.xml
 ImageView;obj\Debug\90\res\layout\emptyview.xml
@@ -54,8 +59,8 @@ item;obj\Debug\90\res\menu\sourcemenu.xml
 item;obj\Debug\90\res\menu\toolmenu.xml
 item;obj\Debug\90\res\values\strings.xml
 item;obj\Debug\90\res\values\styles.xml
-JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\activity_main.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\customview.xml
+JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\search_results_fragment.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\sort_filter_layout.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\spinner_item_category.xml
 JoanZapata.XamarinIconify.Widget.IconTextView;obj\Debug\90\res\layout\spinner_item_order.xml
@@ -75,13 +80,17 @@ LinearLayout;obj\Debug\90\res\layout\spinner_item_order.xml
 LinearLayout;obj\Debug\90\res\layout\spinner_item_provider.xml
 LinearLayout;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 LinearLayout;obj\Debug\90\res\layout\torrentdetaildialog.xml
-ListView;obj\Debug\90\res\layout\activity_main.xml
 ListView;obj\Debug\90\res\layout\search_results_fragment.xml
 menu;obj\Debug\90\res\menu\sourcemenu.xml
 menu;obj\Debug\90\res\menu\toolmenu.xml
 padding;obj\Debug\90\res\drawable\circle_shape.xml
+padding;obj\Debug\90\res\drawable\shape_leechers.xml
+padding;obj\Debug\90\res\drawable\shape_listitem_selected.xml
+padding;obj\Debug\90\res\drawable\shape_seeders.xml
 padding;obj\Debug\90\res\drawable\texteditrect.xml
 padding;obj\Debug\90\res\drawable\textviewbg_rounded.xml
+path;obj\Debug\90\res\drawable\arrow_left.xml
+path;obj\Debug\90\res\drawable\movie_tv.xml
 paths;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\40\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
 ProgressBar;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loading.xml
 RadioButton;obj\Debug\90\res\layout\sort_filter_layout.xml
@@ -89,7 +98,6 @@ RadioGroup;obj\Debug\90\res\layout\sort_filter_layout.xml
 RelativeLayout;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loading.xml
 RelativeLayout;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingimage.xml
 RelativeLayout;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingprogress.xml
-RelativeLayout;obj\Debug\90\res\layout\activity_main.xml
 RelativeLayout;obj\Debug\90\res\layout\customview.xml
 RelativeLayout;obj\Debug\90\res\layout\search_fragment.xml
 RelativeLayout;obj\Debug\90\res\layout\search_results_fragment.xml
@@ -97,10 +105,12 @@ RelativeLayout;obj\Debug\90\res\layout\sort_filter_layout.xml
 resources;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\values\attrs.xml
 resources;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\values\strings.xml
 resources;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\2\jl\res\values\strings.xml
+resources;obj\Debug\90\res\values\attrs.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\ic_launcher_background.xml
 resources;obj\Debug\90\res\values\strings.xml
 resources;obj\Debug\90\res\values\styles.xml
+resources;obj\Debug\90\res\values\values.xml
 SearchView;obj\Debug\90\res\layout\search_fragment.xml
 set;obj\Debug\90\res\anim\bottom_to_top.xml
 shape;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\drawable\roundedbg.xml
@@ -111,15 +121,20 @@ shape;obj\Debug\90\res\drawable\circle_shape.xml
 shape;obj\Debug\90\res\drawable\filterdialog_shape.xml
 shape;obj\Debug\90\res\drawable\listrect.xml
 shape;obj\Debug\90\res\drawable\myrect.xml
+shape;obj\Debug\90\res\drawable\shape_circle_search.xml
+shape;obj\Debug\90\res\drawable\shape_leechers.xml
 shape;obj\Debug\90\res\drawable\shape_listitem.xml
+shape;obj\Debug\90\res\drawable\shape_listitem_header.xml
+shape;obj\Debug\90\res\drawable\shape_listitem_selected.xml
 shape;obj\Debug\90\res\drawable\shape_searchbar.xml
+shape;obj\Debug\90\res\drawable\shape_seeders.xml
 shape;obj\Debug\90\res\drawable\shape_spinner_category.xml
 shape;obj\Debug\90\res\drawable\shape_spinner_order.xml
 shape;obj\Debug\90\res\drawable\shape_spinner_provider.xml
+shape;obj\Debug\90\res\drawable\shape_toolbar.xml
 shape;obj\Debug\90\res\drawable\shape_tordetaildialog.xml
 shape;obj\Debug\90\res\drawable\texteditrect.xml
 shape;obj\Debug\90\res\drawable\textviewbg_rounded.xml
-shape;obj\Debug\90\res\drawable\toolbar_shape.xml
 shape;obj\Debug\90\res\drawable\topcorners_shape.xml
 shape;obj\Debug\90\res\drawable\underline.xml
 solid;obj\Debug\90\res\drawable\bottomsheet_shape.xml
@@ -127,15 +142,18 @@ solid;obj\Debug\90\res\drawable\buttonrect.xml
 solid;obj\Debug\90\res\drawable\circle_shape.xml
 solid;obj\Debug\90\res\drawable\filterdialog_shape.xml
 solid;obj\Debug\90\res\drawable\myrect.xml
+solid;obj\Debug\90\res\drawable\shape_circle_search.xml
 solid;obj\Debug\90\res\drawable\shape_listitem.xml
+solid;obj\Debug\90\res\drawable\shape_listitem_header.xml
+solid;obj\Debug\90\res\drawable\shape_listitem_selected.xml
 solid;obj\Debug\90\res\drawable\shape_searchbar.xml
 solid;obj\Debug\90\res\drawable\shape_spinner_category.xml
 solid;obj\Debug\90\res\drawable\shape_spinner_order.xml
 solid;obj\Debug\90\res\drawable\shape_spinner_provider.xml
+solid;obj\Debug\90\res\drawable\shape_toolbar.xml
 solid;obj\Debug\90\res\drawable\shape_tordetaildialog.xml
 solid;obj\Debug\90\res\drawable\texteditrect.xml
 solid;obj\Debug\90\res\drawable\textviewbg_rounded.xml
-solid;obj\Debug\90\res\drawable\toolbar_shape.xml
 solid;obj\Debug\90\res\drawable\topcorners_shape.xml
 Spinner;obj\Debug\90\res\layout\search_fragment.xml
 Spinner;obj\Debug\90\res\layout\searchpopup.xml
@@ -146,6 +164,9 @@ string-array;obj\Debug\90\res\values\strings.xml
 stroke;obj\Debug\90\res\drawable\circle_shape.xml
 stroke;obj\Debug\90\res\drawable\listrect.xml
 stroke;obj\Debug\90\res\drawable\myrect.xml
+stroke;obj\Debug\90\res\drawable\shape_leechers.xml
+stroke;obj\Debug\90\res\drawable\shape_listitem_selected.xml
+stroke;obj\Debug\90\res\drawable\shape_seeders.xml
 stroke;obj\Debug\90\res\drawable\texteditrect.xml
 style;obj\Debug\90\res\values\styles.xml
 TableLayout;obj\Debug\90\res\layout\customviewxx.xml
@@ -153,13 +174,11 @@ TableRow;obj\Debug\90\res\layout\customviewxx.xml
 TextView;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loading.xml
 TextView;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingimage.xml
 TextView;D:\Documents\Visual Studio Projects\TorGet\TorGet\obj\Debug\90\lp\1\jl\res\layout\loadingprogress.xml
-TextView;obj\Debug\90\res\layout\activity_main.xml
 TextView;obj\Debug\90\res\layout\customview.xml
 TextView;obj\Debug\90\res\layout\customviewxx.xml
 TextView;obj\Debug\90\res\layout\emptyview.xml
 TextView;obj\Debug\90\res\layout\listview_header.xml
 TextView;obj\Debug\90\res\layout\search_fragment.xml
-TextView;obj\Debug\90\res\layout\search_results_fragment.xml
 TextView;obj\Debug\90\res\layout\searchpopup.xml
 TextView;obj\Debug\90\res\layout\spinner_item_category.xml
 TextView;obj\Debug\90\res\layout\spinner_item_order.xml
@@ -167,4 +186,6 @@ TextView;obj\Debug\90\res\layout\spinner_item_provider.xml
 TextView;obj\Debug\90\res\layout\torrentbottomsheetlayout.xml
 TextView;obj\Debug\90\res\layout\torrentdetaildialog.xml
 translate;obj\Debug\90\res\anim\bottom_to_top.xml
+vector;obj\Debug\90\res\drawable\arrow_left.xml
+vector;obj\Debug\90\res\drawable\movie_tv.xml
 View;obj\Debug\90\res\layout\torrentdetaildialog.xml

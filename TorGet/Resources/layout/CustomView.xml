@@ -5,117 +5,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tordetdiag_linearlayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:elevation="3dp"
-    android:padding="8dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:elevation="4dp"
     android:background="@drawable/shape_listitem">
     <RelativeLayout
         android:id="@+id/headerlayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        
+        android:elevation="1dp"
+        android:padding="8dp"
         android:layout_marginBottom="8dp">
-        <ImageView
-            android:id="@+id/imageView"
+        <LinearLayout
+            android:id="@+id/llHeaderIcon"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            
-            app:srcCompat="@drawable/ic_magnet48_trusted_blue_border" />
-        <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:id="@+id/tvtortrusted"
-            android:text="?"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-16dp"
-            android:layout_below="@+id/imageView"
-            android:layout_alignEnd="@+id/imageView"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/ivHeaderIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_magnet48_trusted_blue_border" />
+            <JoanZapata.XamarinIconify.Widget.IconTextView
+                android:id="@+id/tvtortrusted"
+                android:text="Trusted"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"/>
+        </LinearLayout>
         <TextView
             android:id="@+id/tvtorname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_alignParentTop="true"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/imageView"
+            
+            android:layout_toRightOf="@+id/llHeaderIcon"
             android:text="Avengers Infinity War 2019 Bluray Rip RTG 1080p english 2020"
-            android:textColor="@android:color/white"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:textColor="?android:attr/textColorPrimary"
+            android:textStyle="bold"
+            android:textSize="@dimen/abc_text_size_subhead_material" />
+        
+
     </RelativeLayout>
-    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp">
-        
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="8dp">
         <JoanZapata.XamarinIconify.Widget.IconTextView
             android:id="@+id/tvtorcategory"
             android:text="Video (HD - TV Shows)"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tvtorname"
-            
-            android:layout_centerHorizontal="true"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content" />
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:id="@+id/tvtorsize"
+            android:id="@+id/tvtorseeds"
+            android:text="s100"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:textStyle="bold"
-            android:text="125.5MiB"/>
+            android:layout_marginRight="4dp"
+            android:layout_toStartOf="@+id/tvtorleech"
+            android:background="@drawable/shape_seeders"
+            android:textStyle="bold"/>
+        <JoanZapata.XamarinIconify.Widget.IconTextView
+            android:id="@+id/tvtorleech"
+            android:text="l100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_leechers"
+            android:layout_alignParentEnd="true"
+            android:textStyle="bold"/>
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp">
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:layout_marginBottom="4dp">
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="{md_today 18dp #007ACC}"
+            android:id="@+id/tvtoruploaded"
+            android:text="01/01/2021"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true"
-            android:textStyle="bold"
-            android:id="@+id/tvtoruploaded" />
+            android:layout_alignParentStart="true"/>
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="{md_person 18dp #007ACC} Uploader "
+            android:id="@+id/tvtorprovider"
+            android:text="YIFI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_centerInParent="true"
-            android:textStyle="bold"
-            android:id="@+id/textView4" />
-        <TextView
-            android:id="@+id/tvtoruled"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView4"
-            android:layout_centerInParent="true"
-            android:text="Sotnikam"
-            android:textStyle="bold" />
-        
+            android:layout_centerInParent="true"/>
         <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="{fa_arrow_up #007ACC} "
+            android:id="@+id/tvtorsize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/tvtorleech"
-            android:textStyle="bold"
-            android:id="@+id/tvtorseeds" />
-        <JoanZapata.XamarinIconify.Widget.IconTextView
-            android:text="{fa_arrow_down #007ACC} "
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            
             android:textStyle="bold"
-            android:id="@+id/tvtorleech" />
-
+            android:text="125.5MB"/>
     </RelativeLayout>
-    
-    
 </LinearLayout>
 

@@ -59,12 +59,12 @@ namespace TorGet
             }
             if (order.ToString() == "Date")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{md_query_builder 18dp #007ACC}";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{mdi_calendar_clock 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.orderName).Text = "Date";
             }
             if (order.ToString() == "Size")
             {
-                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{md_sd_card 18dp #007ACC}";
+                view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.orderIcon).Text = "{mdi_harddisk 18dp #007ACC}";
                 view.FindViewById<TextView>(Resource.Id.orderName).Text = "Size";
             }
             if (order.ToString() == "Seeders")

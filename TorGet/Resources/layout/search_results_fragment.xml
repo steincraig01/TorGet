@@ -4,35 +4,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@color/colorBGDark"
+    android:background="?attr/bgColor"
     android:gravity="center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
+        android:id="@+id/rlSearchResultsHeader"
         android:padding="8dp"
-        android:background="@color/colorBGDarkAccent"
+        android:background="?attr/bgColor"
+        android:elevation="4dp"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <TextView
-            android:text="Search Results"
+        <JoanZapata.XamarinIconify.Widget.IconTextView
+            android:id="@+id/tvSearchQuery"
+            android:text="108"
             android:textColor="@color/colorAppBlue"
             android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginLeft="@dimen/mp_medium"
+            
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-    
-    
+        <ImageButton
+            android:id="@+id/ibFilters"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/mp_small"
+            android:tint="@android:color/darker_gray"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
     </RelativeLayout>
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8dp"
+        android:padding="6dp"
         android:clipChildren="false"
         android:clipToPadding="false"
-        android:background="@color/colorBGDark"
-        android:divider="@color/colorBGDark"
+        android:listSelector="@drawable/shape_listitem_selected"
+        android:background="?attr/bgColor"
+        android:divider="?attr/bgColor"
         android:dividerHeight="12dp"
         android:id="@+id/lvSearchResults"/>
-        
+
 
 
 

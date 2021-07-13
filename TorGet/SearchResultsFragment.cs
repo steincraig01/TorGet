@@ -19,6 +19,8 @@ using JoanZapata.XamarinIconify.Fonts;
 using JoanZapata.XamarinIconify.Widget;
 using Acr.UserDialogs;
 using Android.Views.Animations;
+using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace TorGet
 {
@@ -27,6 +29,8 @@ namespace TorGet
 
         ListView lvResults;
         Animation listViewAnimShow;
+        IconTextView tvSearchQuery;
+        RelativeLayout rlStatus;
 
 
 
@@ -46,7 +50,14 @@ namespace TorGet
             MainActivity.Instance.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             MainActivity.Instance.SupportActionBar.SetDisplayShowHomeEnabled(true);
             MainActivity.Instance.toolbar.Visibility = Android.Views.ViewStates.Visible;
+            rlStatus = view.FindViewById<RelativeLayout>(Resource.Id.rlSearchResultsHeader);
             lvResults = view.FindViewById<ListView>(Resource.Id.lvSearchResults);
+            tvSearchQuery = view.FindViewById<JoanZapata.XamarinIconify.Widget.IconTextView>(Resource.Id.tvSearchQuery);
+
+            var filterButton = view.FindViewById<ImageButton>(Resource.Id.ibFilters);
+            filterButton.SetImageDrawable(new IconDrawable(Application.Context, MaterialCommunityIcons.mdi_filter_variant.ToString()).actionBarSize().colorRes(Resource.Color.colorTextWhite));
+            filterButton.Click += MainActivity.Instance.ShowFilterDialog;
+
             listViewAnimShow = AnimationUtils.LoadAnimation(Application.Context, Resource.Animation.abc_slide_in_bottom);
             lvResults.ItemClick += OnListItemClick;
             if (Arguments != null)
@@ -106,57 +117,53 @@ namespace TorGet
             //tvTorUploaded.Text = t.Uploaded;
         }
 
-        public void PerformSearch(string searchQuery, int searchCategory, TpbQueryOrder searchOrder)
+        
+
+        public async void PerformSearch(string searchQuery, int searchCategory, TpbQueryOrder searchOrder)
         {
             if (MainActivity.Instance.IsConnected == true)
             {
                 try
                 {
-                    //TODO - Create seperate thread for each search provider
-                    System.Threading.Thread thread = new System.Threading.Thread(() =>
+                    Stopwatch stopwatch = new Stopwatch();
+                    stopwatch.Start();
+                    var taskList = new List<Task>();
+                    MainActivity.Instance.torrents.Clear();
+                    UserDialogs.Instance.ShowLoading("Searching…");
+                    Task tpbTask = new Task(() => MainActivity.Instance.torrents.AddRange(Tpb.Search(new TpbQuery(searchQuery, 0, searchOrder, MainActivity.Instance.searchCategory))));
+                    Task ytsTask = new Task(() => MainActivity.Instance.torrents.AddRange(YifiYts.Search(searchQuery)));
+                    taskList.Add(tpbTask);
+                    tpbTask.Start();
+                    if (MainActivity.Instance.searchCategory == 0 || MainActivity.Instance.searchCategory == 200)
                     {
-
-                        UserDialogs.Instance.ShowLoading("Searching ThePirateBay, Please Wait …", MaskType.Black);
-                        MainActivity.Instance.torrents = Tpb.Search(new TpbQuery(searchQuery, 0, searchOrder, searchCategory));
-                        UserDialogs.Instance.ShowLoading("Searching YTS, Please Wait …", MaskType.Black);
-                        MainActivity.Instance.torrents.AddRange(YifiYts.Search(searchQuery));
-                        UserDialogs.Instance.ShowLoading("Preparing results, Please Wait …", MaskType.Black);
+                        taskList.Add(ytsTask);
+                        ytsTask.Start();
+                    }
+                       
+                    await Task.WhenAll(taskList.ToArray());
+                    UserDialogs.Instance.HideLoading();
+                    if (MainActivity.Instance.torrents.Count == 0)
+                    {
+                        MainActivity.Instance.RunOnUiThread(() => Toast.MakeText(Application.Context, "No results found for " + searchQuery, ToastLength.Short).Show());
+                    }
+                    else
+                    {
                         MainActivity.Instance.torrents.Sort((x, y) => y.Seeds.CompareTo(x.Seeds));
-                        if (MainActivity.Instance.torrents.Count == 0)
-                        {
-                            MainActivity.Instance.RunOnUiThread(() => Toast.MakeText(Application.Context, "No results found for " + searchQuery, ToastLength.Short).Show());
-                        }
-                        else
-                        {
-                        //listViewAnimShow.Duration = 200;
-
-                        //lvResults.StartAnimation(listViewAnimShow);
-
-                        //MainActivity.Instance.RunOnUiThread(() => listView.Visibility = ViewStates.Visible);
-                        MainActivity.Instance.RunOnUiThread(() => lvResults.Adapter = new TorListAdapter(MainActivity.Instance, MainActivity.Instance.torrents));
-                        };
-
-                        UserDialogs.Instance.HideLoading();
-                    }); ;
-                    thread.Start();
+                        lvResults.Adapter = new TorListAdapter(MainActivity.Instance, MainActivity.Instance.torrents);
+                    };
+                    stopwatch.Stop();
+                    var ts = System.Math.Round(stopwatch.Elapsed.TotalSeconds,1);
+                    rlStatus.Visibility = ViewStates.Visible;
+                    tvSearchQuery.Text = "{md_search 24dp #007ACC}  " + Arguments.GetString("searchQuery");
+                    //tvSearchQuery.Text = tvSearchQuery.Text + " " + ts.ToString();
                 }
                 catch(System.Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine(ex.ToString());
-                }
-                //torSearchView.ClearFocus();
-
-                //torSearchView.SetQuery("", false);
-                //MenuItemCompat.CollapseActionView(item);
-                //tvStatusText.Text = "Search results for: " + e.NewText.ToString();
-                //tvStatusText.Text = MaterialIcons.md_dis;
-                //layoutWelcome.Visibility = ViewStates.Gone;
-
-                //e.Handled = true;
+                }  
             }
             else
             {
-                //torSearchView.ClearFocus();
                 Toast.MakeText(Application.Context, "No internet connection detected!", ToastLength.Long).Show();
             };
 
